@@ -1,0 +1,720 @@
+@import 'all.css';
+@import 'https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap';
+
+$Roboto_Condensed: 'Roboto Condensed', sans-serif;
+
+body{
+	background: #F1F2F2;
+}
+
+// navbar - menu
+#glMenu{
+	background: lighten(#323840, 0%);
+	border-top: 2px solid #F30D31;
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+
+	& > .container{
+		padding: 12px 24px 14px;
+
+		.logo-body{
+			display: flex;
+			justify-content: space-between;
+			width: 189.62px;
+	
+			.menu-tree-mb{
+				display: flex;
+				align-items: center;
+
+				display: none;
+
+				button{
+					height: 14px;
+					
+					&.active{
+						.tree-btn-is{
+							background: transparent;
+
+							&:after{
+								transform: rotate(-45deg);
+								top: 0px;
+							}
+							&:before{
+								transform: rotate(45deg);
+								top: 0px;
+							}
+						}
+					}
+
+					.tree-btn-is{
+						width: 24px;
+						height: 2px;
+						background: white;
+						display: block;
+						position: relative;
+						transition: .5s;
+
+						&:after,
+						&:before{
+							content: '';
+							width: 24px;
+							height: 2px;
+							background: white;
+							display: block;
+							position: absolute;
+							transition: .5s;
+						}
+						&:after{
+							top: 4px;
+						}
+
+						&:before{
+							top: -4px;
+						}
+					}
+				}
+			}
+		}
+
+		.nav-body{
+			margin-left: auto;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 80%;
+			max-width: 1390px;
+
+			.menu-football-gl{
+				display: flex;
+				max-width: 967px;
+				width: 100%;
+				& > li{
+					>  a{
+						font-family: $Roboto_Condensed;
+						font-weight: 600;
+						font-size: 18px;
+						color: white;
+						border-right: 1px solid #999CA0;
+						padding: 0 25px;
+					}
+					&:last-of-type > a{
+						border: 0;
+					} 
+				}
+			}
+		}
+
+		.btns-registration-login{
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			width: 20%;
+			.signNotActive{
+				& >button{
+					color: white;
+					font-size: 18px;
+					font-weight: 600;
+					font-family: $Roboto_Condensed;
+					border: 2px solid white;
+					border-radius: 3px;
+					padding: 10px 15px;
+					transition: .25s;
+
+					&:hover{
+						background: #F30D31;
+						border-color: #F30D31;
+					}
+				}
+				&.signUpActive > button {
+					background: #F30D31;
+					border:0;
+					padding: 12px 15px;
+					&:hover{
+						background: #62686f;
+					}
+				}
+
+				&:first-of-type{
+					margin-right: 20px;
+					& > button{
+						padding: 10px 35px;
+					}
+				}
+			}
+
+			.signActive{
+				color: white;
+				font-size: 18px;
+				font-family: $Roboto_Condensed;
+				border: 2px solid white;
+				border-radius: 3px;
+				padding-left: 12px;
+				overflow: hidden;
+				max-width: 184px;
+				width: 100%;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+
+				button{
+					padding: 12px;
+					background: #F30D31
+				}
+
+				display: none;
+			}
+		}
+	}
+}
+
+// page content
+.indexContentBody.row{
+	width: 100%;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+#headerNews{
+	position: sticky;
+	background: #707070;
+	width: 20%;
+	max-width: 320px;
+	height: 50vh;
+	& > .container-row{
+	}
+}
+
+#successForecasts{
+	position: sticky;
+	background: #ACAFB2;
+	width: 20%;
+	max-width: 384px;
+	height: 50vh;
+	& > .container-row{
+		
+	}
+}
+
+#pageContent{
+	width: 80%;
+	max-width: 1206px;
+	padding: 5px 5px 0px 5px;
+	& > .container{
+		// slider
+		#indexPageSilder{
+			position: relative;
+			min-height: 496px;
+			background: #F30D31;
+
+			.slide{
+				display: none;
+				max-width: 1206px;
+				width: 100%;
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: right center;
+				min-height: inherit;
+				position: absolute;
+
+				& > .container-fluid{
+					background: linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.5));
+					padding: 102px 59px;
+					min-height: inherit;
+
+
+					& > h1{
+						font-family: $Roboto_Condensed;
+						font-weight: 600;
+						font-size: 38px;
+						color: white;
+					}
+					& > p{
+						font-family: $Roboto_Condensed;
+						font-size: 18px;
+						color: white;
+						font-weight: normal;
+						max-width: 576px;
+						line-height: 23px;
+						margin: 26px 0;
+					}
+					& > .moreInfo{
+						border: 2px solid #F30D31;
+						border-radius: 3px;
+						padding: 10px 19px;
+						position: relative;
+						overflow: hidden;
+
+						& > span{
+							font-family: $Roboto_Condensed;
+							font-weight: 600;
+							font-size: 18px;
+							color: white;
+							position: relative;
+							z-index: 5;
+						}
+
+						&:before{
+							content: '';
+							width: 100%;
+							height: 100%;
+							background: #F30D31;
+							position: absolute;
+							top: 0;
+							left: 100%;
+							z-index: 4;
+							transition: .5s; 
+						}
+						&:hover{
+							&:before{
+								left: 0;
+							}
+						}
+					}
+				}
+
+				&.active{
+					display: block;
+				}
+			}
+		}
+
+		// ligaFootball
+		#ligaFootball{
+			& > nav.navbar-liga{
+				ul.row{
+					box-shadow: 0 0 2px rgba(98, 104, 111, .1);
+					background: white;
+					margin: 10px 0 14px;
+					align-items: stretch;
+					& > li{
+						width: 33.33%;
+						max-width: 403px;
+						& > a{
+							padding: 14px 0 12px;
+							display: block;	
+							height: 100%;
+							text-align: center;
+							color: #808080;
+							font-size: 18px;
+							transition: .3s background,  .25s border;
+							border-bottom: 2px solid transparent;
+							font-family: $Roboto_Condensed;
+
+							&.active{
+								font-weight: 600;
+								color: #000000;
+								border-bottom-color: #F30D31;
+							}
+							&:hover{
+								background: #F30D31;
+								color: white;
+								border-bottom-color: #F30D31;
+								transition: .4s border;
+								font-weight: 600;
+								&.active{
+									background: white;
+									color: #000000;
+									border-bottom-color: #F30D31;
+								}
+							}
+						}
+						&:nth-of-type(2){
+							& > a{
+								position: relative;
+								&:before,
+								&:after{
+									content: '';
+									width: 1px;
+									height: 35%;
+									background: rgba(98,104,111,.5);
+									position: absolute;
+									top: 32.5%;
+								}
+								&:before{
+									left: 0;
+								}
+								&:after{
+									right: 0;
+								}
+							}
+						}	
+					}
+				}
+			}
+
+			& > .discription-navbarLiga{
+				.row{
+					justify-content: space-between;
+				}
+				.col-data{
+					ul.row{
+						background: white;
+						align-items: stretch;
+						& > li{
+							width: 33.33%;
+							min-width: 124px;
+							& > a{
+								padding: 14px 0 12px;
+								display: block;	
+								height: 100%;
+								text-align: center;
+								color: #808080;
+								font-size: 18px;
+								transition: .3s background,  .25s border;
+								border-bottom: 2px solid transparent;
+								font-family: $Roboto_Condensed;
+
+								&.active{
+									font-weight: 600;
+									color: #000000;
+									border-bottom-color: #F30D31;
+								}
+								&:hover{
+									background: #F30D31;
+									color: white;
+									border-bottom-color: #F30D31;
+									transition: .4s border;
+									font-weight: 600;
+									&.active{
+										background: white;
+										color: #000000;
+										border-bottom-color: #F30D31;
+									}
+								}
+							}
+							&:nth-of-type(2){
+								& > a{
+									position: relative;
+									&:before,
+									&:after{
+										content: '';
+										width: 1px;
+										height: 35%;
+										background: rgba(98,104,111,.5);
+										position: absolute;
+										top: 32.5%;
+									}
+									&:before{
+										left: 0;
+									}
+									&:after{
+										right: 0;
+									}
+								}
+							}	
+						}
+					}
+				}
+				.col-forecasts{
+					ul.row{
+						align-items: stretch;
+						& > li{
+							width: 50%;
+							min-width: 167px;
+							position: relative;
+							z-index: 1;
+							background: white;
+							border-radius: 3px;
+
+
+							& > a{
+								padding: 15px 0;
+								display: block;	
+								height: 100%;
+								text-align: center;
+								color: #363636;
+								font-size: 14px;
+								transition: .3s;
+								border: 1px solid #BEC1C4;
+								font-family: $Roboto_Condensed;
+								border-radius: 3px;
+
+								&:hover{
+									box-shadow: 0 0 20px #BEC1C4 inset;
+								}
+							}
+
+							&.active{
+								z-index: 2;
+								 > a{
+									border-color: #F30D31;
+									color: #F30D31;
+									box-shadow: 0 0 0;
+								}
+
+							}
+							&:last-of-type{
+								left: -4px;
+							}
+						}
+					}
+				}
+			}
+
+			&> .tabelForecastsLiga{
+				& > table{
+					background: white;
+					width: 100%;
+					border-radius: 3px;
+					border-collapse: collapse;
+					margin: 14px auto ;
+					overflow: hidden; 
+					tr:first-of-type{
+						border-radius: 3px;
+					}
+					th{
+						border-top: 4px solid white;
+						border-bottom: 9px solid white;
+						background:#F1F2F2;
+						padding: 8px 0;
+						font-family: $Roboto_Condensed;
+						font-size: 16px;
+						color: #808080;
+						font-weight: normal;
+
+						&:first-of-type{
+							border-left: 4px solid white;
+							text-align: left;
+							padding-left: 21px;
+						}
+						&:last-of-type{
+							border-right: 4px solid white;
+						}
+					}
+				}
+			}
+		} 
+	}
+}
+
+// media mobile start for 1130px
+@media only screen and (min-width: 1190px) and (max-width: 1500px){
+	// navbar - menu
+	#glMenu{
+		
+		& > .container{
+			padding: 15px 12px;
+			.nav-body{
+				width: 95%;
+
+				.menu-football-gl{
+					width: 90%;
+					justify-content: flex-end;
+					& > li{
+						>  a{
+							padding: 0 15px;
+						}
+					}
+				}
+			}
+
+			.btns-registration-login{
+				width: auto;
+			}
+		}
+	}	
+}
+
+@media only screen and(min-width: 1000px) and (max-width: 1250px) {
+	// start slider in index page
+	#pageContent{
+		& > .container{
+			// slider
+			#indexPageSilder{
+				min-height: 400px;
+
+				.slide{
+
+					& > .container-fluid{
+						padding: 54px 59px;
+					}
+				}
+			}
+
+			// ligaFootball 
+		}
+	}
+}
+
+@media only screen and (min-width: 1129px) and (max-width: 1190px){
+	// navbar - menu
+	#glMenu{
+		
+		& > .container{
+			padding: 15px 10px;
+			.nav-body{
+				width: 95%;
+
+				.menu-football-gl{
+					width: 100%;
+					justify-content: flex-end;
+					& > li{
+						>  a{
+							padding: 0 10px;
+						}
+					}
+				}
+			}
+
+			.signNotActive:first-of-type  > button {
+				padding: 10px 20px !important;
+			}
+
+			.btns-registration-login{
+				width: auto;
+			}
+		}
+	}	
+}
+
+@media only screen  and (max-width: 1129px) {
+	// navbar - menu
+	#glMenu{
+		& > .container{
+			padding: 12px 20px 14px 10px;
+
+			.row{
+				flex-direction: column;
+			}
+
+			.logo-body{
+				width: 100%;
+
+				.menu-tree-mb{
+					display: flex !important;
+				}
+			}
+
+			.nav-body{
+				margin-left: auto;
+				display: flex;
+				justify-content: space-between;
+				flex-direction: column;
+				align-items: center;
+				width: 100%;
+				overflow: hidden;
+
+				.menu-football-gl{
+					margin-top: 20px;
+					width: 100%;
+					flex-direction: column;
+					justify-content: center;
+					border-top: 1px solid #999CA0;
+					border-bottom: 1px solid #999CA0;
+					& > li{
+						text-align: center;
+						padding: 10px 0;
+						>  a{
+							border: 0px;
+							padding: 0px;
+						}
+					}
+				}
+
+				&.hide{
+					display: none;
+				}
+			}
+
+			.btns-registration-login{
+				margin-top: 20px;
+				justify-content: center;
+			}
+		}
+	}
+}
+
+@media only screen and(min-width: 799px) and (max-width: 999px) {
+	// start slider in index page
+	#pageContent{
+		& > .container{
+			// slider
+			#indexPageSilder{
+				min-height: 380px;
+
+				.slide{
+
+					& > .container-fluid{
+						padding: 32px 28px;
+					}
+				}
+			}
+
+			// ligaFootball 
+		}
+	}
+}
+
+@media only screen and (max-width: 798px) {
+	// start slider in index page
+	#pageContent{
+		& > .container{
+			// slider
+			#indexPageSilder{
+				min-height: 148px;
+
+				.slide{
+
+					& > .container-fluid{
+						padding: 4px 8px;
+						& > h1{
+							font-size: 18px;
+						}
+						& > p{
+							font-size: 9px;
+							max-width: 228px;
+							line-height: 13px;
+							margin: 9px 0 18px;
+						}
+						& > .moreInfo{
+							border: 0;
+							padding: 0;
+
+							& > span{
+								font-family: $Roboto_Condensed;
+								font-weight: 600;
+								font-size: 12px;
+								color: #F30D31;
+								text-decoration: underline;
+							}
+
+							&:before{
+								display: none;
+							}
+							&:hover{
+								&:before{
+									display: none;
+									left: 100%;
+								}
+								& > span{
+									color: #2AB700;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			// ligaFootball 
+		}
+	}
+}
+@media only screen and(max-width: 450px) {
+	// navbar - menu
+	#glMenu{
+		& > .container{
+			.btns-registration-login{
+				margin-top: 20px;
+				flex-direction: column;
+				width: 100%;
+				.signNotActive{
+					width: 100%;
+					margin: 20px 0 0 !important;
+					& >button{
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}
