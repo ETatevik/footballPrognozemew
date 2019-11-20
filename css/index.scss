@@ -457,29 +457,170 @@ body{
 					width: 100%;
 					border-radius: 3px;
 					border-collapse: collapse;
-					margin: 14px auto ;
-					overflow: hidden; 
+					margin: 14px 0 ;
+					overflow: hidden;
+					border: 0; 
 					tr:first-of-type{
 						border-radius: 3px;
 					}
 					th{
-						border-top: 4px solid white;
-						border-bottom: 9px solid white;
-						background:#F1F2F2;
-						padding: 8px 0;
-						font-family: $Roboto_Condensed;
-						font-size: 16px;
-						color: #808080;
-						font-weight: normal;
+						border-bottom: 1px solid #F1F2F2;
+						border-collapse: collapse;
+
+						& > span{
+							border-top: 4px solid white;
+							border-bottom: 9px solid white;
+							background:#F1F2F2;
+							padding: 8px 0;
+							font-family: $Roboto_Condensed;
+							font-size: 16px;
+							color: #808080;
+							font-weight: normal;
+							display: block;
+						}
+						
 
 						&:first-of-type{
 							border-left: 4px solid white;
-							text-align: left;
-							padding-left: 21px;
 						}
 						&:last-of-type{
 							border-right: 4px solid white;
 						}
+					}
+					td{
+						text-align: center;
+						border: 1px solid #F1F2F2;
+						padding: 15px 0 16px;
+						border-collapse: collapse;
+						&:first-of-type{
+							border-left: 0;
+						}
+						&:last-of-type{
+							border-right: 0;
+						}
+						&.teamVS{
+							& > .row{
+								justify-content: space-around;
+								align-items: center;
+								width: 100%;
+								li > span{
+									font-family: $Roboto_Condensed;
+									font-size: 16px;
+									color: #000000;
+									font-weight: normal;
+								}
+							}
+						}
+						&>a{
+							color: #F30D31;
+							text-decoration: underline;
+							transition: .4s;
+
+							&:hover{
+								color: #000000;
+								text-shadow: 0 0 3px #F30D31;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		//takeSubscription
+		#takeSubscription{
+			& > h2 {
+				text-align: center;
+				background: #2AB700;
+				border-radius: 3px;
+				padding: 9px 0 11px;
+				color: white;
+				font-size: 22px;
+				font-family: $Roboto_Condensed;
+				font-weight: 600;
+			}
+
+			& > .row{
+				.card{
+					max-width: 290.5px;
+					width: 100%;
+					background: white;
+					text-align: center;
+					border-radius: 4px;
+					& > .card-header{
+						background: #BEC1C4;
+						border-radius: 3px;
+						& > h4{
+							color: white;
+							font-weight: 600;
+							font-family: $Roboto_Condensed;
+							font-size: 16px;
+							padding: 11px 0 12px;
+						}
+					}
+					& > .card-body{
+						& > h3{
+							color: #F30D31;
+							font-weight: 600;
+							font-family: $Roboto_Condensed;
+							font-size: 38px;
+							padding: 20.4px 0 24.4px;
+						}
+
+						& > ul {
+							& > li{
+								padding: 13px 20px 13px 20px;
+								border-top: 1px solid #F1F2F2;
+								text-align: left;
+								&:last-of-type{
+									border-bottom: 1px solid #F1F2F2;
+								}
+								& > .table{
+									display: table;
+									& >.tb-row{
+										display: table-row;
+										& >.tb-cell{
+											vertical-align: middle;
+											display: table-cell;
+
+											& > svg{
+												margin-right: 18px;
+												width: 13.3px;
+												height: 13.3px;
+											}
+											font-family: $Roboto_Condensed;
+											font-size: 16px;
+											color: #000000;
+										}
+									}
+								}
+							}
+						}
+					}
+					& > .card-footer{
+						padding: 20px 8px 10px;
+						&> button{
+							border: 2px solid #F30D31;
+							color: #F30D31;
+							font-family: $Roboto_Condensed;
+							font-weight: 600;
+							font-size: 18px;
+							border-radius: 3px;
+							padding: 10px;
+							width: 100%;
+							display: block;
+						}
+					}
+				}
+
+				.col-cards{
+					margin: 14px 0;
+					padding: 0 8px; 
+
+					&:first-of-type{
+						padding-left: 0;
+					}
+					&:last-of-type{
+						padding-right: 0;
 					}
 				}
 			}
