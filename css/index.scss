@@ -176,6 +176,7 @@ body{
 	align-items: flex-start;
 	justify-content: space-between;
 }
+//<!-- make responsive-------------------------------------------------------------------------------------------------------------- -->
 #headerNews{
 	position: sticky;
 	background: #707070;
@@ -210,11 +211,31 @@ body{
 					display: flex;
 					flex-direction: row;
 					align-items: stretch;
+					width: 100%;
 					& > .news-img{
 						margin-right: 5px;
 						width: 70px;
 						height: 70px;
 						transition: .25s;
+						overflow: hidden;
+						position: relative;
+
+						& > img{
+							transition: .5s;
+							width: 100%;
+							height: 100%;
+						}
+
+						&:before{
+							content: '';
+							width: 100%;
+							height: 100%;
+							background: rgba(243, 13, 49, .2);
+							position: absolute;
+							opacity: 0;
+							transition:.5s;
+						}
+
 					}
 					& > .news-card-body{
 						display: flex;
@@ -241,7 +262,14 @@ body{
 
 					&:hover{
 						& > .news-img{
-							box-shadow: 0 0 5px white;
+							// box-shadow: 0 0 5px white;
+							& > img{
+								transform: scale(1.1);
+							}
+							&:before{
+								opacity: 1;
+								z-index: 2;
+							}
 						}
 
 						& .news-header{
@@ -260,16 +288,176 @@ body{
 	background: #ACAFB2;
 	width: 20%;
 	max-width: 384px;
-	padding: 6px  4px 3px;
+	padding: 4px;
 	overflow-y: auto;
 	&::-webkit-scrollbar {
 	    display: none;
 	}
 	& > .container-row{
-		
+		#successForecastsDescript{
+			.col-data{
+				width: 100%;
+				ul.row{
+					box-shadow: 0 0 5px rgba(0,0,0, .06);
+					background: white;
+					align-items: stretch;
+					& > li{
+						width: 33.33%;
+						max-width: 124px;
+						& > a{
+							padding: 14px 0 12px;
+							display: block;	
+							height: 100%;
+							text-align: center;
+							color: #808080;
+							font-size: 18px;
+							transition: .3s background,  .25s border;
+							border-bottom: 2px solid transparent;
+							font-family: $Roboto_Condensed;
+							&.active{
+								font-weight: 600;
+								color: #000000;
+								border-bottom-color: #F30D31;
+							}
+							&:hover{
+								background: #F30D31;
+								color: white;
+								border-bottom-color: #F30D31;
+								transition: .4s border;
+								font-weight: 600;
+								&.active{
+									background: white;
+									color: #000000;
+									border-bottom-color: #F30D31;
+								}
+							}
+						}
+						&:nth-of-type(2){
+							& > a{
+								position: relative;
+								&:before,
+								&:after{
+									content: '';
+									width: 1px;
+									height: 35%;
+									background: rgba(98,104,111,.5);
+									position: absolute;
+									top: 32.5%;
+								}
+								&:before{
+									left: 0;
+								}
+								&:after{
+									right: 0;
+								}
+							}
+						}	
+					}
+				}
+			}
+
+			.sucForecBox{
+				background: white;
+				border-radius: 4px;
+				margin: 6px 0;
+				overflow: hidden;
+
+				& > .defLig{
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					padding: 4px 0 6px;
+					h6{
+						background: #2AB700;
+						font-family: $Roboto_Condensed;
+						font-size: 10px;
+						font-weight: 600;
+						color: white;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						border-radius: 2px;
+						padding: 3px 5px;
+
+						& > svg{
+							margin-right: 5px;
+						}
+					}
+				}
+
+				& > .row{
+					width: 100%;
+					justify-content: space-around;
+					align-items: center;
+					text-align: center;
+
+					& > .col-lig-forec{
+						& > p{
+							color: #000000;
+							font-size: 14px;
+							font-weight: normal;
+							font-family: $Roboto_Condensed;
+							margin-top: 7px;
+						}
+
+						&.align-self-end{
+							align-self: flex-end;
+
+							& > h4{
+								color: #F30D31;
+								font-size: 40px;
+								font-weight: normal;
+								font-family: $Roboto_Condensed;
+							}
+						}
+					}
+				}
+
+				& > table{
+					border-collapse: collapse;
+					width: 100%;
+					margin-top: 15px;
+
+					th{
+						background: #F30D31;
+						border-radius: 2px 2px 0 0;
+						color: white;
+						font-size: 10px;
+						font-weight: bold;
+						font-family: $Roboto_Condensed;
+						padding: 5px;
+					}
+					td{
+						border: 1px solid #ACAFB2;
+						color: #F30D31;
+						font-size: 14px;
+						font-weight: normal;
+						font-family: $Roboto_Condensed;
+						text-align: center;
+						padding: 10px 0;
+						&:first-of-type{
+							color: #62686F;
+							font-size: 14px;
+							font-weight: bold;
+							font-family: $Roboto_Condensed;
+							text-align: left;
+							padding-left: 24px;
+						}
+					}
+				}
+			}
+		}
+
+		.green-box-for-decore{
+			height: 18px;
+			border-radius: 2px;
+			background: #2AB700;
+			margin-bottom: 4px;
+		}
 	}
 }
 
+//<!-- make responsive-------------------------------------------------------------------------------------------------------------- -->
 #pageContent{
 	width: 80%;
 	max-width: 1206px;
@@ -886,6 +1074,14 @@ body{
 						li:nth-of-type(2){
 							margin:0 16px;
 						}
+						& li > a > svg > path{
+							transition: .5s;
+						}
+						& li > a:hover{
+							&  > svg > path{
+								fill:#F30D31;
+							}
+						} 
 					}
 
 					.methPrice{

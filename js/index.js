@@ -98,5 +98,14 @@ jQuery(document).ready(function(event) {
 	{
 		jQuery('#headerNews').height((jQuery(window).height()  - jQuery('#glMenu').height() - 11) + 'px');
 		jQuery('#successForecasts').height((jQuery(window).height()  - jQuery('#glMenu').height() - 11) + 'px');
+
+
+		jQuery('#successForecastsDescript .col-data li > a').click(function(event) {
+			if (!jQuery(this).hasClass('active')) {
+				jQuery('#successForecastsDescript .col-data li > a').not(this).removeClass('active');
+				jQuery(this).addClass('active');
+			}
+			return false;
+		});
 	}
 });
