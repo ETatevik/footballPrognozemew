@@ -31,6 +31,7 @@ body{
 
 				button{
 					height: 14px;
+					background: transparent;
 					
 					&.active{
 						.tree-btn-is{
@@ -120,6 +121,7 @@ body{
 					border-radius: 3px;
 					padding: 10px 15px;
 					transition: .25s;
+					background:transparent;
 
 					&:hover{
 						background: #F30D31;
@@ -179,8 +181,77 @@ body{
 	background: #707070;
 	width: 20%;
 	max-width: 320px;
-	height: 50vh;
+	padding: 6px  4px 3px;
+	overflow-y: auto;
+	&::-webkit-scrollbar {
+	    display: none;
+	}
 	& > .container-row{
+		h3{
+			background: #F30D31;
+			border-radius: 2px;
+			color: white;
+			font-size: 12px;
+			font-family: $Roboto_Condensed;
+			font-weight: 600;
+			text-align: center;
+			padding: 5px;
+		}
+		#news-block{
+			& > .box{
+				padding: 3px 2px 10px;
+				border-top: 2px solid #777D83;
+				&:first-of-type{
+					border-top: 0;
+					margin-top: 10px;
+				}
+
+				a.news-card{
+					display: flex;
+					flex-direction: row;
+					align-items: stretch;
+					& > .news-img{
+						margin-right: 5px;
+						width: 70px;
+						height: 70px;
+						transition: .25s;
+					}
+					& > .news-card-body{
+						display: flex;
+						flex-direction: column;
+						justify-content: space-between;
+						width: 100%;
+
+
+						& > .news-header{
+							font-size: 14px;
+							color: #D9DBDE;
+							font-family: $Roboto_Condensed;
+							font-weight: normal;
+							transition: .25s;
+						}
+						& > .news-date{
+							font-size: 12px;
+							color: #BEC1C4;
+							font-family: $Roboto_Condensed;
+							font-weight: normal;
+							text-align: right;
+						}
+					}
+
+					&:hover{
+						& > .news-img{
+							box-shadow: 0 0 5px white;
+						}
+
+						& .news-header{
+							color: white  !important;
+							text-decoration: underline;
+						}
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -189,7 +260,11 @@ body{
 	background: #ACAFB2;
 	width: 20%;
 	max-width: 384px;
-	height: 50vh;
+	padding: 6px  4px 3px;
+	overflow-y: auto;
+	&::-webkit-scrollbar {
+	    display: none;
+	}
 	& > .container-row{
 		
 	}
@@ -243,6 +318,7 @@ body{
 						padding: 10px 19px;
 						position: relative;
 						overflow: hidden;
+						background: transparent;
 
 						& > span{
 							font-family: $Roboto_Condensed;
@@ -277,12 +353,13 @@ body{
 				}
 			}
 		}
-
+		//<!-- make responsive-------------------------------------------------------------------------------------------------------------- -->
+		
 		// ligaFootball
 		#ligaFootball{
 			& > nav.navbar-liga{
 				ul.row{
-					box-shadow: 0 0 2px rgba(98, 104, 111, .1);
+					box-shadow: 0 0 5px rgba(0,0,0, .06);
 					background: white;
 					margin: 10px 0 14px;
 					align-items: stretch;
@@ -348,6 +425,7 @@ body{
 				}
 				.col-data{
 					ul.row{
+						box-shadow: 0 0 5px rgba(0,0,0, .06);
 						background: white;
 						align-items: stretch;
 						& > li{
@@ -407,6 +485,7 @@ body{
 				}
 				.col-forecasts{
 					ul.row{
+						box-shadow: 0 0 5px rgba(0,0,0, .06);
 						align-items: stretch;
 						& > li{
 							width: 50%;
@@ -453,6 +532,7 @@ body{
 
 			&> .tabelForecastsLiga{
 				& > table{
+					box-shadow: 0 0 5px rgba(0,0,0, .06);
 					background: white;
 					width: 100%;
 					border-radius: 3px;
@@ -518,7 +598,7 @@ body{
 
 							&:hover{
 								color: #000000;
-								text-shadow: 0 0 3px #F30D31;
+								text-shadow: 0 0 1px #F30D31;
 							}
 						}
 					}
@@ -541,11 +621,14 @@ body{
 
 			& > .row{
 				.card{
+					box-shadow: 0 0 5px rgba(0,0,0, .06);
 					max-width: 290.5px;
 					width: 100%;
 					background: white;
 					text-align: center;
 					border-radius: 4px;
+					position: relative;
+					overflow: hidden;
 					& > .card-header{
 						background: #BEC1C4;
 						border-radius: 3px;
@@ -599,15 +682,82 @@ body{
 					& > .card-footer{
 						padding: 20px 8px 10px;
 						&> button{
-							border: 2px solid #F30D31;
-							color: #F30D31;
-							font-family: $Roboto_Condensed;
-							font-weight: 600;
-							font-size: 18px;
 							border-radius: 3px;
-							padding: 10px;
 							width: 100%;
 							display: block;
+							position: relative;
+							overflow: hidden;
+							background: transparent;
+
+							& > span{
+								border: 2px solid #F30D31;
+								color: #F30D31;
+								font-family: $Roboto_Condensed;
+								font-weight: 600;
+								font-size: 18px;
+								padding: 10px;
+								border-radius: 3px;
+								position: relative;
+								z-index: 5;
+								transition:color 0s .2s;
+								display: block;
+							}
+							
+							&:before{
+								content: '';
+								position: absolute;
+								width: 100%;
+								height: 100%;
+								background: #F30D31;
+								left: 0;
+								top: 100%;
+								transition: .5s;
+								z-index: 2;
+							}
+							&:hover{
+								&:before{
+									top: 0;
+								}
+								& > span{
+									color: white;
+								}
+							}
+						}
+					}
+
+					& > .card-show{
+						position: absolute;
+						width: 60%;
+						padding: 3px;
+						transform: rotate(45deg);
+						right: -18%;
+						top: 15px;
+						box-shadow: 0 5px 8px rgba(0,0,0,.5);
+
+						&.most-buy{
+							background: #F0506D;
+							& > h6{
+								color: white;
+								font-size: 12px;
+								font-family: $Roboto_Condensed;
+								font-weight: 600;
+								max-width: 100px;
+								margin: auto;
+							}
+						}
+						&.premium{
+							background: #44238B;
+							padding: 5px;
+							top: 25px;
+							right: -16%;
+							& > h6{
+								color: white;
+								font-size: 12px;
+								font-family: $Roboto_Condensed;
+								font-weight: 600;
+								max-width: 100px;
+								margin: auto;
+							}
 						}
 					}
 				}
@@ -625,9 +775,142 @@ body{
 				}
 			}
 		} 
+
+		// statistics our forecast
+		#statisticsOurForecast{
+			& > h2 {
+				text-align: center;
+				background: #2AB700;
+				border-radius: 3px;
+				padding: 9px 0 11px;
+				color: white;
+				font-size: 22px;
+				font-family: $Roboto_Condensed;
+				font-weight: 600;
+
+			}
+
+			& .proggresBars{
+				box-shadow: 0 0 5px rgba(0,0,0, .06);
+				padding: 34px 32px;
+				background: white;
+				margin: 14px 0 17px;
+				border-radius: 3px;
+
+				& > .row{
+					flex-direction: column;
+					
+					& .col-bar{
+						width: 100%;
+
+						&:first-of-type{
+							margin-bottom: 26px;
+						}
+
+						& > h5{
+							color: #000000;
+							font-size: 18px;
+							font-family: $Roboto_Condensed;
+							font-weight: 600;
+							margin-bottom: 10px;
+						}
+						& > .bar{
+							border-radius: 4px;
+							height: 8px;
+							background: #EBF2F7;
+							position: relative;
+	
+
+							&:after{
+								content: '100%';
+								font-size: 12px;
+								font-family: $Roboto_Condensed;
+								color: #818487;
+								position: absolute;
+								top: -20px;
+								right: 0;
+							}
+
+							& >.proggress{
+								position: relative;
+								height: 100%;
+								border-radius: 4px;
+								width: 0;
+								transition:.5s;
+								animation-delay: 0;
+								&>span{
+									opacity: 0;
+									color: inherit;
+									font-size: 20px;
+									font-family: $Roboto_Condensed;
+									font-weight: 600;
+									position: absolute;
+									top: -35px;
+									right: 0;
+									transition:.5s;
+								}
+
+								&.bg-prog-successful{
+									background: #2AB700;
+									color: #2AB700;
+								}
+								&.bg-prog-unsuccessful{
+									background: #F30D31;
+									color: #F30D31;
+								}
+							}
+						}
+					}
+				}
+			} 
+		}
+
+
+		// content footer
+		footer{
+			background: white;
+			padding: 26px 58px  16px;
+			box-shadow: 0 0 5px rgba(0,0,0, .06);
+			& >.container > .row{
+				justify-content: space-between;
+				align-items: center;
+				&:first-of-type{
+					padding-bottom: 21px;
+					border-bottom:1px solid #BEC1C4 ;
+				}
+				&:last-of-type{
+					padding-top: 21px;
+				}
+				.col-foot{
+					ul.row{
+						li:nth-of-type(2){
+							margin:0 16px;
+						}
+					}
+
+					.methPrice{
+						span:first-of-type{
+							margin-right: 20px;
+							font-family: $Roboto_Condensed;
+							font-weight: normal;
+							font-size: 16px;
+							color: #000000;
+						}
+					}
+
+					& > p{
+						font-family: $Roboto_Condensed;
+						font-weight: normal;
+						font-size: 16px;
+						color: #000000;
+					}
+				}
+			}
+		}
+
+		// <!-- make responsive-------------------------------------------------------------------------------------------------------------- -->
 	}
 }
-
 // media mobile start for 1130px
 @media only screen and (min-width: 1190px) and (max-width: 1500px){
 	// navbar - menu

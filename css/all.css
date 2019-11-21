@@ -27,8 +27,8 @@
   width: 100%; }
 
 .btn {
-  background: transparent -webkit-gradient(linear, left top, left bottom, from(transparent));
-  background: transparent -webkit-linear-gradient(transparent);
-  background: transparent -o-linear-gradient(transparent);
-  background: transparent linear-gradient(transparent);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent));
+  background-image: -webkit-linear-gradient(transparent);
+  background-image: -o-linear-gradient(transparent);
+  background-image: linear-gradient(transparent);
   cursor: pointer; }

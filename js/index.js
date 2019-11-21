@@ -73,4 +73,30 @@ jQuery(document).ready(function(event) {
 			return false;
 		});
 	}
+
+	// statisticsOurForecast proggresBars
+	{
+		
+
+		// when scrolling: show proggress
+		{
+			jQuery(window).scroll(function() {
+			    if( jQuery(window).scrollTop() > 950) {
+			       	jQuery('.proggress').animate({
+						width: '0px',
+						width: parseInt(jQuery(this).children('span').text())+'%'},
+						10, function() {
+							jQuery(this).css('width',parseInt(jQuery(this).children('span').text())+'%');
+							jQuery(this).children('span').css('opacity', 1);
+					});
+			    }
+			});
+		}
+	}
+
+	// headerNews & successForecasts
+	{
+		jQuery('#headerNews').height((jQuery(window).height()  - jQuery('#glMenu').height() - 11) + 'px');
+		jQuery('#successForecasts').height((jQuery(window).height()  - jQuery('#glMenu').height() - 11) + 'px');
+	}
 });
