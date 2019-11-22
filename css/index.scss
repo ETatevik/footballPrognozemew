@@ -665,7 +665,7 @@ body{
 		// <!-- make responsive-------------------------------------------------------------------------------------------------------------- -->
 	}
 }
-// media mobile start for 1130px
+// media mobile start for 798px
 
 @media only screen and(min-width: 1000px) and (max-width: 1250px) {
 	// start slider in index page
@@ -684,6 +684,59 @@ body{
 			}
 
 			// ligaFootball 
+		}
+	}
+}
+
+@media only screen and(min-width: 1130px) and(max-width: 1260px) {
+	#pageContent{
+		margin-right: 15px;
+		& > .container{
+			//takeSubscription
+			#takeSubscription{
+				& > .row{
+					flex-wrap: wrap;
+
+					.col-cards{
+						margin: 14px auto;
+						padding: 0; 
+						width: 50%;
+						.card{
+							margin: auto;
+						}
+					}
+				}
+			}
+		}
+	} 
+}
+
+@media only screen and(max-width: 1129px) {
+	#pageContent{
+		width: 100%;
+		margin-right: 16px;
+		margin-left: 13px;
+	}
+}
+
+@media only screen and(max-width: 1040px) {
+	#pageContent{
+		& > .container{
+			//takeSubscription
+			#takeSubscription{
+				& > .row{
+					flex-wrap: wrap;
+
+					.col-cards{
+						margin: 14px auto;
+						padding: 0; 
+						width: 50%;
+						.card{
+							margin: auto;
+						}
+					}
+				}
+			}
 		}
 	}
 }

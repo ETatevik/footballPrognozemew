@@ -567,6 +567,36 @@ body {
     #pageContent > .container #indexPageSilder .slide > .container-fluid {
       padding: 54px 59px; } }
 
+@media only screen and (min-width: 1130px) and (max-width: 1260px) {
+  #pageContent {
+    margin-right: 15px; }
+    #pageContent > .container #takeSubscription > .row {
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+      #pageContent > .container #takeSubscription > .row .col-cards {
+        margin: 14px auto;
+        padding: 0;
+        width: 50%; }
+        #pageContent > .container #takeSubscription > .row .col-cards .card {
+          margin: auto; } }
+
+@media only screen and (max-width: 1129px) {
+  #pageContent {
+    width: 100%;
+    margin-right: 16px;
+    margin-left: 13px; } }
+
+@media only screen and (max-width: 1040px) {
+  #pageContent > .container #takeSubscription > .row {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    #pageContent > .container #takeSubscription > .row .col-cards {
+      margin: 14px auto;
+      padding: 0;
+      width: 50%; }
+      #pageContent > .container #takeSubscription > .row .col-cards .card {
+        margin: auto; } }
+
 @media only screen and (min-width: 799px) and (max-width: 999px) {
   #pageContent > .container #indexPageSilder {
     min-height: 380px; }

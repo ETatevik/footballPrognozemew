@@ -23,11 +23,13 @@ jQuery(document).ready(function() {
 		});
 	}
 
-	// 
+	// right and left block show or hide when decstop is small 1130px
 	{
-		jQuery('#successForecasts').click(function(event) {
-			jQuery(this).toggleClass('active');
-			jQuery(this).children('.mobile-hide-block').children('.btn-open-fix').toggleClass('active');
+		jQuery('.mobile-hide-block').click(function(event) {
+			jQuery('.mobile-hide-block').not(this).parent('section').removeClass('active');
+			jQuery('.mobile-hide-block').not(this).children('.btn-open-fix').removeClass('active');
+			jQuery(this).parent('section').toggleClass('active');
+			jQuery(this).children('.btn-open-fix').toggleClass('active');
 		});
 	}
 });

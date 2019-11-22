@@ -1,5 +1,5 @@
 @import 'all.scss';
-//<!-- make responsive-------------------------------------------------------------------------------------------------------------- -->
+
 #headerNews{
 	position: sticky;
 	width: 20%;
@@ -298,7 +298,6 @@
 	}
 }
 
-
 .mobile-hide-block{
 	display: none;
 }
@@ -327,16 +326,17 @@
 	#successForecasts{
 		position: fixed;
 		right: -315px;
-		z-index: 100;
+		z-index: 200;
 		width: 100%;
 		max-width: 340px;
 		transition: .5s;
-		
+
 		&.active{
 			max-width: 100%;
 			transition: .8s 1s background,.5s 0s all;
 			background: rgba(0,0,0,.16);
 			right: 0;
+			z-index: 100;
 
 			& >.container-row{
 				background:  #ACAFB2;
@@ -344,6 +344,10 @@
 				h3{
 					visibility: visible;
 				}
+			}
+
+			& > .mobile-hide-block{
+				right: 323px;
 			}
 		}
 		& > .mobile-hide-block{
@@ -353,10 +357,11 @@
 			align-items: center;
 			width: 14px;
 			height: 100%;
-			position: absolute;
+			position: fixed;
 			z-index: 200;
 			top: 0;
-			right: 323px;
+			right: 7px;
+			transition: .5s;
 
 			& > .btn-open-fix{
 				background: #FFFFFF;
@@ -441,7 +446,7 @@
 		&  > .container-row{
 			max-width: 330px;
 			margin-left: auto;
-			background: #707070;
+			background: #919498;
 
 			& > div,
 			h3{
@@ -452,28 +457,32 @@
 	}
 }
 
-@media only screen and(max-width: 1260px) {
-	// stop
+@media only screen and(max-width: 1130px) {
 	#headerNews{
 		position: fixed;
-		left: -315px;
-		z-index: 100;
+		left: -300px;
+		z-index: 200;
 		width: 100%;
-		max-width: 340px;
+		max-width: 337px;
 		transition: .5s;
 		
 		&.active{
-			max-width: 100%;
+			max-width: calc(100% - 15px);
 			transition: .8s 1s background,.5s 0s all;
 			background: rgba(0,0,0,.16);
 			left: 0;
+			z-index: 100;
 
 			& >.container-row{
-				background:  #ACAFB2;
+				background:  #62686F;
 				& > div,
 				h3{
 					visibility: visible;
 				}
+			}
+
+			& > .mobile-hide-block{
+				left: 305px;
 			}
 		}
 		& > .mobile-hide-block{
@@ -483,10 +492,11 @@
 			align-items: center;
 			width: 14px;
 			height: 100%;
-			position: absolute;
+			position: fixed;
 			z-index: 200;
 			top: 0;
-			left: 323px;
+			left: 7px;
+			transition: .5s;
 
 			& > .btn-open-fix{
 				background: #FFFFFF;
@@ -507,7 +517,7 @@
 					width: 6px;
 					height: 6px;
 					border-radius: 100%;
-					background: #F30D31;
+					background: #323840;
 					display: inline-block;;
 
 					&:after,
@@ -517,7 +527,7 @@
 						width: 6px;
 						height: 6px;
 						border-radius: 100%;
-						background: #F30D31;
+						background: #323840;
 					}
 
 					&:before{
@@ -531,8 +541,8 @@
 				}
 
 				&:hover{
-					background: #F30D31;
-					border-color: #F30D31;
+					background: #323840;
+					border-color: #323840;
 					& >span{
 						background: white;
 						&:before,
@@ -550,18 +560,17 @@
 					}
 					& > svg{
 						display: inline;
-						transform: rotate(180deg);
 					}
 
 					&:hover{
-						background: #f30d31;
-						border-color: #f30d31;
+						background: #323840;
+						border-color: #323840;
 						& > svg > path{
 							fill:white;
 						}
 
 						&:active{
-							box-shadow: 0px 0 10px rgba(0,0,0,.5) inset;
+							box-shadow: 0px 0 10px rgba(0,0,0,.8) inset;
 						}
 					}
 				}
@@ -569,9 +578,9 @@
 		}
 
 		&  > .container-row{
-			max-width: 330px;
-			margin-left: auto;
-			background: #707070;
+			max-width: 313px;
+			margin-right: auto;
+			background: #919498;
 
 			& > div,
 			h3{
@@ -579,5 +588,9 @@
 			}
 			
 		}
+	}
+
+	#successForecasts.active{
+		max-width: calc(100% - 14px);
 	}
 }
