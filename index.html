@@ -9,6 +9,8 @@
 	<link rel="shortcut icon" href="img/logo-for-web-icon.png">
 	
 	<!-- Styles -->
+	<link rel="stylesheet" href="css/navbar.css">
+	<link rel="stylesheet" href="css/fixedLRblock.css">
 	<link rel="stylesheet" href="css/index.css">
 </head>
 <body>
@@ -85,6 +87,14 @@
 	<article class="indexContentBody row">
 		<!-- make responsive-------------------------------------------------------------------------------------------------------------- -->
 		<section id="headerNews">
+			<div class="mobile-hide-block">
+				<button class="btn btn-open-fix" type="button">
+					<span class="circle"></span>
+					<svg xmlns="http://www.w3.org/2000/svg" width="12" height="11" viewBox="0 0 12.259 11.967">
+					  	<path id="Path_8977" data-name="Path 8977" d="M52.159,29.334,46.591,23.72a1.238,1.238,0,0,0-1.751,1.751l2.6,2.649H41.135a1.235,1.235,0,1,0,0,2.47h6.287l-2.6,2.6a1.238,1.238,0,0,0,1.751,1.751l5.568-5.591v-.022Z" transform="translate(52.159 35.318) rotate(180)" fill="#323840"/>
+					</svg>
+				</button>
+			</div>
 			<div class="container-row">
 				<h3>Главные новости дня</h3>
 				<div id="news-block">
@@ -647,7 +657,7 @@
 				 				<p>&copy; «DFC777», 2019</p>
 				 			</div>
 				 			<div class="col-foot">
-				 				<p>Политика конфиденциальности</p>
+				 				<p><a href="#">Политика конфиденциальности</a></p>
 				 			</div>
 				 		</div>
 				 	</div>
@@ -656,7 +666,15 @@
 
 			</div>
 		</section>
-		<section id="successForecasts" >
+		<section id="successForecasts">
+			<div class="mobile-hide-block">
+				<button class="btn btn-open-fix" type="button">
+					<span class="circle"></span>
+					<svg xmlns="http://www.w3.org/2000/svg" width="12" height="11" viewBox="0 0 12.259 11.967">
+					  	<path id="Path_8977" data-name="Path 8977" d="M52.159,29.334,46.591,23.72a1.238,1.238,0,0,0-1.751,1.751l2.6,2.649H41.135a1.235,1.235,0,1,0,0,2.47h6.287l-2.6,2.6a1.238,1.238,0,0,0,1.751,1.751l5.568-5.591v-.022Z" transform="translate(52.159 35.318) rotate(180)" fill="#f30d31"/>
+					</svg>
+				</button>
+			</div>
 			<div class="container-row">
 				<div class="green-box-for-decore"></div>
 				<div id="successForecastsDescript">
@@ -944,10 +962,11 @@
 	</article>
 	<!-- end page content -->
 
-
-
 	<!-- Script -->
 	<script src="js/jquery-3.4.1.min.js"></script>
+	<script src="js/navbar.js"></script>
+	<script src="js/fixedLRblock.js"></script>
 	<script src="js/index.js"></script>
+	<script src="js/updateJs.js"></script>
 </body>
 </html>

@@ -1,0 +1,300 @@
+@import 'all.scss';
+// navbar - menu
+#glMenu{
+	background: lighten(#323840, 0%);
+	border-top: 2px solid #F30D31;
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+
+	& > .container{
+		padding: 12px 24px 14px;
+
+		.logo-body{
+			display: flex;
+			justify-content: space-between;
+			width: 189.62px;
+	
+			.menu-tree-mb{
+				display: flex;
+				align-items: center;
+
+				display: none;
+
+				button{
+					height: 14px;
+					background: transparent;
+					
+					&.active{
+						.tree-btn-is{
+							background: transparent;
+
+							&:after{
+								transform: rotate(-45deg);
+								top: 0px;
+							}
+							&:before{
+								transform: rotate(45deg);
+								top: 0px;
+							}
+						}
+					}
+
+					.tree-btn-is{
+						width: 24px;
+						height: 2px;
+						background: white;
+						display: block;
+						position: relative;
+						transition: .5s;
+
+						&:after,
+						&:before{
+							content: '';
+							width: 24px;
+							height: 2px;
+							background: white;
+							display: block;
+							position: absolute;
+							transition: .5s;
+						}
+						&:after{
+							top: 4px;
+						}
+
+						&:before{
+							top: -4px;
+						}
+					}
+				}
+			}
+		}
+
+		.nav-body{
+			margin-left: auto;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 80%;
+			max-width: 1390px;
+
+			.menu-football-gl{
+				display: flex;
+				max-width: 967px;
+				width: 100%;
+				& > li{
+					>  a{
+						font-family: $Roboto_Condensed;
+						font-weight: 600;
+						font-size: 18px;
+						color: white;
+						border-right: 1px solid #999CA0;
+						padding: 0 25px;
+					}
+					&:last-of-type > a{
+						border: 0;
+					} 
+				}
+			}
+		}
+
+		.btns-registration-login{
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			width: 20%;
+			.signNotActive{
+				& >button{
+					color: white;
+					font-size: 18px;
+					font-weight: 600;
+					font-family: $Roboto_Condensed;
+					border: 2px solid white;
+					border-radius: 3px;
+					padding: 10px 15px;
+					transition: .25s;
+					background:transparent;
+
+					&:hover{
+						background: #F30D31;
+						border-color: #F30D31;
+					}
+				}
+				&.signUpActive > button {
+					background: #F30D31;
+					border:0;
+					padding: 12px 15px;
+					&:hover{
+						background: #62686f;
+					}
+				}
+
+				&:first-of-type{
+					margin-right: 20px;
+					& > button{
+						padding: 10px 35px;
+					}
+				}
+			}
+
+			.signActive{
+				color: white;
+				font-size: 18px;
+				font-family: $Roboto_Condensed;
+				border: 2px solid white;
+				border-radius: 3px;
+				padding-left: 12px;
+				overflow: hidden;
+				max-width: 184px;
+				width: 100%;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+
+				button{
+					padding: 12px;
+					background: #F30D31
+				}
+
+				display: none;
+			}
+		}
+	}
+}
+
+
+// media mobile start for 1130px
+@media only screen and (min-width: 1190px) and (max-width: 1500px){
+	// navbar - menu
+	#glMenu{
+		
+		& > .container{
+			padding: 15px 12px;
+			.nav-body{
+				width: 95%;
+
+				.menu-football-gl{
+					width: 90%;
+					justify-content: flex-end;
+					& > li{
+						>  a{
+							padding: 0 15px;
+						}
+					}
+				}
+			}
+
+			.btns-registration-login{
+				width: auto;
+			}
+		}
+	}	
+}
+
+@media only screen and (min-width: 1129px) and (max-width: 1190px){
+	// navbar - menu
+	#glMenu{
+		
+		& > .container{
+			padding: 15px 10px;
+			.nav-body{
+				width: 95%;
+
+				.menu-football-gl{
+					width: 100%;
+					justify-content: flex-end;
+					& > li{
+						>  a{
+							padding: 0 10px;
+						}
+					}
+				}
+			}
+
+			.signNotActive:first-of-type  > button {
+				padding: 10px 20px !important;
+			}
+
+			.btns-registration-login{
+				width: auto;
+			}
+		}
+	}	
+}
+
+@media only screen  and (max-width: 1129px) {
+	// navbar - menu
+	#glMenu{
+		& > .container{
+			padding: 12px 20px 14px 10px;
+
+			.row{
+				flex-direction: column;
+			}
+
+			.logo-body{
+				width: 100%;
+
+				.menu-tree-mb{
+					display: flex !important;
+				}
+			}
+
+			.nav-body{
+				margin-left: auto;
+				display: flex;
+				justify-content: space-between;
+				flex-direction: column;
+				align-items: center;
+				width: 100%;
+				overflow: hidden;
+
+				.menu-football-gl{
+					margin-top: 20px;
+					width: 100%;
+					flex-direction: column;
+					justify-content: center;
+					border-top: 1px solid #999CA0;
+					border-bottom: 1px solid #999CA0;
+					& > li{
+						text-align: center;
+						padding: 10px 0;
+						>  a{
+							border: 0px;
+							padding: 0px;
+						}
+					}
+				}
+
+				&.hide{
+					display: none;
+				}
+			}
+
+			.btns-registration-login{
+				margin-top: 20px;
+				justify-content: center;
+			}
+		}
+	}
+}
+
+@media only screen and(max-width: 450px) {
+	// navbar - menu
+	#glMenu{
+		& > .container{
+			.btns-registration-login{
+				margin-top: 20px;
+				flex-direction: column;
+				width: 100%;
+				.signNotActive{
+					width: 100%;
+					margin: 20px 0 0 !important;
+					& >button{
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}
