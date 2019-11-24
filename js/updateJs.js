@@ -20,6 +20,15 @@ jQuery(document).ready(function() {
 				jQuery('#headerNews').height((jQuery(window).height()  - jQuery('#glMenu').height()) + 'px');
 				jQuery('#successForecasts').height((jQuery(window).height()  - jQuery('#glMenu').height()) + 'px');
 			}
+
+			// pagecontent football liga menu navbar
+			{
+				if(jQuery(window).width() < 799){
+					jQuery('#ligaFootball .navbar-liga li > a').not('#ligaFootball .navbar-liga li > a.active').slideUp(0);
+				}else{
+					jQuery('#ligaFootball .navbar-liga li > a').not('#ligaFootball .navbar-liga li > a.active').slideDown(0);
+				}
+			}
 		});
 	}
 });

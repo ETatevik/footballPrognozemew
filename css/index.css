@@ -7,7 +7,8 @@
   list-style: none;
   text-decoration: none;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  font-family: "Roboto Condensed", sans-serif; }
 
 .container {
   max-width: 1920px;
@@ -32,6 +33,7 @@
   background-image: -webkit-linear-gradient(transparent);
   background-image: -o-linear-gradient(transparent);
   background-image: linear-gradient(transparent);
+  background-color: transparent;
   cursor: pointer; }
 
 body {
@@ -152,6 +154,8 @@ body {
             background: white;
             color: #000000;
             border-bottom-color: #F30D31; }
+        #pageContent > .container #ligaFootball > nav.navbar-liga ul.row > li > a > .aw-bt {
+          display: none; }
       #pageContent > .container #ligaFootball > nav.navbar-liga ul.row > li:nth-of-type(2) > a {
         position: relative; }
         #pageContent > .container #ligaFootball > nav.navbar-liga ul.row > li:nth-of-type(2) > a:before, #pageContent > .container #ligaFootball > nav.navbar-liga ul.row > li:nth-of-type(2) > a:after {
@@ -284,14 +288,18 @@ body {
         font-weight: normal;
         display: block; }
       #pageContent > .container #ligaFootball > .tabelForecastsLiga > table th:first-of-type {
-        border-left: 4px solid white; }
+        border-left: 4px solid white;
+        border-radius: 3px 0 0 3px; }
       #pageContent > .container #ligaFootball > .tabelForecastsLiga > table th:last-of-type {
-        border-right: 4px solid white; }
+        border-right: 4px solid white;
+        border-radius: 0 3px 3px 0; }
     #pageContent > .container #ligaFootball > .tabelForecastsLiga > table td {
       text-align: center;
       border: 1px solid #F1F2F2;
       padding: 15px 0 16px;
-      border-collapse: collapse; }
+      border-collapse: collapse;
+      font-family: "Roboto Condensed", sans-serif;
+      font-size: 16px; }
       #pageContent > .container #ligaFootball > .tabelForecastsLiga > table td:first-of-type {
         border-left: 0; }
       #pageContent > .container #ligaFootball > .tabelForecastsLiga > table td:last-of-type {
@@ -313,7 +321,9 @@ body {
         text-decoration: underline;
         -webkit-transition: .4s;
         -o-transition: .4s;
-        transition: .4s; }
+        transition: .4s;
+        font-size: 16px;
+        font-family: "Roboto Condensed", sans-serif; }
         #pageContent > .container #ligaFootball > .tabelForecastsLiga > table td > a:hover {
           color: #000000;
           text-shadow: 0 0 1px #F30D31; }
@@ -580,10 +590,14 @@ body {
         #pageContent > .container #takeSubscription > .row .col-cards .card {
           margin: auto; } }
 
-@media only screen and (max-width: 1129px) {
+@media only screen and (min-width: 1130px) and (max-width: 1449px) {
+  #pageContent {
+    margin-right: 14px; } }
+
+@media only screen and (max-width: 1130px) {
   #pageContent {
     width: 100%;
-    margin-right: 16px;
+    margin-right: 14px;
     margin-left: 13px; } }
 
 @media only screen and (max-width: 1040px) {
@@ -603,31 +617,309 @@ body {
     #pageContent > .container #indexPageSilder .slide > .container-fluid {
       padding: 32px 28px; } }
 
-@media only screen and (max-width: 798px) {
-  #pageContent > .container #indexPageSilder {
-    min-height: 148px; }
-    #pageContent > .container #indexPageSilder .slide > .container-fluid {
-      padding: 4px 8px; }
-      #pageContent > .container #indexPageSilder .slide > .container-fluid > h1 {
-        font-size: 18px; }
-      #pageContent > .container #indexPageSilder .slide > .container-fluid > p {
-        font-size: 9px;
-        max-width: 228px;
-        line-height: 13px;
-        margin: 9px 0 18px; }
-      #pageContent > .container #indexPageSilder .slide > .container-fluid > .moreInfo {
-        border: 0;
-        padding: 0; }
-        #pageContent > .container #indexPageSilder .slide > .container-fluid > .moreInfo > span {
-          font-family: "Roboto Condensed", sans-serif;
-          font-weight: 600;
-          font-size: 12px;
-          color: #F30D31;
-          text-decoration: underline; }
-        #pageContent > .container #indexPageSilder .slide > .container-fluid > .moreInfo:before {
+@media only screen and (max-width: 799px) {
+  #pageContent {
+    width: 96%;
+    margin-right: 15px;
+    margin-left: 15px; }
+    #pageContent > .container #indexPageSilder {
+      min-height: 148px; }
+      #pageContent > .container #indexPageSilder .slide {
+        background-position: right top !important; }
+        #pageContent > .container #indexPageSilder .slide > .container-fluid {
+          padding: 4px 8px; }
+          #pageContent > .container #indexPageSilder .slide > .container-fluid > h1 {
+            font-size: 18px; }
+          #pageContent > .container #indexPageSilder .slide > .container-fluid > p {
+            font-size: 9px;
+            max-width: 228px;
+            line-height: 13px;
+            margin: 9px 0 18px; }
+          #pageContent > .container #indexPageSilder .slide > .container-fluid > .moreInfo {
+            border: 0;
+            padding: 0; }
+            #pageContent > .container #indexPageSilder .slide > .container-fluid > .moreInfo > span {
+              font-size: 12px;
+              color: #F30D31;
+              text-decoration: underline; }
+            #pageContent > .container #indexPageSilder .slide > .container-fluid > .moreInfo:before {
+              display: none; }
+            #pageContent > .container #indexPageSilder .slide > .container-fluid > .moreInfo:hover:before {
+              display: none;
+              left: 100%; }
+            #pageContent > .container #indexPageSilder .slide > .container-fluid > .moreInfo:hover > span {
+              color: #2AB700; }
+    #pageContent > .container #ligaFootball > nav.navbar-liga ul.row {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      margin: 6px 0;
+      -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+      align-items: stretch; }
+      #pageContent > .container #ligaFootball > nav.navbar-liga ul.row > li {
+        width: 100%;
+        max-width: 100%; }
+        #pageContent > .container #ligaFootball > nav.navbar-liga ul.row > li > a {
+          padding: 8px 0;
+          text-align: left;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+          justify-content: space-between; }
+          #pageContent > .container #ligaFootball > nav.navbar-liga ul.row > li > a > span {
+            padding-left: 27px; }
+          #pageContent > .container #ligaFootball > nav.navbar-liga ul.row > li > a > .aw-bt {
+            margin-right: 10px;
+            width: 20px;
+            height: 20px;
+            background: #F30D31;
+            border-radius: 50%;
+            text-align: center;
+            -webkit-transition: .5s;
+            -o-transition: .5s;
+            transition: .5s; }
+          #pageContent > .container #ligaFootball > nav.navbar-liga ul.row > li > a.active {
+            font-weight: 600;
+            color: #000000;
+            border-bottom-color: #F30D31; }
+            #pageContent > .container #ligaFootball > nav.navbar-liga ul.row > li > a.active > .aw-bt {
+              display: block;
+              -webkit-transform: rotate(0deg);
+              -ms-transform: rotate(0deg);
+              transform: rotate(0deg); }
+          #pageContent > .container #ligaFootball > nav.navbar-liga ul.row > li > a:hover, #pageContent > .container #ligaFootball > nav.navbar-liga ul.row > li > a:hover.active {
+            background: #F30D31;
+            color: white;
+            border-bottom-color: #F30D31;
+            -webkit-transition: .4s border;
+            -o-transition: .4s border;
+            transition: .4s border;
+            font-weight: 600; }
+          #pageContent > .container #ligaFootball > nav.navbar-liga ul.row > li > a:hover.active > .aw-bt {
+            background: white;
+            -webkit-transform: rotate(0deg);
+            -ms-transform: rotate(0deg);
+            transform: rotate(0deg); }
+            #pageContent > .container #ligaFootball > nav.navbar-liga ul.row > li > a:hover.active > .aw-bt svg > path {
+              fill: #F30D31; }
+          #pageContent > .container #ligaFootball > nav.navbar-liga ul.row > li > a:hover > .aw-bt {
+            display: block;
+            background: white;
+            -webkit-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            transform: rotate(180deg); }
+            #pageContent > .container #ligaFootball > nav.navbar-liga ul.row > li > a:hover > .aw-bt svg > path {
+              fill: #F30D31; }
+        #pageContent > .container #ligaFootball > nav.navbar-liga ul.row > li:nth-of-type(2) > a {
+          border-top: 1px solid #EBECEC;
+          border-bottom: 1px solid #EBECEC; }
+          #pageContent > .container #ligaFootball > nav.navbar-liga ul.row > li:nth-of-type(2) > a:before, #pageContent > .container #ligaFootball > nav.navbar-liga ul.row > li:nth-of-type(2) > a:after {
+            display: none; }
+    #pageContent > .container #ligaFootball > .discription-navbarLiga .row {
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+    #pageContent > .container #ligaFootball > .discription-navbarLiga .col-data {
+      width: 100%;
+      margin-top: 6px;
+      margin-bottom: 6px; }
+      #pageContent > .container #ligaFootball > .discription-navbarLiga .col-data ul.row {
+        -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.06);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.06);
+        background: white;
+        -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+        align-items: stretch;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row; }
+        #pageContent > .container #ligaFootball > .discription-navbarLiga .col-data ul.row > li {
+          width: 33.33%;
+          min-width: 110px; }
+          #pageContent > .container #ligaFootball > .discription-navbarLiga .col-data ul.row > li > a {
+            padding: 12px 0;
+            font-size: 14px; }
+    #pageContent > .container #ligaFootball > .discription-navbarLiga .col-forecasts {
+      width: 100%; }
+      #pageContent > .container #ligaFootball > .discription-navbarLiga .col-forecasts ul.row {
+        -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.06);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.06);
+        -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+        align-items: stretch;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between; }
+        #pageContent > .container #ligaFootball > .discription-navbarLiga .col-forecasts ul.row > li {
+          width: auto;
+          min-width: auto;
+          position: static; }
+          #pageContent > .container #ligaFootball > .discription-navbarLiga .col-forecasts ul.row > li > a {
+            padding: 12px 10px; }
+    #pageContent > .container #ligaFootball > .tabelForecastsLiga > table {
+      margin: 0px 0 6px; }
+      #pageContent > .container #ligaFootball > .tabelForecastsLiga > table tr:first-of-type {
+        border-radius: 3px;
+        overflow: hidden; }
+      #pageContent > .container #ligaFootball > .tabelForecastsLiga > table th {
+        border-bottom: 1px solid #F1F2F2;
+        border-collapse: collapse; }
+        #pageContent > .container #ligaFootball > .tabelForecastsLiga > table th > span {
+          padding: 10px 0;
+          font-size: 12px; }
+        #pageContent > .container #ligaFootball > .tabelForecastsLiga > table th:first-of-type {
           display: none; }
-        #pageContent > .container #indexPageSilder .slide > .container-fluid > .moreInfo:hover:before {
-          display: none;
-          left: 100%; }
-        #pageContent > .container #indexPageSilder .slide > .container-fluid > .moreInfo:hover > span {
-          color: #2AB700; } }
+        #pageContent > .container #ligaFootball > .tabelForecastsLiga > table th:nth-of-type(2) {
+          border-left: 4px solid white;
+          border-radius: 3px 0 0 3px;
+          text-align: left;
+          padding-left: 12px; }
+      #pageContent > .container #ligaFootball > .tabelForecastsLiga > table td {
+        text-align: center;
+        border: 1px solid #F1F2F2;
+        padding: 15px 0 16px;
+        border-collapse: collapse;
+        font-size: 14px; }
+        #pageContent > .container #ligaFootball > .tabelForecastsLiga > table td:first-of-type {
+          display: none; }
+        #pageContent > .container #ligaFootball > .tabelForecastsLiga > table td:nth-of-type(2) {
+          border-left: 0; }
+        #pageContent > .container #ligaFootball > .tabelForecastsLiga > table td:last-of-type {
+          border-right: 0; }
+        #pageContent > .container #ligaFootball > .tabelForecastsLiga > table td.teamVS > .row {
+          -ms-flex-pack: distribute;
+          justify-content: space-around;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          width: 100%; }
+          #pageContent > .container #ligaFootball > .tabelForecastsLiga > table td.teamVS > .row .teamStart,
+          #pageContent > .container #ligaFootball > .tabelForecastsLiga > table td.teamVS > .row .teamEnd {
+            display: none; }
+          #pageContent > .container #ligaFootball > .tabelForecastsLiga > table td.teamVS > .row li {
+            width: 100%;
+            text-align: left;
+            padding-left: 12px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-align: start;
+            -ms-flex-align: start;
+            align-items: flex-start;
+            font-size: 12px;
+            color: #808080;
+            line-height: 20px; }
+            #pageContent > .container #ligaFootball > .tabelForecastsLiga > table td.teamVS > .row li > span {
+              font-size: 14px;
+              background: #F30D31;
+              border-radius: 2px;
+              display: inline-block;
+              padding: 4px;
+              color: white; }
+        #pageContent > .container #ligaFootball > .tabelForecastsLiga > table td > a {
+          color: #F30D31;
+          text-decoration: underline;
+          -webkit-transition: .4s;
+          -o-transition: .4s;
+          transition: .4s;
+          font-size: 14px; }
+          #pageContent > .container #ligaFootball > .tabelForecastsLiga > table td > a:hover {
+            color: #000000;
+            text-shadow: 0 0 1px #F30D31; }
+    #pageContent > .container #takeSubscription > h2 {
+      padding: 8px 0;
+      font-size: 16px; }
+    #pageContent > .container #takeSubscription > .row {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+      #pageContent > .container #takeSubscription > .row .card {
+        max-width: 335px; }
+      #pageContent > .container #takeSubscription > .row .col-cards {
+        margin: 6px auto;
+        padding: 0;
+        width: 100%; }
+    #pageContent > .container #statisticsOurForecast > h2 {
+      padding: 8px 0;
+      font-size: 16px; }
+    #pageContent > .container #statisticsOurForecast .proggresBars {
+      padding: 16px 14px 29px;
+      margin: 12px 0 18px; }
+      #pageContent > .container #statisticsOurForecast .proggresBars > .row {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column; }
+        #pageContent > .container #statisticsOurForecast .proggresBars > .row .col-bar > h5 {
+          font-size: 14px; }
+        #pageContent > .container #statisticsOurForecast .proggresBars > .row .col-bar > .bar > .proggress {
+          position: relative;
+          height: 100%;
+          border-radius: 4px;
+          width: 0;
+          -webkit-transition: .5s;
+          -o-transition: .5s;
+          transition: .5s;
+          -webkit-animation-delay: 0;
+          animation-delay: 0; }
+          #pageContent > .container #statisticsOurForecast .proggresBars > .row .col-bar > .bar > .proggress > span {
+            font-size: 16px;
+            top: -27px; }
+    #pageContent > .container footer {
+      padding: 29px 0px  16px; }
+      #pageContent > .container footer > .container > .row {
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start; }
+        #pageContent > .container footer > .container > .row:first-of-type {
+          padding-bottom: 14px; }
+        #pageContent > .container footer > .container > .row .col-foot ul.row {
+          padding-right: 12px; }
+        #pageContent > .container footer > .container > .row .col-foot .methPrice {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          padding-left: 12px; }
+          #pageContent > .container footer > .container > .row .col-foot .methPrice span:first-of-type {
+            margin-right: 0px;
+            margin-bottom: 22.5px;
+            font-size: 14px; }
+        #pageContent > .container footer > .container > .row .col-foot > p {
+          text-align: center;
+          width: 100%; }
+          #pageContent > .container footer > .container > .row .col-foot > p > a {
+            font-size: 14px; }
+        #pageContent > .container footer > .container > .row .col-foot.order-mb-1 {
+          -webkit-box-ordinal-group: 2;
+          -ms-flex-order: 1;
+          order: 1; }
+        #pageContent > .container footer > .container > .row .col-foot.order-mb-2 {
+          -webkit-box-ordinal-group: 3;
+          -ms-flex-order: 2;
+          order: 2; }
+        #pageContent > .container footer > .container > .row:last-of-type > .col-foot:first-of-type {
+          display: none; }
+        #pageContent > .container footer > .container > .row:last-of-type > .col-foot {
+          width: 100%; } }

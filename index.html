@@ -11,9 +11,36 @@
 	<!-- Styles -->
 	<link rel="stylesheet" href="css/navbar.css">
 	<link rel="stylesheet" href="css/fixedLRblock.css">
+	<link rel="stylesheet" href="css/modals.css">
 	<link rel="stylesheet" href="css/index.css">
 </head>
 <body>
+	<!-- modlas -->
+	<div class="modal" id="login-modal">
+		<div class="modal-body">
+			<div class="modal-container">
+				<h3>Вход</h3>
+				<form action="">
+					<div class="form-col">
+						<label  for="loginMD">
+							<span>Логин</span>
+							<input type="text" id="loginMD">
+						</label>
+						<div class="invalid">* Error</div> <!--input class error-->
+					</div>
+					<div class="form-col">
+						<label for="passMD">
+							<span>Пароль</span>
+							<input type="password" id="passMD">
+						</label>
+						<div class="invalid">* Error</div> <!--input class error-->
+					</div>
+					<div class="form-col btn-submit"><button type="submit" class="btn">Войти</button></div>
+					<div class="form-col btn-link"><button type="button" class="btn forgotPassword">ЗАБЫЛИЫ ПАРОЛЬ?</button></div>
+				</form>
+			</div>
+		</div>
+	</div>
 	
 	<!-- start navbar - menu -->
 	<nav id="glMenu">
@@ -240,9 +267,36 @@
 				<div id="ligaFootball">
 					<nav class="navbar-liga">
 						<ul class="row">
-							<li><a class="active" href="#">Лига чемпионов УЕФА</a></li>
-							<li><a href="#">Лига Европы УЕФА</a></li>
-							<li><a href="#">Премьер-лига</a></li>
+							<li>
+								<a class="active" href="#">
+									<span>Лига чемпионов УЕФА</span>
+									<div class="aw-bt">
+										<svg xmlns="http://www.w3.org/2000/svg" width="11.967" height="12.259" viewBox="0 0 11.967 12.259">
+										  	<path id="Path_8977" data-name="Path 8977" d="M52.159,29.334,46.591,23.72a1.238,1.238,0,0,0-1.751,1.751l2.6,2.649H41.135a1.235,1.235,0,1,0,0,2.47h6.287l-2.6,2.6a1.238,1.238,0,0,0,1.751,1.751l5.568-5.591v-.022Z" transform="translate(35.318 -39.9) rotate(90)" fill="#fff"/>
+										</svg>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span>Лига Европы УЕФА</span>
+									<div class="aw-bt">
+										<svg xmlns="http://www.w3.org/2000/svg" width="11.967" height="12.259" viewBox="0 0 11.967 12.259">
+										  	<path id="Path_8977" data-name="Path 8977" d="M52.159,29.334,46.591,23.72a1.238,1.238,0,0,0-1.751,1.751l2.6,2.649H41.135a1.235,1.235,0,1,0,0,2.47h6.287l-2.6,2.6a1.238,1.238,0,0,0,1.751,1.751l5.568-5.591v-.022Z" transform="translate(35.318 -39.9) rotate(90)" fill="#fff"/>
+										</svg>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<span>Премьер-лига</span>
+									<div class="aw-bt">
+										<svg xmlns="http://www.w3.org/2000/svg" width="11.967" height="12.259" viewBox="0 0 11.967 12.259">
+										  	<path id="Path_8977" data-name="Path 8977" d="M52.159,29.334,46.591,23.72a1.238,1.238,0,0,0-1.751,1.751l2.6,2.649H41.135a1.235,1.235,0,1,0,0,2.47h6.287l-2.6,2.6a1.238,1.238,0,0,0,1.751,1.751l5.568-5.591v-.022Z" transform="translate(35.318 -39.9) rotate(90)" fill="#fff"/>
+										</svg>
+									</div>
+								</a>
+							</li>
 						</ul>
 					</nav>
 					<div class="discription-navbarLiga">
@@ -275,7 +329,7 @@
 								<td class="teamVS">
 									<ul class="row">
 										<li class="teamStart"><img src="img/tabelForecastsLiga/st1.png" alt="start" ></li>
-										<li><span>ЭЙБАР   vs   БАРСЕЛОНА</span></li>
+										<li><span class="teamLiga">ЭЙБАР</span>   vs   <span class="teamLiga">БАРСЕЛОНА</span></li>
 										<li class="teamEnd"><img src="img/tabelForecastsLiga/en1.png" alt="end" ></li>
 									</ul>
 								</td>
@@ -287,7 +341,7 @@
 								<td class="teamVS">
 									<ul class="row">
 										<li class="teamStart"><img src="img/tabelForecastsLiga/st1.png" alt="start" ></li>
-										<li><span>ЭЙБАР   vs   БАРСЕЛОНА</span></li>
+										<li><span class="teamLiga">ЭЙБАР</span>   vs   <span class="teamLiga">БАРСЕЛОНА</span></li>
 										<li class="teamEnd"><img src="img/tabelForecastsLiga/en1.png" alt="end" ></li>
 									</ul>
 								</td>
@@ -299,7 +353,7 @@
 								<td class="teamVS">
 									<ul class="row">
 										<li class="teamStart"><img src="img/tabelForecastsLiga/st1.png" alt="start" ></li>
-										<li><span>ЭЙБАР   vs   БАРСЕЛОНА</span></li>
+										<li><span class="teamLiga">ЭЙБАР</span>   vs   <span class="teamLiga">БАРСЕЛОНА</span></li>
 										<li class="teamEnd"><img src="img/tabelForecastsLiga/en1.png" alt="end" ></li>
 									</ul>
 								</td>
@@ -311,7 +365,7 @@
 								<td class="teamVS">
 									<ul class="row">
 										<li class="teamStart"><img src="img/tabelForecastsLiga/st1.png" alt="start" ></li>
-										<li><span>ЭЙБАР   vs   БАРСЕЛОНА</span></li>
+										<li><span class="teamLiga">ЭЙБАР</span>   vs   <span class="teamLiga">БАРСЕЛОНА</span></li>
 										<li class="teamEnd"><img src="img/tabelForecastsLiga/en1.png" alt="end" ></li>
 									</ul>
 								</td>
@@ -323,7 +377,7 @@
 								<td class="teamVS">
 									<ul class="row">
 										<li class="teamStart"><img src="img/tabelForecastsLiga/st1.png" alt="start" ></li>
-										<li><span>ЭЙБАР   vs   БАРСЕЛОНА</span></li>
+										<li><span class="teamLiga">ЭЙБАР</span>   vs   <span class="teamLiga">БАРСЕЛОНА</span></li>
 										<li class="teamEnd"><img src="img/tabelForecastsLiga/en1.png" alt="end" ></li>
 									</ul>
 								</td>
@@ -335,7 +389,7 @@
 								<td class="teamVS">
 									<ul class="row">
 										<li class="teamStart"><img src="img/tabelForecastsLiga/st1.png" alt="start" ></li>
-										<li><span>ЭЙБАР   vs   БАРСЕЛОНА</span></li>
+										<li><span class="teamLiga">ЭЙБАР</span>   vs   <span class="teamLiga">БАРСЕЛОНА</span></li>
 										<li class="teamEnd"><img src="img/tabelForecastsLiga/en1.png" alt="end" ></li>
 									</ul>
 								</td>
@@ -347,7 +401,7 @@
 								<td class="teamVS">
 									<ul class="row">
 										<li class="teamStart"><img src="img/tabelForecastsLiga/st1.png" alt="start" ></li>
-										<li><span>ЭЙБАР   vs   БАРСЕЛОНА</span></li>
+										<li><span class="teamLiga">ЭЙБАР</span>   vs   <span class="teamLiga">БАРСЕЛОНА</span></li>
 										<li class="teamEnd"><img src="img/tabelForecastsLiga/en1.png" alt="end" ></li>
 									</ul>
 								</td>
@@ -359,7 +413,7 @@
 								<td class="teamVS">
 									<ul class="row">
 										<li class="teamStart"><img src="img/tabelForecastsLiga/st1.png" alt="start" ></li>
-										<li><span>ЭЙБАР   vs   БАРСЕЛОНА</span></li>
+										<li><span class="teamLiga">ЭЙБАР</span>   vs   <span class="teamLiga">БАРСЕЛОНА</span></li>
 										<li class="teamEnd"><img src="img/tabelForecastsLiga/en1.png" alt="end" ></li>
 									</ul>
 								</td>
@@ -371,7 +425,7 @@
 								<td class="teamVS">
 									<ul class="row">
 										<li class="teamStart"><img src="img/tabelForecastsLiga/st1.png" alt="start" ></li>
-										<li><span>ЭЙБАР   vs   БАРСЕЛОНА</span></li>
+										<li><span class="teamLiga">ЭЙБАР</span>   vs   <span class="teamLiga">БАРСЕЛОНА</span></li>
 										<li class="teamEnd"><img src="img/tabelForecastsLiga/en1.png" alt="end" ></li>
 									</ul>
 								</td>
@@ -383,7 +437,7 @@
 								<td class="teamVS">
 									<ul class="row">
 										<li class="teamStart"><img src="img/tabelForecastsLiga/st1.png" alt="start" ></li>
-										<li><span>ЭЙБАР   vs   БАРСЕЛОНА</span></li>
+										<li><span class="teamLiga">ЭЙБАР</span>   vs   <span class="teamLiga">БАРСЕЛОНА</span></li>
 										<li class="teamEnd"><img src="img/tabelForecastsLiga/en1.png" alt="end" ></li>
 									</ul>
 								</td>
@@ -603,7 +657,7 @@
 				<footer>
 				 	<div class="container">
 				 		<div class="row">
-				 			<div class="col-foot">
+				 			<div class="col-foot order-mb-2">
 				 				<ul class="row">
 				 					<li>
 				 						<a href="#">
@@ -628,7 +682,7 @@
 				 					</li>
 				 				</ul>
 				 			</div>
-				 			<div class="col-foot">
+				 			<div class="col-foot order-mb-1">
 				 				<p class="row methPrice">
 				 					<span>К оплате приниматься</span> 
 									<span>
@@ -961,6 +1015,7 @@
 	<script src="js/jquery-3.4.1.min.js"></script>
 	<script src="js/navbar.js"></script>
 	<script src="js/fixedLRblock.js"></script>
+	<script src="js/modals.js"></script>
 	<script src="js/index.js"></script>
 	<script src="js/updateJs.js"></script>
 </body>

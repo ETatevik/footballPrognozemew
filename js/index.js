@@ -16,13 +16,29 @@ jQuery(document).ready(function() {
 	}
 
 	// index page ligaFootball navbar
-	{
+	{	
+		if(jQuery(window).width() < 799){
+			jQuery('#ligaFootball .navbar-liga li > a').not('#ligaFootball .navbar-liga li > a.active').slideUp(0);
+		}//go to update
 		jQuery('#ligaFootball .navbar-liga li > a').click(function(event) {
-			if (!jQuery(this).hasClass('active')) {
-				jQuery('#ligaFootball .navbar-liga li > a').not(this).removeClass('active');
-				jQuery(this).addClass('active');
+			if(jQuery(window).width() > 799){
+				if (!jQuery(this).hasClass('active')) {
+					jQuery('#ligaFootball .navbar-liga li > a').not(this).removeClass('active');
+					jQuery(this).addClass('active');
+				}
+			}else{
+				if (jQuery(this).hasClass('active')) {
+					jQuery(this).children('.aw-bt').attr('style') ?  jQuery(this).children('.aw-bt').removeAttr('style'):jQuery(this).children('.aw-bt').css('transform','rotate(180deg)');
+					jQuery('#ligaFootball .navbar-liga li > a').not(this).slideToggle(500);
+				}else{
+					jQuery('#ligaFootball .navbar-liga li > a').not(this).slideToggle(500);
+					jQuery('#ligaFootball .navbar-liga li > a > .aw-bt').removeAttr('style')
+					jQuery('#ligaFootball .navbar-liga li > a').not(this).removeClass('active');
+					jQuery(this).addClass('active');
+				}
 			}
-			return false;
+			
+			return false;//delet this if you want using hiperlink
 		});
 
 		jQuery('#ligaFootball .col-forecasts li').click(function(event) {
@@ -30,7 +46,7 @@ jQuery(document).ready(function() {
 				jQuery('#ligaFootball .col-forecasts  li').not(this).removeClass('active');
 				jQuery(this).addClass('active');
 			}
-			return false;
+			return false;//delet this if you want using hiperlink
 		});
 
 		jQuery('#ligaFootball .col-data li > a').click(function(event) {
@@ -38,7 +54,7 @@ jQuery(document).ready(function() {
 				jQuery('#ligaFootball .col-data li > a').not(this).removeClass('active');
 				jQuery(this).addClass('active');
 			}
-			return false;
+			return false;//delet this if you want using hiperlink
 		});
 	}
 
