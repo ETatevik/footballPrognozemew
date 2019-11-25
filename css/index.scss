@@ -965,7 +965,9 @@ body{
 								border-left: 4px solid white;
 								border-radius: 3px 0 0 3px;
 								text-align: left;
-								padding-left: 12px;
+								& > span{
+									padding-left: 12px;
+								}
 							}
 						}
 						td{

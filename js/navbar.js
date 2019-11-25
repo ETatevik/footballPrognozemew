@@ -5,6 +5,6 @@ jQuery(document).ready(function() {
 			jQuery(this).toggleClass('active');
 			jQuery('#glMenu .nav-body').slideToggle(400).css('display', 'flex');
 		});
-	}
+	}//go to update
 
 });

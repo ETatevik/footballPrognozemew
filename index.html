@@ -15,23 +15,30 @@
 	<link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-	<!-- modlas -->
+	<!-- modals -->
+	<!-- Login  modal -->
 	<div class="modal" id="login-modal">
 		<div class="modal-body">
+			<button type="button" class="btn close-modal">
+				<svg id="Group_293" data-name="Group 293" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+				  	<path id="Path_8983" data-name="Path 8983" d="M11,0A11,11,0,1,0,22,11,11.012,11.012,0,0,0,11,0Zm0,20.114A9.114,9.114,0,1,1,20.114,11,9.125,9.125,0,0,1,11,20.114Z" fill="#f30d31"/>
+				  	<path id="Path_8984" data-name="Path 8984" d="M60.188,51.508a.962.962,0,0,0-1.36,0l-2.982,2.983-2.982-2.983a.962.962,0,0,0-1.36,1.36l2.982,2.983L51.5,58.834a.962.962,0,1,0,1.36,1.36l2.982-2.983,2.982,2.983a.962.962,0,1,0,1.36-1.36l-2.982-2.983,2.982-2.983A.962.962,0,0,0,60.188,51.508Z" transform="translate(-44.846 -44.85)" fill="#f30d31"/>
+				</svg>
+			</button>
 			<div class="modal-container">
 				<h3>Вход</h3>
-				<form action="">
+				<form action="index.html" autocomplete="off">
 					<div class="form-col">
 						<label  for="loginMD">
 							<span>Логин</span>
-							<input type="text" id="loginMD">
+							<input type="text" id="loginMD" >
 						</label>
 						<div class="invalid">* Error</div> <!--input class error-->
 					</div>
 					<div class="form-col">
 						<label for="passMD">
 							<span>Пароль</span>
-							<input type="password" id="passMD">
+							<input type="password" id="passMD" >
 						</label>
 						<div class="invalid">* Error</div> <!--input class error-->
 					</div>
@@ -41,7 +48,90 @@
 			</div>
 		</div>
 	</div>
-	
+
+	<!-- Registration  modal-->
+
+	<!-- Password recovery modal -->
+	<div class="modal" id="passwordRecovery-modal">
+		<div class="modal-body">
+			<button type="button" class="btn close-modal">
+				<svg id="Group_293" data-name="Group 293" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+				  	<path id="Path_8983" data-name="Path 8983" d="M11,0A11,11,0,1,0,22,11,11.012,11.012,0,0,0,11,0Zm0,20.114A9.114,9.114,0,1,1,20.114,11,9.125,9.125,0,0,1,11,20.114Z" fill="#f30d31"/>
+				  	<path id="Path_8984" data-name="Path 8984" d="M60.188,51.508a.962.962,0,0,0-1.36,0l-2.982,2.983-2.982-2.983a.962.962,0,0,0-1.36,1.36l2.982,2.983L51.5,58.834a.962.962,0,1,0,1.36,1.36l2.982-2.983,2.982,2.983a.962.962,0,1,0,1.36-1.36l-2.982-2.983,2.982-2.983A.962.962,0,0,0,60.188,51.508Z" transform="translate(-44.846 -44.85)" fill="#f30d31"/>
+				</svg>
+			</button>
+			<div class="modal-container">
+				<h3>Введите E-mail для восстановления пароля</h3>
+				<form  action="./#newPassword-modal" autocomplete="off">
+					<div class="form-col">
+						<label  for="mailMD">
+							<span>Введите E-mail</span>
+							<input type="email" id="mailMD" >
+						</label>
+						<div class="invalid">* Error</div> <!--input class error-->
+					</div>
+					<div class="form-col btn-submit">
+						<button type="submit" class="btn">Восстановить</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- New password modal -->
+	<div class="modal" id="newPassword-modal">
+		<div class="modal-body">
+			<button type="button" class="btn close-modal">
+				<svg id="Group_293" data-name="Group 293" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+				  	<path id="Path_8983" data-name="Path 8983" d="M11,0A11,11,0,1,0,22,11,11.012,11.012,0,0,0,11,0Zm0,20.114A9.114,9.114,0,1,1,20.114,11,9.125,9.125,0,0,1,11,20.114Z" fill="#f30d31"/>
+				  	<path id="Path_8984" data-name="Path 8984" d="M60.188,51.508a.962.962,0,0,0-1.36,0l-2.982,2.983-2.982-2.983a.962.962,0,0,0-1.36,1.36l2.982,2.983L51.5,58.834a.962.962,0,1,0,1.36,1.36l2.982-2.983,2.982,2.983a.962.962,0,1,0,1.36-1.36l-2.982-2.983,2.982-2.983A.962.962,0,0,0,60.188,51.508Z" transform="translate(-44.846 -44.85)" fill="#f30d31"/>
+				</svg>
+			</button>
+			<div class="modal-container">
+				<h3>Введите новый пароль</h3>
+				<form action="index.html" autocomplete="off" >  
+					<div class="form-col">
+						<label  for="passNewMD">
+							<span>Новый пароль</span>
+							<input type="password" id="passNewMD" >
+						</label>
+						<div class="invalid">* Error</div> <!--input class error-->
+					</div>
+					<div class="form-col">
+						<label  for="confirmPassMD">
+							<span>Повторите пароль</span>
+							<input type="password" id="confirmPassMD" >
+						</label>
+						<div class="invalid">* Error</div> <!--input class error-->
+					</div>
+					<div class="form-col btn-submit"><button type="submit" class="btn">Восстановить</button></div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- Check your email modal -->
+	<div class="modal" id="checkMail-modal">
+		<div class="modal-body">
+			<button type="button" class="btn close-modal">
+				<svg id="Group_293" data-name="Group 293" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+				  	<path id="Path_8983" data-name="Path 8983" d="M11,0A11,11,0,1,0,22,11,11.012,11.012,0,0,0,11,0Zm0,20.114A9.114,9.114,0,1,1,20.114,11,9.125,9.125,0,0,1,11,20.114Z" fill="#f30d31"/>
+				  	<path id="Path_8984" data-name="Path 8984" d="M60.188,51.508a.962.962,0,0,0-1.36,0l-2.982,2.983-2.982-2.983a.962.962,0,0,0-1.36,1.36l2.982,2.983L51.5,58.834a.962.962,0,1,0,1.36,1.36l2.982-2.983,2.982,2.983a.962.962,0,1,0,1.36-1.36l-2.982-2.983,2.982-2.983A.962.962,0,0,0,60.188,51.508Z" transform="translate(-44.846 -44.85)" fill="#f30d31"/>
+				</svg>
+			</button>
+			<div class="modal-container">
+				<h3>Проверьте ваш E-mail</h3>
+				<div class="box-modal">
+					<svg id="Group_142" data-name="Group 142" xmlns="http://www.w3.org/2000/svg" width="107" height="107" viewBox="0 0 13.304 13.304">
+					  	<ellipse id="Ellipse_3" data-name="Ellipse 3" cx="6.652" cy="6.652" rx="6.652" ry="6.652" fill="#2ab700"/>
+					  	<path id="Path_132" data-name="Path 132" d="M2.361,64.552a.519.519,0,0,1-.368-.152L.153,62.56a.52.52,0,1,1,.736-.736L2.361,63.3l3.312-3.312a.52.52,0,0,1,.736.736L2.729,64.4A.519.519,0,0,1,2.361,64.552Z" transform="translate(3.501 -55.63)" fill="#fff"/>
+					</svg>
+				</div>
+				<div class="form-col btn-close"><button type="button" class="btn">Закрыть</button></div>
+			</div>
+		</div>
+	</div>
+
 	<!-- start navbar - menu -->
 	<nav id="glMenu">
 		<div class="container">

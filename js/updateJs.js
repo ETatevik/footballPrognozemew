@@ -6,6 +6,7 @@ jQuery(document).ready(function() {
 			// navbar - menu # show nav-body when desctop is big 1129px
 			if(jQuery(window).width() > 1129){
 				jQuery('#glMenu .nav-body').removeAttr('style');
+				jQuery("#glMenu .menu-tree-mb > .btn").removeClass('active');
 			}
 
 			// page content # header News & successForecasts elements top fixing
