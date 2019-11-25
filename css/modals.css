@@ -150,10 +150,9 @@
           .modal > .modal-body > .modal-container form .form-col.btn-link button:hover {
             color: #F30D31;
             text-decoration: underline; }
-    .modal > .modal-body > .modal-container > .form-col.btn-close {
-      margin-top: 50px;
+    .modal > .modal-body > .modal-container > .btn-close {
       margin-bottom: 7px !important; }
-      .modal > .modal-body > .modal-container > .form-col.btn-close > button {
+      .modal > .modal-body > .modal-container > .btn-close > button {
         background: #F30D31;
         width: 100%;
         font-size: 18px;
@@ -164,11 +163,11 @@
         -webkit-transition: .5s;
         -o-transition: .5s;
         transition: .5s; }
-        .modal > .modal-body > .modal-container > .form-col.btn-close > button:hover {
+        .modal > .modal-body > .modal-container > .btn-close > button:hover {
           background: #2AB700;
           -webkit-box-shadow: 2px 2px 0 #62686f,-2px -2px 0 #62686f;
           box-shadow: 2px 2px 0 #62686f,-2px -2px 0 #62686f; }
-        .modal > .modal-body > .modal-container > .form-col.btn-close > button:active {
+        .modal > .modal-body > .modal-container > .btn-close > button:active {
           background: #239800;
           -webkit-transform: scale(0.99);
           -ms-transform: scale(0.99);
@@ -177,7 +176,37 @@
           box-shadow: 0px 0px 10px #62686f inset; }
     .modal > .modal-body > .modal-container > .box-modal {
       width: 107px;
-      margin: auto; }
+      margin: auto;
+      margin-bottom: 50px; }
+    .modal > .modal-body > .modal-container > .signNotActive {
+      width: 100%; }
+      .modal > .modal-body > .modal-container > .signNotActive > button {
+        width: 100%;
+        color: #000000;
+        font-size: 18px;
+        font-weight: 600;
+        font-family: "Roboto Condensed", sans-serif;
+        border: 2px solid #F30D31;
+        border-radius: 3px;
+        padding: 10px 15px;
+        -webkit-transition: .25s;
+        -o-transition: .25s;
+        transition: .25s;
+        background: transparent; }
+        .modal > .modal-body > .modal-container > .signNotActive > button:hover {
+          background: #F30D31;
+          border-color: #F30D31;
+          color: white; }
+      .modal > .modal-body > .modal-container > .signNotActive.signUpActive > button {
+        background: #F30D31;
+        border: 0;
+        padding: 12px 15px;
+        margin-bottom: 27px;
+        color: white; }
+        .modal > .modal-body > .modal-container > .signNotActive.signUpActive > button:hover {
+          background: #62686f; }
+      .modal > .modal-body > .modal-container > .signNotActive:first-of-type > button {
+        padding: 10px 35px; }
     .modal > .modal-body > .close-modal {
       display: block;
       position: absolute;

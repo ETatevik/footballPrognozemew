@@ -38,15 +38,20 @@ jQuery(document).ready(function() {
 				}
 			}
 			
-			return false;//delet this if you want using hiperlink
+			return false;//delete this if you want using hiperlink
 		});
 
 		jQuery('#ligaFootball .col-forecasts li').click(function(event) {
 			if (!jQuery(this).hasClass('active')) {
+
+				if(jQuery(this).hasClass('pay-forecast')){
+					jQuery('.modal#subscription-modal').fadeIn(500).css('display','flex');
+					return false;
+				}
 				jQuery('#ligaFootball .col-forecasts  li').not(this).removeClass('active');
 				jQuery(this).addClass('active');
 			}
-			return false;//delet this if you want using hiperlink
+			return false;//delete this if you want using hiperlink
 		});
 
 		jQuery('#ligaFootball .col-data li > a').click(function(event) {
@@ -54,7 +59,7 @@ jQuery(document).ready(function() {
 				jQuery('#ligaFootball .col-data li > a').not(this).removeClass('active');
 				jQuery(this).addClass('active');
 			}
-			return false;//delet this if you want using hiperlink
+			return false;//delete this if you want using hiperlink
 		});
 	}
 

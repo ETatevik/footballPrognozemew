@@ -117,8 +117,7 @@
 					}
 				}
 			}
-			& > .form-col.btn-close{
-				margin-top: 50px;
+			& > .btn-close{
 				margin-bottom: 7px !important;
 				& > button{
 					background: #F30D31;
@@ -143,7 +142,46 @@
 			& > .box-modal{
 				width: 107px;
 				margin: auto;
-			} 
+				margin-bottom: 50px;
+			}
+			& > .signNotActive{
+				width: 100%;
+				& >button{
+					width: 100%;
+					color: #000000;
+					font-size: 18px;
+					font-weight: 600;
+					font-family: $Roboto_Condensed;
+					border: 2px solid #F30D31;
+					border-radius: 3px;
+					padding: 10px 15px;
+					transition: .25s;
+					background:transparent;
+
+					&:hover{
+						background: #F30D31;
+						border-color: #F30D31;
+						color: white;
+					}
+				}
+				&.signUpActive > button {
+					background: #F30D31;
+					border:0;
+					padding: 12px 15px;
+					margin-bottom: 27px;
+					color: white;
+
+					&:hover{
+						background: #62686f;
+					}
+				}
+
+				&:first-of-type{
+					& > button{
+						padding: 10px 35px;
+					}
+				}
+			}
 		}
 		
 		& > .close-modal{

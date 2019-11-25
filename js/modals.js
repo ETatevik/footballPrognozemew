@@ -11,6 +11,10 @@ jQuery(document).ready(function($) {
 			jQuery(this).parent('.modal-body').parent('.modal').fadeOut(500);
 			clearAllInput();
 		});
+		jQuery('.modal .btn-close > .btn').click(function(event) {
+			jQuery(this).parent('.btn-close').parent('.modal-container').parent('.modal-body').parent('.modal').fadeOut(500);
+			clearAllInput();
+		});
 	}
 
 	// open login modal
@@ -21,13 +25,23 @@ jQuery(document).ready(function($) {
 		});
 	}
 
+
+	// open Registration modal
+	{
+		jQuery('#signUp').click(function(event) {
+			jQuery('.modal#registration-modal').fadeIn(500).css('display','flex');
+			jQuery('body').css('overflow-y' , 'hidden');
+		});
+	}
+
 	// all modal input text active style
 	{
 		jQuery('.form-col > label > input').on({
 			click : function(event) {
 				jQuery(this).removeAttr('style');
 				if(!jQuery(this).hasClass('active')){
-					if(jQuery('.form-col > label > input').not(this).hasClass('active') && !jQuery('.form-col > label > input').not(this).val()){
+					if(jQuery('.form-col > label > input').not(this).hasClass('active') 
+						&& !jQuery('.form-col > label > input').not(this).val()){
 						jQuery('.form-col > label > input').not(this).removeClass('active');
 						jQuery('.form-col > label > input').not(this).prev('span').removeAttr('style');
 					}
@@ -40,12 +54,13 @@ jQuery(document).ready(function($) {
 				}
 			},
 			blur: function(event) {
+				console.log(jQuery(this).val())
 				if(jQuery(this).hasClass('active') && !jQuery(this).val()){
 					jQuery(this).removeClass('active');
 					jQuery(this).prev('span').removeAttr('style');
 				}
 
-				if(jQuery(this).hasClass('active') && jQuery(this).val()){
+				if(jQuery(this).val()){
 					jQuery(this).parent('label').next('.invalid').removeClass('error');
 					jQuery(this).prev('span').css({
 						top: '3px',
@@ -91,13 +106,32 @@ jQuery(document).ready(function($) {
 		});
 	}
 
-	// New password modal check
+	// open login & reg in subscription-modal
 	{
+		jQuery('#signUpSub').click(function(event) {
+			jQuery('.modal#subscription-modal').fadeOut(0);
+			jQuery('.modal#registration-modal').fadeIn(500).css('display','flex');
+			jQuery('body').css('overflow-y' , 'hidden');
+		});
 
+		jQuery('#signInSub').click(function(event) {
+			jQuery('.modal#subscription-modal').fadeOut(0);
+			jQuery('.modal#login-modal').fadeIn(500).css('display','flex');
+			jQuery('body').css('overflow-y' , 'hidden');
+		});
 	}
 
+	// New password modal check
 	{
-		jQuery('#checkMail-modal').fadeIn(0);
+		// jQuery('#newPassword-modal').fadeIn(0).css('display','flex');//if you want to open this modal -----bug
+	}
+	// Check your email modal
+	{
+		// jQuery('#checkMail-modal').fadeIn(0).css('display','flex');//if you want to open this modal
+	}
+	// password Success Change modal
+	{
+		// jQuery('#passwordSuccessChange-modal').fadeIn(0).css('display', 'flex');//if you want to open this modal
 	}
 });
 
