@@ -98,7 +98,7 @@ jQuery(document).ready(function($) {
 				console.log(send)
 
 			});
-			if(jQuery('.modal#registration-modal form .select-selected').text() == "Выбрать тариф"){
+			if(jQuery('.modal#registration-modal form .select-selected').text() == document.querySelector('#registration-modal .custom-select > select > option[value="0"]').innerHTML ){
 				jQuery('.modal#registration-modal form .select-selected').addClass('error');
 				jQuery('.modal#registration-modal form .select-selected').parent('.custom-select').next('.invalid').addClass('error');
 				send = false;
@@ -247,7 +247,7 @@ function checkValuePasswordsConfPass(pass, confPass){
 	              y[k].removeAttribute("class");
 	            }
 	            this.setAttribute("class", "same-as-selected");
-	            if("Выбрать тариф" != this.innerHTML) this.parentNode.previousSibling.classList.add('active');
+	            if(document.querySelector('#registration-modal .custom-select > select > option[value="0"]').innerHTML != this.innerHTML) this.parentNode.previousSibling.classList.add('active');
 	            break;
 	          }
 	        }

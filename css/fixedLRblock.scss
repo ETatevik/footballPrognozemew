@@ -232,12 +232,17 @@
 					text-align: center;
 
 					& > .col-lig-forec{
+						padding-top: 9px;
 						& > p{
 							color: #000000;
 							font-size: 14px;
 							font-weight: normal;
 							font-family: $Roboto_Condensed;
 							margin-top: 7px;
+						}
+						&>img{
+							width: 27px;
+							height: 27px;
 						}
 
 						&.align-self-end{

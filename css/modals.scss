@@ -13,6 +13,7 @@
 	align-items: center;
 	display: none;
 	overflow-y: auto;
+	padding-bottom: 20px;
 	&::-webkit-scrollbar {
 	    display: none;
 	}
@@ -22,8 +23,7 @@
 		padding: 60px 40px 83px;
 		position: relative;
 		width: auto;
-		margin-top: 50px;
-		margin-bottom: 20px;
+		
 		& > .modal-container{
 			h3{
 				font-family: $Roboto_Condensed;
@@ -408,5 +408,19 @@
 				}
 			}
 		}
+	}
+}
+
+@media only screen and(max-height: 700px) {
+	.modal{
+		padding-top: 150px;
+		padding-bottom: 50px;
+	}
+}
+
+@media only screen and(max-height: 580px) {
+	.modal{
+		padding-top: 200px;
+		padding-bottom: 50px;
 	}
 }

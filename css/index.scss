@@ -16,85 +16,6 @@ body{
 	max-width: 1206px;
 	padding: 5px 5px 0px 5px;
 	& > .container{
-		// slider
-		#indexPageSilder{
-			position: relative;
-			min-height: 496px;
-			background: #F30D31;
-
-			.slide{
-				display: none;
-				max-width: 1206px;
-				width: 100%;
-				background-repeat: no-repeat;
-				background-size: cover;
-				background-position: right center;
-				min-height: inherit;
-				position: absolute;
-
-				& > .container-fluid{
-					background: linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.5));
-					padding: 102px 59px;
-					min-height: inherit;
-
-
-					& > h1{
-						font-family: $Roboto_Condensed;
-						font-weight: 600;
-						font-size: 38px;
-						color: white;
-					}
-					& > p{
-						font-family: $Roboto_Condensed;
-						font-size: 18px;
-						color: white;
-						font-weight: normal;
-						max-width: 576px;
-						line-height: 23px;
-						margin: 26px 0;
-					}
-					& > .moreInfo{
-						border: 2px solid #F30D31;
-						border-radius: 3px;
-						padding: 10px 19px;
-						position: relative;
-						overflow: hidden;
-						background: transparent;
-
-						& > span{
-							font-family: $Roboto_Condensed;
-							font-weight: 600;
-							font-size: 18px;
-							color: white;
-							position: relative;
-							z-index: 5;
-						}
-
-						&:before{
-							content: '';
-							width: 100%;
-							height: 100%;
-							background: #F30D31;
-							position: absolute;
-							top: 0;
-							left: 100%;
-							z-index: 4;
-							transition: .5s; 
-						}
-						&:hover{
-							&:before{
-								left: 0;
-							}
-						}
-					}
-				}
-
-				&.active{
-					display: block;
-				}
-			}
-		}
-		
 		// ligaFootball
 		#ligaFootball{
 			& > nav.navbar-liga{
@@ -335,6 +256,11 @@ body{
 									font-size: 16px;
 									color: #000000;
 									font-weight: normal;
+								}
+
+								img{
+									width: 27px;
+									height: 27px;
 								}
 							}
 						}
@@ -671,27 +597,6 @@ body{
 }
 // media mobile start for 798px
 
-@media only screen and(min-width: 1000px) and (max-width: 1250px) {
-	// start slider in index page
-	#pageContent{
-		& > .container{
-			// slider
-			#indexPageSilder{
-				min-height: 400px;
-
-				.slide{
-
-					& > .container-fluid{
-						padding: 54px 59px;
-					}
-				}
-			}
-
-			// ligaFootball 
-		}
-	}
-}
-
 @media only screen and(min-width: 1130px) and(max-width: 1260px) {
 	#pageContent{
 		margin-right: 15px;
@@ -750,27 +655,6 @@ body{
 	}
 }
 
-@media only screen and(min-width: 799px) and (max-width: 999px) {
-	// start slider in index page
-	#pageContent{
-		& > .container{
-			// slider
-			#indexPageSilder{
-				min-height: 380px;
-
-				.slide{
-
-					& > .container-fluid{
-						padding: 32px 28px;
-					}
-				}
-			}
-
-			// ligaFootball 
-		}
-	}
-}
-
 @media only screen and (max-width: 799px) {
 	// start slider in index page
 	#pageContent{
@@ -778,49 +662,6 @@ body{
 		margin-right: 15px;
 		margin-left: 15px;
 		& > .container{
-			// slider
-			#indexPageSilder{
-				min-height: 148px;
-
-				.slide{
-					background-position: right top!important;
-					& > .container-fluid{
-						padding: 4px 8px;
-						& > h1{
-							font-size: 18px;
-						}
-						& > p{
-							font-size: 9px;
-							max-width: 228px;
-							line-height: 13px;
-							margin: 9px 0 18px;
-						}
-						& > .moreInfo{
-							border: 0;
-							padding: 0;
-
-							& > span{
-								font-size: 12px;
-								color: #F30D31;
-								text-decoration: underline;
-							}
-
-							&:before{
-								display: none;
-							}
-							&:hover{
-								&:before{
-									display: none;
-									left: 100%;
-								}
-								& > span{
-									color: #2AB700;
-								}
-							}
-						}
-					}
-				}
-			}
 
 			// ligaFootball 
 			#ligaFootball{
