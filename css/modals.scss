@@ -12,12 +12,18 @@
 	justify-content: center;
 	align-items: center;
 	display: none;
+	overflow-y: auto;
+	&::-webkit-scrollbar {
+	    display: none;
+	}
 	
 	& > .modal-body{
 		background: white;
 		padding: 60px 40px 83px;
 		position: relative;
 		width: auto;
+		margin-top: 50px;
+		margin-bottom: 20px;
 		& > .modal-container{
 			h3{
 				font-family: $Roboto_Condensed;
@@ -38,6 +44,22 @@
 						position: relative;
 						transition: .5s ;
 
+						&.checkPesData{
+							padding-left: 35px;
+							font-size: 10px;
+							color: #000000;
+							padding-top: 2px;
+							& > a{
+								font-weight: bold;
+								color: #000000;
+								font-size: 10px;
+								text-decoration: underline;
+								&:hover{
+									color: #F30D31;
+								}
+							}
+						}
+
 
 						& > span{
 							font-size: 14px;
@@ -49,7 +71,7 @@
 							left: 24px;
 						}
 
-						input{
+						& > input{
 							width: 100%;
 							font-size: 14px;
 							font-family: $Roboto_Condensed;
@@ -66,6 +88,161 @@
 								border-color: darken(#2AB700, 6%);
 								box-shadow: 0 0 6px rgba(0,0,0,.2) inset;
 							}
+						}
+
+						& > input[type="checkbox"]{
+							position: absolute;
+							opacity: 0;
+							cursor: pointer;
+							height: 0;
+							width: 0;
+						}
+						&>.checkmark {
+						  	position: absolute;
+						  	top: 0;
+						  	left: 0;
+						  	height: 17px;
+						  	width: 17px;
+						  	background-color: white;
+						  	border: 1.5px solid darken(#2AB700, 6%);
+						  	border-radius: 4px;
+						  	&:after {
+							  	content: "";
+							  	position: absolute;
+							  	display: none;
+							  	left: 4.5px;
+								top: 1.5px;
+								width: 4px;
+								height: 7px;
+								border: .2px solid white;
+								border-width: 0 1.5px 1.5px 0;
+								-webkit-transform: rotate(45deg);
+								-ms-transform: rotate(45deg);
+								transform: rotate(45deg);
+							}
+						}
+
+						& input:checked ~ .checkmark {
+						  	background-color: darken(#2AB700, 6%);
+						}
+						& input:checked ~ .checkmark:after {
+						  	display: block;
+						}
+
+
+						/*the container must be positioned relative:*/
+						.custom-select {
+						  	position: relative;
+						    width:100%;
+						}
+
+						.custom-select select {
+						  	display: none; /*hide original SELECT element:*/
+						}
+
+						.select-selected {
+						  	background-color: white;
+						  	font-size: 14px;
+						}
+
+						/*style the arrow inside the select element:*/
+						.select-selected:after {
+						  	position: absolute;
+						  	content: "";
+						  	top: 20px;
+						  	right: 24px;
+						  	width: 7px;
+						  	height: 7px;
+						  	border: 1px solid transparent;
+						  	border-color: transparent transparent #ACAFB2 #ACAFB2 ;
+						  	border-radius: 3px 0 3px 0;
+						  	transform:rotate(-45deg);
+						}
+
+						/*point the arrow upwards when the select box is open (active):*/
+						.select-selected.select-arrow-active:after {
+						  	border-color: transparent transparent #239800 #239800;
+						}
+
+						.select-selected.select-arrow-active{
+						    border-color: #239800;
+						    color: #239800;
+						    border-bottom: 0;
+						    border-bottom-left-radius: 0;
+						    border-bottom-right-radius: 0;
+						}
+
+						/*style the items (options), including the selected item:*/
+						.select-items div,.select-selected {	
+						  	color: #ACAFB2;
+						  	padding: 15px 24px;
+						  	border: 1px solid #ACAFB2;
+						  	cursor: pointer;
+						  	user-select: none;
+						  	border-radius: 4px;
+						}
+						.select-items div{
+						    font-weight: bolder;
+						    color: #62686F;
+						    font-size: 18px;
+						}
+						.select-items div > strong,
+						.select-selected strong{
+						    color: #000000;
+						    font-weight: bold;
+						}
+						.select-items div > span,
+						.select-selected  span{
+						  color: #F30D31;
+						  font-weight: bold;
+						  float: right;
+						}
+						.select-selected  span{
+						  float: none;
+						  margin-left: 15px;
+						}
+
+						.select-items div{
+						  	border: 1px solid transparent;
+						  	border-top-color:#ACAFB2;
+						    border-left-color: #239800;
+						    border-right-color: #239800;
+						  	border-radius:0px;
+						}
+						.select-selected.active{
+							border-color: #239800;
+							color: #62686F;
+							&:after {
+						  		border-color: transparent transparent #239800 #239800;
+							}
+						}
+						.select-selected.error{
+							border-color: #F30D31;
+							color: #F30D31;
+							&:after {
+						  		border-color: transparent transparent #F30D31 #F30D31;
+							}
+						}
+						/*style items (options):*/
+						.select-items {
+						  	position: absolute;
+						  	background-color: white;
+						  	top: 100%;
+						  	left: 0;
+						  	right: 0;
+						  	z-index: 99;
+						    border-bottom: 1px solid #239800;
+						    border-bottom-left-radius: 3px;
+						    border-bottom-right-radius: 3px;
+						}
+
+						/*hide the items when the select box is closed:*/
+						.select-hide {
+						  	display: none;
+						}
+
+						.select-items div:hover, .same-as-selected {
+						  	background-color: rgba(172, 175, 178, .2);
 						}
 					}
 
@@ -212,10 +389,6 @@
 // media
 @media only screen and(max-width: 799px) {
 	.modal{
-		overflow-y: auto;
-		&::-webkit-scrollbar {
-		    display: none;
-		}
 		& > .modal-body{
 			width: 100%;
 			padding: 43px 20px 36px;

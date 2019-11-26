@@ -198,6 +198,7 @@
         -ms-flex-pack: end;
         justify-content: flex-end; }
         #glMenu > .container .nav-body .menu-football-gl > li > a {
+          font-size: 17px;
           padding: 0 15px; }
     #glMenu > .container .btns-registration-login {
       width: auto; } }

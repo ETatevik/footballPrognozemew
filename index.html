@@ -76,6 +76,20 @@
 						<div class="invalid">* Error</div> <!--input class error-->
 					</div>
 					<div class="form-col">
+						<label>
+							<div class="custom-select">
+							  	<select>
+							  	  	<option value="0">Выбрать тариф</option>
+							  	  	<option value="1">Начинающий –w 7 днейw 2000 ₽</option>
+							  	  	<option value="2">Оптимальный –w 14 днейw 3500 ₽</option>
+							  	  	<option value="3">Продвинутый –w 30 днейw 7000 ₽</option>
+							  	  	<option value="4">Активный участник –w 180 днейw 9000 ₽</option>
+							  	</select>
+							</div>
+							<div class="invalid">* Error</div> <!--input class error-->
+						</label>
+					</div>
+					<div class="form-col">
 						<label  for="regPassMD">
 							<span>Пароль</span>
 							<input type="password" id="regPassMD" >
@@ -85,13 +99,14 @@
 					<div class="form-col">
 						<label  for="regPassConfMD">
 							<span>Повторите пароль</span>
-							<input type="password" id="regPassConfMD" >
+							<input type="password" id="regPassConfMD" name="pass">
 						</label>
 						<div class="invalid">* Error</div> <!--input class error-->
 					</div>
 					<div class="form-col">
-						<label  for="personalDataMD">
-							<input type="checkbox" id="personalDataMD">
+						<label  for="personalDataMD" class="checkPesData">
+							<input type="checkbox" id="personalDataMD" >
+							<span class="checkmark"></span>
 							Даю согласие <a href="#">на обработку персональных данных</a>
 						</label>
 						<div class="invalid">* Error</div> <!--input class error-->
@@ -146,14 +161,14 @@
 					<div class="form-col">
 						<label  for="passNewMD">
 							<span>Новый пароль</span>
-							<input type="password" id="passNewMD" >
+							<input type="password" id="passNewMD" ><!--if change id, please change that in modal.js too!-->
 						</label>
 						<div class="invalid">* Error</div> <!--input class error-->
 					</div>
 					<div class="form-col">
 						<label  for="confirmPassMD">
 							<span>Повторите пароль</span>
-							<input type="password" id="confirmPassMD" >
+							<input type="password" id="confirmPassMD" ><!--if change id, please change that in modal.js too!-->
 						</label>
 						<div class="invalid">* Error</div> <!--input class error-->
 					</div>
@@ -183,7 +198,7 @@
 				<div class="btn-close"><button type="button" class="btn">Закрыть</button></div>
 			</div>
 		</div>
-	</div><!--bug js-->
+	</div>
 
 	<!-- Password successfull change -->
 	<div class="modal" id="passwordSuccessChange-modal">
