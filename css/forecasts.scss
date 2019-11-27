@@ -1,44 +1,10 @@
 @import 'all.scss';
 
 #pageContent{
-	// nav-node-list
-	#nav-node-list{
-		background: #ffffff;
-		padding: 4px 15px;
-		margin-bottom: 9px;
-		margin-top: 4px;
-		box-shadow: 0 0 5px rgba(0,0,0, .06);
-		li{
-			& > a{
-			 	display: inline-block;
-			 	padding-right: 10px;
-			 	position: relative;
-			 	font-size: 14px;
-			 	color: #808080;
-
-			 	&:after{
-			 		content: '/';
-			 		position: absolute;
-			 		right: 0px;
-			 	}
-			 	&:hover{
-			 		text-decoration: underline;
-			 		font-weight: bold;
-			 		color: #000000;
-			 	}
-			}
-
-			& > span{
-				padding-left: 2.5px;
-				color: #000000;
-				font-size: 14px;
-			}
-		}
-	}
-
+	
 	// comment to forecast
 	#commentForecast{
-		margin: 0 13px; // I don't linke it
+		margin: 0;
 		& > .comment-block{
 			box-shadow: 0 0 5px rgba(0,0,0, .06);
 			background: #ffffff;
@@ -213,20 +179,7 @@
 // media
 @media only screen and (max-width: 799px ) {
 	#pageContent{
-		// nav-node-list
-		#nav-node-list{
-			background: #ffffff;
-			padding: 5px 10px;
-			margin-bottom: 4px;
-			margin-top: 0px;
-			li{
-				& > a,
-				& > span{
-				 	font-size: 12px;
-				}
-			}
-		}
-
+		
 		// comment to forecast
 		#commentForecast{
 			margin: 0;
@@ -260,7 +213,7 @@
 				margin: 4px 0 0;
 
 				& > .defLig{
-					margin-bottom: 13px;
+					padding-bottom: 13px;
 				}
 
 				& > .row{

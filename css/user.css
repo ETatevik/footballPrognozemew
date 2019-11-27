@@ -1,0 +1,110 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap';
+body {
+  background: #F1F2F2; }
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  list-style: none;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Roboto Condensed", sans-serif; }
+
+.container {
+  max-width: 1920px;
+  width: 100%;
+  margin: auto; }
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%; }
+
+.btn {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent));
+  background-image: -webkit-linear-gradient(transparent);
+  background-image: -o-linear-gradient(transparent);
+  background-image: linear-gradient(transparent);
+  background-color: transparent;
+  cursor: pointer; }
+
+.text-nowrap {
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative; }
+
+@media only screen and (max-width: 950px) {
+  .text-nowrap {
+    max-width: 600px; }
+    .text-nowrap:after {
+      content: '...';
+      background: white;
+      font-size: 14px;
+      color: #000000;
+      position: absolute;
+      right: 0px;
+      padding: 0 3px;
+      bottom: 0; } }
+
+#personalAreaBox #userArea-header > .personalAre-navbar ul.row {
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.06);
+  background: white;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch; }
+  #personalAreaBox #userArea-header > .personalAre-navbar ul.row > li {
+    width: 33.33%;
+    min-width: 124px; }
+    #personalAreaBox #userArea-header > .personalAre-navbar ul.row > li > a {
+      padding: 14px 0 12px;
+      display: block;
+      height: 100%;
+      text-align: center;
+      color: #808080;
+      font-size: 18px;
+      -webkit-transition: .3s background,  .25s border;
+      -o-transition: .3s background,  .25s border;
+      transition: .3s background,  .25s border;
+      border-bottom: 2px solid transparent;
+      font-family: "Roboto Condensed", sans-serif; }
+      #personalAreaBox #userArea-header > .personalAre-navbar ul.row > li > a.active {
+        font-weight: 600;
+        color: #000000;
+        border-bottom-color: #F30D31; }
+      #personalAreaBox #userArea-header > .personalAre-navbar ul.row > li > a:hover {
+        background: #F30D31;
+        color: white;
+        border-bottom-color: #F30D31;
+        -webkit-transition: .4s border;
+        -o-transition: .4s border;
+        transition: .4s border;
+        font-weight: 600; }
+        #personalAreaBox #userArea-header > .personalAre-navbar ul.row > li > a:hover.active {
+          background: white;
+          color: #000000;
+          border-bottom-color: #F30D31; }
+    #personalAreaBox #userArea-header > .personalAre-navbar ul.row > li:nth-of-type(2) > a {
+      position: relative; }
+      #personalAreaBox #userArea-header > .personalAre-navbar ul.row > li:nth-of-type(2) > a:before, #personalAreaBox #userArea-header > .personalAre-navbar ul.row > li:nth-of-type(2) > a:after {
+        content: '';
+        width: 1px;
+        height: 35%;
+        background: rgba(98, 104, 111, 0.5);
+        position: absolute;
+        top: 32.5%; }
+      #personalAreaBox #userArea-header > .personalAre-navbar ul.row > li:nth-of-type(2) > a:before {
+        left: 0; }
+      #personalAreaBox #userArea-header > .personalAre-navbar ul.row > li:nth-of-type(2) > a:after {
+        right: 0; }

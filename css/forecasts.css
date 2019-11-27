@@ -39,34 +39,26 @@ body {
   background-color: transparent;
   cursor: pointer; }
 
-#pageContent #nav-node-list {
-  background: #ffffff;
-  padding: 4px 15px;
-  margin-bottom: 9px;
-  margin-top: 4px;
-  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.06);
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.06); }
-  #pageContent #nav-node-list li > a {
-    display: inline-block;
-    padding-right: 10px;
-    position: relative;
-    font-size: 14px;
-    color: #808080; }
-    #pageContent #nav-node-list li > a:after {
-      content: '/';
+.text-nowrap {
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative; }
+
+@media only screen and (max-width: 950px) {
+  .text-nowrap {
+    max-width: 600px; }
+    .text-nowrap:after {
+      content: '...';
+      background: white;
+      font-size: 14px;
+      color: #000000;
       position: absolute;
-      right: 0px; }
-    #pageContent #nav-node-list li > a:hover {
-      text-decoration: underline;
-      font-weight: bold;
-      color: #000000; }
-  #pageContent #nav-node-list li > span {
-    padding-left: 2.5px;
-    color: #000000;
-    font-size: 14px; }
+      right: 0px;
+      padding: 0 3px;
+      bottom: 0; } }
 
 #pageContent #commentForecast {
-  margin: 0 13px; }
+  margin: 0; }
   #pageContent #commentForecast > .comment-block {
     -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.06);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.06);
@@ -235,14 +227,6 @@ body {
           padding-left: 24px; }
 
 @media only screen and (max-width: 799px) {
-  #pageContent #nav-node-list {
-    background: #ffffff;
-    padding: 5px 10px;
-    margin-bottom: 4px;
-    margin-top: 0px; }
-    #pageContent #nav-node-list li > a,
-    #pageContent #nav-node-list li > span {
-      font-size: 12px; }
   #pageContent #commentForecast {
     margin: 0; }
     #pageContent #commentForecast > .comment-block {
@@ -263,7 +247,7 @@ body {
     #pageContent #moreOfForecast > .moreInfoForecBox {
       margin: 4px 0 0; }
       #pageContent #moreOfForecast > .moreInfoForecBox > .defLig {
-        margin-bottom: 13px; }
+        padding-bottom: 13px; }
       #pageContent #moreOfForecast > .moreInfoForecBox > .row {
         padding-bottom: 22px; }
         #pageContent #moreOfForecast > .moreInfoForecBox > .row > .col-lig-forec {

@@ -1,0 +1,68 @@
+@import 'all.scss';
+
+#personalAreaBox{
+
+	#userArea-header{
+
+		& > .personalAre-navbar{
+			ul.row{
+				box-shadow: 0 0 5px rgba(0,0,0, .06);
+				background: white;
+				align-items: stretch;
+				& > li{
+					width: 33.33%;
+					min-width: 124px;
+					& > a{
+						padding: 14px 0 12px;
+						display: block;	
+						height: 100%;
+						text-align: center;
+						color: #808080;
+						font-size: 18px;
+						transition: .3s background,  .25s border;
+						border-bottom: 2px solid transparent;
+						font-family: $Roboto_Condensed;
+
+						&.active{
+							font-weight: 600;
+							color: #000000;
+							border-bottom-color: #F30D31;
+						}
+						&:hover{
+							background: #F30D31;
+							color: white;
+							border-bottom-color: #F30D31;
+							transition: .4s border;
+							font-weight: 600;
+							&.active{
+								background: white;
+								color: #000000;
+								border-bottom-color: #F30D31;
+							}
+						}
+					}
+					&:nth-of-type(2){
+						& > a{
+							position: relative;
+							&:before,
+							&:after{
+								content: '';
+								width: 1px;
+								height: 35%;
+								background: rgba(98,104,111,.5);
+								position: absolute;
+								top: 32.5%;
+							}
+							&:before{
+								left: 0;
+							}
+							&:after{
+								right: 0;
+							}
+						}
+					}	
+				}
+			}
+		}
+	}
+}

@@ -1,4 +1,7 @@
 @import 'https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap';
+body {
+  background: #F1F2F2; }
+
 * {
   padding: 0;
   margin: 0;
@@ -35,6 +38,24 @@
   background-image: linear-gradient(transparent);
   background-color: transparent;
   cursor: pointer; }
+
+.text-nowrap {
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative; }
+
+@media only screen and (max-width: 950px) {
+  .text-nowrap {
+    max-width: 600px; }
+    .text-nowrap:after {
+      content: '...';
+      background: white;
+      font-size: 14px;
+      color: #000000;
+      position: absolute;
+      right: 0px;
+      padding: 0 3px;
+      bottom: 0; } }
 
 #glMenu {
   background: #323840;
@@ -186,6 +207,10 @@
         #glMenu > .container .btns-registration-login .signActive button {
           padding: 12px;
           background: #F30D31; }
+        #glMenu > .container .btns-registration-login .signActive.show {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex; }
 
 @media only screen and (min-width: 1190px) and (max-width: 1500px) {
   #glMenu > .container {

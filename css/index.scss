@@ -13,7 +13,7 @@ body{
 
 #pageContent{
 	width: 80%;
-	max-width: 1206px;
+	max-width: 1206px !important;
 	padding: 5px 5px 0px 5px;
 	& > .container{
 		// ligaFootball
@@ -594,6 +594,45 @@ body{
 			}
 		}
 	}
+
+	// nav-node-list
+	#nav-node-list{
+		background: #ffffff;
+		padding: 4px 15px;
+		margin-bottom: 9px;
+		margin-top: 4px;
+		box-shadow: 0 0 5px rgba(0,0,0, .06);
+		li{
+			& > a{
+			 	display: inline-block;
+			 	padding-right: 10px;
+			 	position: relative;
+			 	font-size: 14px;
+			 	color: #808080;
+			 	padding-left: 5px;
+
+			 	&:after{
+			 		content: '/';
+			 		position: absolute;
+			 		right: 0px;
+			 	}
+			 	&:hover{
+			 		text-decoration: underline;
+			 		font-weight: bold;
+			 		color: #000000;
+			 	}
+			}
+
+			& > span{
+				padding-left: 5px;
+				color: #000000;
+				font-size: 14px;
+			}
+			&:first-of-type > a{
+				padding-left: 0;
+			}
+		}
+	}
 }
 // media mobile start for 798px
 
@@ -982,5 +1021,19 @@ body{
 				}
 			}
 		}
+		// nav-node-list
+		#nav-node-list{
+			background: #ffffff;
+			padding: 5px 10px;
+			margin-bottom: 4px;
+			margin-top: 0px;
+			li{
+				& > a,
+				& > span{
+				 	font-size: 12px;
+				}
+			}
+		}
+
 	}
 }

@@ -39,6 +39,24 @@ body {
   background-color: transparent;
   cursor: pointer; }
 
+.text-nowrap {
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative; }
+
+@media only screen and (max-width: 950px) {
+  .text-nowrap {
+    max-width: 600px; }
+    .text-nowrap:after {
+      content: '...';
+      background: white;
+      font-size: 14px;
+      color: #000000;
+      position: absolute;
+      right: 0px;
+      padding: 0 3px;
+      bottom: 0; } }
+
 body {
   background: #F1F2F2; }
 
@@ -53,7 +71,7 @@ body {
 
 #pageContent {
   width: 80%;
-  max-width: 1206px;
+  max-width: 1206px !important;
   padding: 5px 5px 0px 5px; }
   #pageContent > .container #ligaFootball > nav.navbar-liga ul.row {
     -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.06);
@@ -513,6 +531,34 @@ body {
         #pageContent > .container footer > .container > .row .col-foot > p > a:hover {
           text-decoration: underline;
           color: #F30D31; }
+  #pageContent #nav-node-list {
+    background: #ffffff;
+    padding: 4px 15px;
+    margin-bottom: 9px;
+    margin-top: 4px;
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.06); }
+    #pageContent #nav-node-list li > a {
+      display: inline-block;
+      padding-right: 10px;
+      position: relative;
+      font-size: 14px;
+      color: #808080;
+      padding-left: 5px; }
+      #pageContent #nav-node-list li > a:after {
+        content: '/';
+        position: absolute;
+        right: 0px; }
+      #pageContent #nav-node-list li > a:hover {
+        text-decoration: underline;
+        font-weight: bold;
+        color: #000000; }
+    #pageContent #nav-node-list li > span {
+      padding-left: 5px;
+      color: #000000;
+      font-size: 14px; }
+    #pageContent #nav-node-list li:first-of-type > a {
+      padding-left: 0; }
 
 @media only screen and (min-width: 1130px) and (max-width: 1260px) {
   #pageContent {
@@ -827,4 +873,12 @@ body {
         #pageContent > .container footer > .container > .row:last-of-type > .col-foot:first-of-type {
           display: none; }
         #pageContent > .container footer > .container > .row:last-of-type > .col-foot {
-          width: 100%; } }
+          width: 100%; }
+    #pageContent #nav-node-list {
+      background: #ffffff;
+      padding: 5px 10px;
+      margin-bottom: 4px;
+      margin-top: 0px; }
+      #pageContent #nav-node-list li > a,
+      #pageContent #nav-node-list li > span {
+        font-size: 12px; } }
