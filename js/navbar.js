@@ -7,4 +7,10 @@ jQuery(document).ready(function() {
 		});
 	}//go to update
 
+	// usersignIn
+	{
+		jQuery('#usersignIn').click(function(event) {
+			location.href = "index.html";
+		});
+	}
 });

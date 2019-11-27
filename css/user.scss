@@ -4,16 +4,18 @@
 
 	#userArea-header{
 
-		& > .personalAre-navbar{
+		& > .row{
+			justify-content: space-between;
+		}
+
+		& .personalAre-navbar{
 			ul.row{
 				box-shadow: 0 0 5px rgba(0,0,0, .06);
 				background: white;
 				align-items: stretch;
 				& > li{
-					width: 33.33%;
-					min-width: 124px;
 					& > a{
-						padding: 14px 0 12px;
+						padding: 14px 15px 12px;
 						display: block;	
 						height: 100%;
 						text-align: center;
@@ -60,9 +62,194 @@
 								right: 0;
 							}
 						}
+					}
+					&:nth-of-type(3){
+						& > a{
+							position: relative;
+							&:after{
+								content: '';
+								width: 1px;
+								height: 35%;
+								background: rgba(98,104,111,.5);
+								position: absolute;
+								top: 32.5%;
+							}
+							&:after{
+								right: 0;
+							}
+						}
 					}	
 				}
 			}
 		}
+
+		& .col-pers > h1{
+			font-size: 38px;
+			color: #000000;
+			font-weight: bolder;
+		}
+	}
+}
+
+
+.alert{
+	display: none;
+	padding: 8px 17px 8px 11px;
+	margin: 9px 0;
+	& > .row{
+		justify-content: space-between;
+		& > .col-alert{
+			& > p{
+				color: #ffffff;
+				font-weight: bolder;
+				font-size: 18px;
+			}
+			& > .btn{
+				transition: .5s;
+				border: 2px solid #FFFFFF;
+				color: #FFFFFF;
+				font-size: 18px;
+				font-weight: bolder;
+				text-transform: uppercase;
+				padding: 10px 20px;
+				border-radius: 6px;
+			}
+		}
+	}
+}
+
+.alert-warring{
+	background: #E2BE28;
+	& .btn:hover{
+		color: #E2BE28 !important;
+		background: white !important; 
+	}
+}
+
+.alert-success{
+	background: #2AB700;
+	& .btn:hover{
+		color: #2AB700 !important;
+		background: white !important; 
+	}
+}
+
+.alert-danger{
+	background: #F30D31;
+	& .btn:hover{
+		color: #F30D31 !important;
+		background: white !important; 
+	}
+}
+
+#ligaFootball{
+	position: relative;
+	margin-bottom: 20px;
+	min-height: 55vh;
+}
+.modal-danger-close{
+	display: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(90deg,rgba(255,255,255,.4), rgba(255,255,255,.2),rgba(255,255,255,.4));
+	z-index: 500;
+
+	& >.row{
+		width: inherit;
+		height: inherit;
+		justify-content: center;
+		align-items: center;
+
+		& > .col{
+			text-align: center;
+			h2{
+				font-size: 38px;
+				color: #000000;
+				margin-bottom: 55px;
+			}
+		}
+	}
+
+	&.show{
+		display: block;
+	}
+
+}
+
+.blur{
+	-webkit-filter: blur(10px);
+}
+
+#userSubscript{
+	margin-top: 12px;
+	margin-bottom: 20px;
+	& > .sub-info{
+		border-radius: 4px;
+		background: white;
+		box-shadow: 0 3px 5px rgba(229,230,230,.5);
+		h3{
+			border-radius: inherit;
+			background: #BEC1C4;
+			text-align: center;
+			padding: 12px 0;
+			color: white;
+			font-size: 16px;
+			font-weight: bolder;
+		}
+		ul{
+			li{
+				padding: 18px 0;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border-top: 1px solid #F1F2F2;
+				span{
+					display: inline-block;
+					margin:0 7px ;
+					width: 194px;
+					font-size: 16px;
+					color: #000000;
+					line-height: 16px;
+					&.icon{
+						width: 14px !important;
+					}
+					&.subscript-notactive,
+					&.subscript-active{
+						display: none;
+					}
+
+					&.show{
+						display: block;
+					}
+				}
+				&:first-of-type{
+					border-top: 0;
+					padding: 23px 0;
+					color: #F30D31;
+					font-size: 38px;
+					font-weight: bolder;
+				}
+			}
+		}
+	}
+
+	& >.sub-btn{
+		text-align: right;
+		padding: 12px 0;
+
+		& > .btn-continue-sub{
+			border: 2px solid #ACAFB2;
+			color: #ACAFB2;
+			font-size: 18px;
+			font-weight: bolder;
+			border-radius: 6px;
+			padding: 5px 10px;
+
+			&.active{
+				color: #F30D31;
+				border-color: #F30D31;
+			}
+		} 
 	}
 }

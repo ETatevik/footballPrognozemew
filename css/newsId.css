@@ -97,10 +97,9 @@ body {
   margin-bottom: 8px; }
 
 #newsIdBox #recommendedReadingBox > .recommendBlockSlide .col-news {
-  width: 25%;
-  max-width: 295px;
+  width: 295px;
   height: inherit;
-  padding: 0px 8px 0 0;
+  padding: 8px 8px 0 8px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
   #newsIdBox #recommendedReadingBox > .recommendBlockSlide .col-news > a.news-card {
@@ -134,8 +133,8 @@ body {
       border-radius: 4px;
       margin-bottom: 14px;
       height: inherit;
-      min-height: 150px;
-      width: inherit; }
+      width: inherit;
+      overflow: hidden; }
       #newsIdBox #recommendedReadingBox > .recommendBlockSlide .col-news > a.news-card .card-img > img {
         -webkit-transition: .5s;
         -o-transition: .5s;

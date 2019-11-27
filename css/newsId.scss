@@ -53,10 +53,9 @@
 		}
 		&  > .recommendBlockSlide{
 			&  .col-news{
-				width: 25%;
-				max-width: 295px;
+				width: 295px;
 				height: inherit;
-				padding: 0px 8px 0 0;
+				padding: 8px 8px 0 8px;
 				box-sizing:border-box;
 				& >a.news-card{
 					background: #ffffff;
@@ -77,8 +76,8 @@
 						border-radius: 4px;
 						margin-bottom: 14px;
 						height: inherit;
-						min-height: 150px;
 						width: inherit;
+						overflow: hidden;
 
 						& >img{
 							transition: .5s;
