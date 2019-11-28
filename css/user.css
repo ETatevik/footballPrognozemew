@@ -122,6 +122,66 @@ body {
     #personalAreaBox #userArea-header .personalAre-navbar ul.row > li:nth-of-type(3) > a:after {
       right: 0; }
 
+#personalAreaBox #userArea-header .personalAre-navbar .mobile-persNavbar {
+  background: white;
+  color: #000000;
+  border-bottom: 2px solid #F30D31;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 8px 10px 8px 27px;
+  font-size: 18px;
+  font-weight: bolder;
+  cursor: pointer;
+  display: none; }
+  #personalAreaBox #userArea-header .personalAre-navbar .mobile-persNavbar > .menu-tree-mb button {
+    height: 24px;
+    width: 24px;
+    background: #F30D31;
+    border-radius: 50%; }
+    #personalAreaBox #userArea-header .personalAre-navbar .mobile-persNavbar > .menu-tree-mb button.active .tree-btn-is {
+      background: transparent; }
+      #personalAreaBox #userArea-header .personalAre-navbar .mobile-persNavbar > .menu-tree-mb button.active .tree-btn-is:after {
+        -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        top: 0px; }
+      #personalAreaBox #userArea-header .personalAre-navbar .mobile-persNavbar > .menu-tree-mb button.active .tree-btn-is:before {
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+        top: 0px; }
+    #personalAreaBox #userArea-header .personalAre-navbar .mobile-persNavbar > .menu-tree-mb button .tree-btn-is {
+      width: 10px;
+      height: 2px;
+      background: white;
+      display: block;
+      position: relative;
+      -webkit-transition: .5s;
+      -o-transition: .5s;
+      transition: .5s;
+      margin: auto; }
+      #personalAreaBox #userArea-header .personalAre-navbar .mobile-persNavbar > .menu-tree-mb button .tree-btn-is:after, #personalAreaBox #userArea-header .personalAre-navbar .mobile-persNavbar > .menu-tree-mb button .tree-btn-is:before {
+        content: '';
+        width: 10px;
+        height: 2px;
+        background: white;
+        display: block;
+        position: absolute;
+        -webkit-transition: .5s;
+        -o-transition: .5s;
+        transition: .5s; }
+      #personalAreaBox #userArea-header .personalAre-navbar .mobile-persNavbar > .menu-tree-mb button .tree-btn-is:after {
+        top: 4px; }
+      #personalAreaBox #userArea-header .personalAre-navbar .mobile-persNavbar > .menu-tree-mb button .tree-btn-is:before {
+        top: -4px; }
+
 #personalAreaBox #userArea-header .col-pers > h1 {
   font-size: 38px;
   color: #000000;
@@ -150,6 +210,8 @@ body {
       text-transform: uppercase;
       padding: 10px 20px;
       border-radius: 6px; }
+      .alert > .row > .col-alert > .btn > .close-icon {
+        display: none; }
 
 .alert-warring {
   background: #E2BE28; }
@@ -210,9 +272,7 @@ body {
   margin-bottom: 20px; }
   #userSubscript > .sub-info {
     border-radius: 4px;
-    background: white;
-    -webkit-box-shadow: 0 3px 5px rgba(229, 230, 230, 0.5);
-    box-shadow: 0 3px 5px rgba(229, 230, 230, 0.5); }
+    background: white; }
     #userSubscript > .sub-info h3 {
       border-radius: inherit;
       background: #BEC1C4;
@@ -252,16 +312,367 @@ body {
         color: #F30D31;
         font-size: 38px;
         font-weight: bolder; }
-  #userSubscript > .sub-btn {
-    text-align: right;
-    padding: 12px 0; }
-    #userSubscript > .sub-btn > .btn-continue-sub {
-      border: 2px solid #ACAFB2;
-      color: #ACAFB2;
-      font-size: 18px;
-      font-weight: bolder;
-      border-radius: 6px;
-      padding: 5px 10px; }
-      #userSubscript > .sub-btn > .btn-continue-sub.active {
+      #userSubscript > .sub-info ul li.sub-btn {
+        text-align: right;
+        padding: 12px 0;
+        background: #F1F2F2;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end; }
+        #userSubscript > .sub-info ul li.sub-btn > .btn-continue-sub {
+          border: 2px solid #ACAFB2;
+          color: #ACAFB2;
+          font-size: 18px;
+          font-weight: bolder;
+          border-radius: 6px;
+          padding: 5px 10px; }
+          #userSubscript > .sub-info ul li.sub-btn > .btn-continue-sub.active {
+            color: #F30D31;
+            border-color: #F30D31; }
+
+.userData-body {
+  margin: 12px 0 16px; }
+  .userData-body form > .form-group {
+    background: white;
+    padding: 6px 0px 0px;
+    border-radius: 4px; }
+    .userData-body form > .form-group .form-col-100 {
+      border-radius: 4px;
+      background: #F1F2F2;
+      margin: 0 5px 14px; }
+      .userData-body form > .form-group .form-col-100 > h4 {
+        font-size: 16px;
+        color: #808080;
+        padding: 8px;
+        padding-left: 24px; }
+    .userData-body form > .form-group > .row {
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      padding: 0 5px; }
+    .userData-body form > .form-group .form-col {
+      max-width: 374px;
+      width: 33.33%; }
+      .userData-body form > .form-group .form-col label {
+        display: block;
+        margin: auto;
+        position: relative;
+        -webkit-transition: .5s;
+        -o-transition: .5s;
+        transition: .5s;
+        margin-bottom: 14px;
+        /*the container must be positioned relative:*/
+        /*style the arrow inside the select element:*/
+        /*point the arrow upwards when the select box is open (active):*/
+        /*style the items (options), including the selected item:*/
+        /*style items (options):*/
+        /*hide the items when the select box is closed:*/ }
+        .userData-body form > .form-group .form-col label > span {
+          font-size: 12px;
+          font-family: "Roboto Condensed", sans-serif;
+          color: #ACAFB2;
+          position: absolute;
+          -webkit-transition: .5s;
+          -o-transition: .5s;
+          transition: .5s;
+          top: 5px;
+          left: 24px; }
+        .userData-body form > .form-group .form-col label > input {
+          width: 100%;
+          font-size: 14px;
+          font-family: "Roboto Condensed", sans-serif;
+          color: #000000;
+          border: 1px solid #ACAFB2;
+          border-radius: 4px;
+          padding: 21px 24px 10px;
+          -webkit-transition: .5s;
+          -o-transition: .5s;
+          transition: .5s; }
+          .userData-body form > .form-group .form-col label > input:hover {
+            border-color: #5f6366;
+            -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 6px rgba(0, 0, 0, 0.2); }
+          .userData-body form > .form-group .form-col label > input.active {
+            border-color: #239800;
+            -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.2) inset;
+            box-shadow: 0 0 6px rgba(0, 0, 0, 0.2) inset; }
+        .userData-body form > .form-group .form-col label .custom-select {
+          position: relative;
+          width: 100%; }
+        .userData-body form > .form-group .form-col label .custom-select select {
+          display: none;
+          /*hide original SELECT element:*/ }
+        .userData-body form > .form-group .form-col label .select-selected {
+          background-color: white;
+          font-size: 14px; }
+        .userData-body form > .form-group .form-col label .select-selected:after {
+          position: absolute;
+          content: "";
+          top: 20px;
+          right: 24px;
+          width: 7px;
+          height: 7px;
+          border: 1px solid transparent;
+          border-color: transparent transparent #ACAFB2 #ACAFB2;
+          border-radius: 3px 0 3px 0;
+          -webkit-transform: rotate(-45deg);
+          -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg); }
+        .userData-body form > .form-group .form-col label .select-selected.select-arrow-active:after {
+          border-color: transparent transparent #239800 #239800; }
+        .userData-body form > .form-group .form-col label .select-selected.select-arrow-active {
+          border-color: #239800;
+          color: #239800;
+          border-bottom: 0;
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0; }
+        .userData-body form > .form-group .form-col label .select-items div, .userData-body form > .form-group .form-col label .select-selected {
+          color: #ACAFB2;
+          padding: 15px 24px;
+          border: 1px solid #ACAFB2;
+          cursor: pointer;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+          border-radius: 4px; }
+        .userData-body form > .form-group .form-col label .select-items div {
+          font-weight: bolder;
+          color: #62686F;
+          font-size: 18px; }
+        .userData-body form > .form-group .form-col label .select-items div > strong,
+        .userData-body form > .form-group .form-col label .select-selected strong {
+          color: #000000;
+          font-weight: bold; }
+        .userData-body form > .form-group .form-col label .select-items div > span,
+        .userData-body form > .form-group .form-col label .select-selected span {
+          color: #F30D31;
+          font-weight: bold;
+          float: right; }
+        .userData-body form > .form-group .form-col label .select-selected span {
+          float: none;
+          margin-left: 15px; }
+        .userData-body form > .form-group .form-col label .select-items div {
+          border: 1px solid transparent;
+          border-top-color: #ACAFB2;
+          border-left-color: #239800;
+          border-right-color: #239800;
+          border-radius: 0px; }
+        .userData-body form > .form-group .form-col label .select-selected.active {
+          border-color: #239800;
+          color: #62686F; }
+          .userData-body form > .form-group .form-col label .select-selected.active:after {
+            border-color: transparent transparent #239800 #239800; }
+        .userData-body form > .form-group .form-col label .select-selected.error {
+          border-color: #F30D31;
+          color: #F30D31; }
+          .userData-body form > .form-group .form-col label .select-selected.error:after {
+            border-color: transparent transparent #F30D31 #F30D31; }
+        .userData-body form > .form-group .form-col label .select-items {
+          position: absolute;
+          background-color: white;
+          top: 100%;
+          left: 0;
+          right: 0;
+          z-index: 99;
+          border-bottom: 1px solid #239800;
+          border-bottom-left-radius: 3px;
+          border-bottom-right-radius: 3px; }
+        .userData-body form > .form-group .form-col label .select-hide {
+          display: none; }
+        .userData-body form > .form-group .form-col label .select-items div:hover, .userData-body form > .form-group .form-col label .same-as-selected {
+          background-color: rgba(172, 175, 178, 0.2); }
+      .userData-body form > .form-group .form-col .invalid {
+        display: none;
         color: #F30D31;
-        border-color: #F30D31; }
+        margin-top: 5px;
+        font-size: 12px; }
+        .userData-body form > .form-group .form-col .invalid.error {
+          display: block; }
+      .userData-body form > .form-group .form-col:nth-of-type(2) {
+        margin: 0 32px; }
+      .userData-body form > .form-group .form-col.form-select-user {
+        margin: 0; }
+    .userData-body form > .form-group .btn-submit {
+      background: #F1F2F2;
+      width: 100%;
+      padding: 15px 5px 15px; }
+      .userData-body form > .form-group .btn-submit > button {
+        border-radius: 3px;
+        display: block;
+        position: relative;
+        overflow: hidden;
+        background: transparent;
+        margin-left: auto; }
+        .userData-body form > .form-group .btn-submit > button > span {
+          border: 2px solid #F30D31;
+          color: #F30D31;
+          font-family: "Roboto Condensed", sans-serif;
+          font-weight: 600;
+          font-size: 18px;
+          padding: 10px;
+          border-radius: 3px;
+          position: relative;
+          z-index: 5;
+          -webkit-transition: color 0s .2s;
+          -o-transition: color 0s .2s;
+          transition: color 0s .2s;
+          display: block; }
+        .userData-body form > .form-group .btn-submit > button:before {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background: #F30D31;
+          left: 0;
+          top: 100%;
+          -webkit-transition: .5s;
+          -o-transition: .5s;
+          transition: .5s;
+          z-index: 2; }
+        .userData-body form > .form-group .btn-submit > button:hover:before {
+          top: 0; }
+        .userData-body form > .form-group .btn-submit > button:hover > span {
+          color: white; }
+
+@media only screen and (min-width: 799px) and (max-width: 1000px) {
+  #personalAreaBox #userArea-header > .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start; }
+  #personalAreaBox #userArea-header .personalAre-navbar {
+    width: 100%; }
+    #personalAreaBox #userArea-header .personalAre-navbar ul.row {
+      width: 100%; }
+      #personalAreaBox #userArea-header .personalAre-navbar ul.row > li {
+        width: 100%; }
+        #personalAreaBox #userArea-header .personalAre-navbar ul.row > li > a {
+          width: 100%;
+          padding-left: 0;
+          padding-right: 0; } }
+
+@media only screen and (max-width: 799px) {
+  #personalAreaBox #userArea-header > .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start; }
+  #personalAreaBox #userArea-header .personalAre-navbar {
+    width: 100%; }
+    #personalAreaBox #userArea-header .personalAre-navbar ul.row {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      align-items: flex-start; }
+      #personalAreaBox #userArea-header .personalAre-navbar ul.row > li {
+        width: 100%; }
+        #personalAreaBox #userArea-header .personalAre-navbar ul.row > li > a {
+          padding: 8px 27px;
+          text-align: left;
+          border-bottom: 1px solid rgba(98, 104, 111, 0.5); }
+          #personalAreaBox #userArea-header .personalAre-navbar ul.row > li > a.active {
+            display: none; }
+        #personalAreaBox #userArea-header .personalAre-navbar ul.row > li:nth-of-type(2) > a, #personalAreaBox #userArea-header .personalAre-navbar ul.row > li:nth-of-type(3) > a {
+          position: relative; }
+          #personalAreaBox #userArea-header .personalAre-navbar ul.row > li:nth-of-type(2) > a:before, #personalAreaBox #userArea-header .personalAre-navbar ul.row > li:nth-of-type(2) > a:after, #personalAreaBox #userArea-header .personalAre-navbar ul.row > li:nth-of-type(3) > a:before, #personalAreaBox #userArea-header .personalAre-navbar ul.row > li:nth-of-type(3) > a:after {
+            display: none; }
+    #personalAreaBox #userArea-header .personalAre-navbar .mobile-persNavbar {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+  #personalAreaBox #userArea-header .col-pers > h1 {
+    display: none; }
+  .alert > .row > .col-alert > p {
+    font-size: 16px;
+    padding: 0 10px; }
+  .alert > .row > .col-alert > .btn {
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+    border: 0;
+    padding: 0;
+    border-radius: 0; }
+    .alert > .row > .col-alert > .btn > span:first-of-type {
+      display: none; }
+    .alert > .row > .col-alert > .btn > .close-icon {
+      display: block; }
+  .alert > .row > .col-alert > svg {
+    width: 20.5px;
+    height: 20.5px; }
+  .alert-warring .btn:hover {
+    background: transparent !important; }
+    .alert-warring .btn:hover svg > path {
+      fill: #F30D31; }
+  .alert-success .btn:hover {
+    background: transparent !important; }
+    .alert-success .btn:hover svg > path {
+      fill: #F30D31; }
+  .alert-danger .btn:hover {
+    background: transparent  !important; }
+    .alert-danger .btn:hover svg > path {
+      fill: #F30D31; }
+  .modal-danger-close > .row > .col h2 {
+    font-size: 28px; }
+  #userSubscript > .sub-info ul li {
+    padding: 13px 10px;
+    -ms-flex-pack: distribute;
+    justify-content: space-around; }
+    #userSubscript > .sub-info ul li span {
+      width: 60%; }
+    #userSubscript > .sub-info ul li.sub-btn {
+      text-align: right;
+      padding: 12px 10px;
+      background: #ffffff;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; }
+      #userSubscript > .sub-info ul li.sub-btn > .btn-continue-sub {
+        width: 100%; }
+  .userData-body form > .form-group {
+    background: white;
+    padding: 6px 5px 0px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 0px 5px rgba(229, 230, 230, 0.5);
+    box-shadow: 0 0px 5px rgba(229, 230, 230, 0.5);
+    margin-bottom: 11px; }
+    .userData-body form > .form-group .form-col-100 {
+      margin: 0 0px 14px; }
+      .userData-body form > .form-group .form-col-100 > h4 {
+        font-size: 16px;
+        color: #808080; }
+    .userData-body form > .form-group > .row {
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      padding: 0;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+    .userData-body form > .form-group .form-col {
+      max-width: 100%;
+      width: 100%; }
+    .userData-body form > .form-group .btn-submit {
+      background: #ffffff;
+      padding: 15px 0; }
+      .userData-body form > .form-group .btn-submit > button {
+        width: 100%; } }

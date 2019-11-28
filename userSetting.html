@@ -232,11 +232,19 @@
 								<h1>Личный кабинет</h1>
 							</div>
 							<div class="personalAre-navbar">
-								<ul class="row">
+								<div class="mobile-persNavbar">
+									<span class="choose-active"></span>
+									<div class="menu-tree-mb">
+										<button type="button" class="btn">
+											<span class="tree-btn-is"></span>
+										</button>
+									</div>
+								</div>
+								<ul class="row personalAre-navbar-body">
 									<li><a href="user.html">Актуальные прогнозы</a></li>
-									<li><a href="user.html">Архив прогнозов</a></li>
+									<li><a href="#">Архив прогнозов</a></li>
 									<li><a href="userSubscription.html">Подписка</a></li>
-									<li><a  class="active" href="userSetting.html">Настройки аккаунта</a></li>
+									<li><a class="active"  href="userSetting.html">Настройки аккаунта</a></li>
 								</ul>
 							</div>
 						</div>
@@ -294,7 +302,67 @@
 
 				<!-- start liga content  -->
 				<div id="ligaFootball">
-					
+					<div class="userData-body">
+						<form  action="" autocomplete="off">
+							<div class="form-group">
+								<div class="form-col-100">
+									<h4>Личные данные</h4>
+								</div>
+								<div class="row">
+									<div class="form-col">
+										<label  for="nameUserMD">
+											<span>Имя</span>
+											<input type="text" id="nameUserMD" value="Николай">
+										</label>
+										<div class="invalid">* Error</div> <!--input class error-->
+									</div>
+									<div class="form-col">
+										<label  for="nameUserMD">
+											<span>Фамилия</span>
+											<input  type="text" id="nameUserMD" value="Беллуян">
+										</label>
+										<div class="invalid">* Error</div> <!--input class error-->
+									</div>
+									<div class="form-col">
+										<label  for="regEmailUserMD">
+											<span>Эл. Почта</span>
+											<input  type="email" id="regEmailUserMD" value="niko@gmail.com">
+										</label>
+										<div class="invalid">* Error</div> <!--input class error-->
+									</div>
+								</div>
+								<div class="btn-submit">
+									<button type="submit" class="btn"><span>СОХРАНИТЬ</span></button>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="userData-body" id="userDataSetting">
+						<form  action="" autocomplete="off">
+							<div class="form-group">
+								<div class="form-col-100">
+									<h4>Изменеие тарифа</h4>
+								</div>
+								<div class="form-col form-select-user">
+									<label>
+										<div class="custom-select">
+										  	<select>
+										  	  	<option value="0">Выбрать тариф</option>
+										  	  	<option value="1">Начинающий –w 7 днейw 2000 ₽</option>
+										  	  	<option value="2">Оптимальный –w 14 днейw 3500 ₽</option>
+										  	  	<option value="3">Продвинутый –w 30 днейw 7000 ₽</option>
+										  	  	<option value="4">Активный участник –w 180 днейw 9000 ₽</option>
+										  	</select>
+										</div>
+										<div class="invalid">* Error</div> <!--input class error-->
+									</label>
+								</div>
+								<div class=" btn-submit">
+									<button type="submit" class="btn"><span>СОХРАНИТЬ<span></button>
+								</div>
+							</div>
+						</form>
+					</div>
 				</div>
 				<!-- end liga content -->
 				

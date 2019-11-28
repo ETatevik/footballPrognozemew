@@ -4,7 +4,7 @@ jQuery(document).ready(function() {
 		jQuery(window).resize(function(event) {
 			console.log(jQuery(window).width());
 			// navbar - menu # show nav-body when desctop is big 1129px
-			if(jQuery(window).width() > 1129){
+			if(jQuery(window).width() > 1128){
 				jQuery('#glMenu .nav-body').removeAttr('style');
 				jQuery("#glMenu .menu-tree-mb > .btn").removeClass('active');
 			}
@@ -24,10 +24,19 @@ jQuery(document).ready(function() {
 
 			// pagecontent football liga menu navbar
 			{
-				if(jQuery(window).width() < 799){
+				if(jQuery(window).width() < 800){
 					jQuery('#ligaFootball .navbar-liga li > a').not('#ligaFootball .navbar-liga li > a.active').slideUp(0);
 				}else{
 					jQuery('#ligaFootball .navbar-liga li > a').not('#ligaFootball .navbar-liga li > a.active').slideDown(0);
+				}
+			}
+			// user personal nav bar
+			{
+				if (jQuery(window).width() < 800 ) {
+					jQuery('#personalAreaBox  .mobile-persNavbar .choose-active').text(jQuery('#personalAreaBox .personalAre-navbar li > a.active').text());
+					jQuery('#personalAreaBox .personalAre-navbar-body').slideUp(0);
+				}else{
+					jQuery('#personalAreaBox .personalAre-navbar-body').slideDown(0);
 				}
 			}
 		});
