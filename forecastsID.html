@@ -1096,7 +1096,7 @@
 			</button>
 			<div class="modal-container">
 				<h3>Регистрация</h3>
-				<form  action="./#newPassword-modal" autocomplete="off">
+				<form  action="index.html" autocomplete="off">
 					<div class="form-col">
 						<label  for="nameMD">
 							<span>Имя</span>
@@ -1112,18 +1112,46 @@
 						<div class="invalid">* Error</div> <!--input class error-->
 					</div>
 					<div class="form-col">
-						<label>
-							<div class="custom-select">
-							  	<select>
-							  	  	<option value="0">Выбрать тариф</option>
-							  	  	<option value="1">Начинающий –w 7 днейw 2000 ₽</option>
-							  	  	<option value="2">Оптимальный –w 14 днейw 3500 ₽</option>
-							  	  	<option value="3">Продвинутый –w 30 днейw 7000 ₽</option>
-							  	  	<option value="4">Активный участник –w 180 днейw 9000 ₽</option>
-							  	</select>
+						<div class="select-form">
+							<div class="show-select">
+								<span class="choose-radio">Выбрать тариф</span>
+							</div>
+							<div class="select-body">
+								<label for="tarif-start">
+									<input name="chooseTarif" type="radio" value="2000" id="tarif-start">
+									<span class="select-text">
+										Начинающий –
+										<b>7 дней</b>
+										<span class="red-price">2000 ₽</span>
+									</span>
+								</label>
+								<label for="tarif-optim">
+									<input name="chooseTarif" type="radio" value="3500" id="tarif-optim">
+									<span class="select-text">
+										Оптимальный –
+										<b>14 дней</b>
+										<span class="red-price">3500 ₽</span>
+									</span>
+								</label>
+								<label for="tarif-prew">
+									<input name="chooseTarif" type="radio" value="7000" id="tarif-prew">
+									<span class="select-text">
+										Продвинутый –
+										<b>30 дней</b>
+										<span class="red-price">7000 ₽</span>
+									</span>
+								</label>
+								<label for="tarif-activeUser">
+									<input name="chooseTarif" type="radio" value="9000" id="tarif-activeUser">
+									<span class="select-text">
+										Активный участник –
+										<b>180 дней</b>
+										<span class="red-price">9000 ₽</span>
+									</span>
+								</label>
 							</div>
 							<div class="invalid">* Error</div> <!--input class error-->
-						</label>
+						</div>
 					</div>
 					<div class="form-col">
 						<label  for="regPassMD">

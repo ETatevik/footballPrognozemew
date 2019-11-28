@@ -97,33 +97,27 @@ body {
       margin: auto; }
     .modal > .modal-body > .modal-container form .form-col {
       margin-bottom: 23px; }
-      .modal > .modal-body > .modal-container form .form-col label {
+      .modal > .modal-body > .modal-container form .form-col > label {
         display: block;
         width: 405px;
         margin: auto;
         position: relative;
         -webkit-transition: .5s;
         -o-transition: .5s;
-        transition: .5s;
-        /*the container must be positioned relative:*/
-        /*style the arrow inside the select element:*/
-        /*point the arrow upwards when the select box is open (active):*/
-        /*style the items (options), including the selected item:*/
-        /*style items (options):*/
-        /*hide the items when the select box is closed:*/ }
-        .modal > .modal-body > .modal-container form .form-col label.checkPesData {
+        transition: .5s; }
+        .modal > .modal-body > .modal-container form .form-col > label.checkPesData {
           padding-left: 35px;
           font-size: 10px;
           color: #000000;
           padding-top: 2px; }
-          .modal > .modal-body > .modal-container form .form-col label.checkPesData > a {
+          .modal > .modal-body > .modal-container form .form-col > label.checkPesData > a {
             font-weight: bold;
             color: #000000;
             font-size: 10px;
             text-decoration: underline; }
-            .modal > .modal-body > .modal-container form .form-col label.checkPesData > a:hover {
+            .modal > .modal-body > .modal-container form .form-col > label.checkPesData > a:hover {
               color: #F30D31; }
-        .modal > .modal-body > .modal-container form .form-col label > span {
+        .modal > .modal-body > .modal-container form .form-col > label > span {
           font-size: 14px;
           font-family: "Roboto Condensed", sans-serif;
           color: #ACAFB2;
@@ -133,7 +127,7 @@ body {
           transition: .5s;
           top: 15px;
           left: 24px; }
-        .modal > .modal-body > .modal-container form .form-col label > input {
+        .modal > .modal-body > .modal-container form .form-col > label > input {
           width: 100%;
           font-size: 14px;
           font-family: "Roboto Condensed", sans-serif;
@@ -144,21 +138,21 @@ body {
           -webkit-transition: .5s;
           -o-transition: .5s;
           transition: .5s; }
-          .modal > .modal-body > .modal-container form .form-col label > input:hover {
+          .modal > .modal-body > .modal-container form .form-col > label > input:hover {
             border-color: #5f6366;
             -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
             box-shadow: 0 0 6px rgba(0, 0, 0, 0.2); }
-          .modal > .modal-body > .modal-container form .form-col label > input.active {
+          .modal > .modal-body > .modal-container form .form-col > label > input.active {
             border-color: #239800;
             -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.2) inset;
             box-shadow: 0 0 6px rgba(0, 0, 0, 0.2) inset; }
-        .modal > .modal-body > .modal-container form .form-col label > input[type="checkbox"] {
+        .modal > .modal-body > .modal-container form .form-col > label > input[type="checkbox"] {
           position: absolute;
           opacity: 0;
           cursor: pointer;
           height: 0;
           width: 0; }
-        .modal > .modal-body > .modal-container form .form-col label > .checkmark {
+        .modal > .modal-body > .modal-container form .form-col > label > .checkmark {
           position: absolute;
           top: 0;
           left: 0;
@@ -167,7 +161,7 @@ body {
           background-color: white;
           border: 1.5px solid #239800;
           border-radius: 4px; }
-          .modal > .modal-body > .modal-container form .form-col label > .checkmark:after {
+          .modal > .modal-body > .modal-container form .form-col > label > .checkmark:after {
             content: "";
             position: absolute;
             display: none;
@@ -180,96 +174,10 @@ body {
             -webkit-transform: rotate(45deg);
             -ms-transform: rotate(45deg);
             transform: rotate(45deg); }
-        .modal > .modal-body > .modal-container form .form-col label input:checked ~ .checkmark {
+        .modal > .modal-body > .modal-container form .form-col > label input:checked ~ .checkmark {
           background-color: #239800; }
-        .modal > .modal-body > .modal-container form .form-col label input:checked ~ .checkmark:after {
+        .modal > .modal-body > .modal-container form .form-col > label input:checked ~ .checkmark:after {
           display: block; }
-        .modal > .modal-body > .modal-container form .form-col label .custom-select {
-          position: relative;
-          width: 100%; }
-        .modal > .modal-body > .modal-container form .form-col label .custom-select select {
-          display: none;
-          /*hide original SELECT element:*/ }
-        .modal > .modal-body > .modal-container form .form-col label .select-selected {
-          background-color: white;
-          font-size: 14px; }
-        .modal > .modal-body > .modal-container form .form-col label .select-selected:after {
-          position: absolute;
-          content: "";
-          top: 20px;
-          right: 24px;
-          width: 7px;
-          height: 7px;
-          border: 1px solid transparent;
-          border-color: transparent transparent #ACAFB2 #ACAFB2;
-          border-radius: 3px 0 3px 0;
-          -webkit-transform: rotate(-45deg);
-          -ms-transform: rotate(-45deg);
-          transform: rotate(-45deg); }
-        .modal > .modal-body > .modal-container form .form-col label .select-selected.select-arrow-active:after {
-          border-color: transparent transparent #239800 #239800; }
-        .modal > .modal-body > .modal-container form .form-col label .select-selected.select-arrow-active {
-          border-color: #239800;
-          color: #239800;
-          border-bottom: 0;
-          border-bottom-left-radius: 0;
-          border-bottom-right-radius: 0; }
-        .modal > .modal-body > .modal-container form .form-col label .select-items div, .modal > .modal-body > .modal-container form .form-col label .select-selected {
-          color: #ACAFB2;
-          padding: 15px 24px;
-          border: 1px solid #ACAFB2;
-          cursor: pointer;
-          -webkit-user-select: none;
-          -moz-user-select: none;
-          -ms-user-select: none;
-          user-select: none;
-          border-radius: 4px; }
-        .modal > .modal-body > .modal-container form .form-col label .select-items div {
-          font-weight: bolder;
-          color: #62686F;
-          font-size: 18px; }
-        .modal > .modal-body > .modal-container form .form-col label .select-items div > strong,
-        .modal > .modal-body > .modal-container form .form-col label .select-selected strong {
-          color: #000000;
-          font-weight: bold; }
-        .modal > .modal-body > .modal-container form .form-col label .select-items div > span,
-        .modal > .modal-body > .modal-container form .form-col label .select-selected span {
-          color: #F30D31;
-          font-weight: bold;
-          float: right; }
-        .modal > .modal-body > .modal-container form .form-col label .select-selected span {
-          float: none;
-          margin-left: 15px; }
-        .modal > .modal-body > .modal-container form .form-col label .select-items div {
-          border: 1px solid transparent;
-          border-top-color: #ACAFB2;
-          border-left-color: #239800;
-          border-right-color: #239800;
-          border-radius: 0px; }
-        .modal > .modal-body > .modal-container form .form-col label .select-selected.active {
-          border-color: #239800;
-          color: #62686F; }
-          .modal > .modal-body > .modal-container form .form-col label .select-selected.active:after {
-            border-color: transparent transparent #239800 #239800; }
-        .modal > .modal-body > .modal-container form .form-col label .select-selected.error {
-          border-color: #F30D31;
-          color: #F30D31; }
-          .modal > .modal-body > .modal-container form .form-col label .select-selected.error:after {
-            border-color: transparent transparent #F30D31 #F30D31; }
-        .modal > .modal-body > .modal-container form .form-col label .select-items {
-          position: absolute;
-          background-color: white;
-          top: 100%;
-          left: 0;
-          right: 0;
-          z-index: 99;
-          border-bottom: 1px solid #239800;
-          border-bottom-left-radius: 3px;
-          border-bottom-right-radius: 3px; }
-        .modal > .modal-body > .modal-container form .form-col label .select-hide {
-          display: none; }
-        .modal > .modal-body > .modal-container form .form-col label .select-items div:hover, .modal > .modal-body > .modal-container form .form-col label .same-as-selected {
-          background-color: rgba(172, 175, 178, 0.2); }
       .modal > .modal-body > .modal-container form .form-col .invalid {
         display: none;
         color: #F30D31;
@@ -311,6 +219,94 @@ body {
           .modal > .modal-body > .modal-container form .form-col.btn-link button:hover {
             color: #F30D31;
             text-decoration: underline; }
+      .modal > .modal-body > .modal-container form .form-col > .select-form {
+        position: relative;
+        background: white; }
+        .modal > .modal-body > .modal-container form .form-col > .select-form > .show-select > .choose-radio {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          width: 100%;
+          color: #ACAFB2;
+          border: 1px solid #ACAFB2;
+          cursor: pointer;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+          border-radius: 4px;
+          font-size: 14px;
+          position: relative;
+          padding: 15px 24px; }
+          .modal > .modal-body > .modal-container form .form-col > .select-form > .show-select > .choose-radio:after {
+            position: absolute;
+            content: "";
+            top: 15px;
+            right: 24px;
+            width: 7px;
+            height: 7px;
+            border: 1px solid transparent;
+            border-color: transparent transparent #ACAFB2 #ACAFB2;
+            border-radius: 3px 0 3px 0;
+            -webkit-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg); }
+          .modal > .modal-body > .modal-container form .form-col > .select-form > .show-select > .choose-radio.active:after {
+            border-color: transparent transparent #239800 #239800; }
+          .modal > .modal-body > .modal-container form .form-col > .select-form > .show-select > .choose-radio.active {
+            border-color: #239800 !important;
+            color: #239800; }
+          .modal > .modal-body > .modal-container form .form-col > .select-form > .show-select > .choose-radio.error {
+            border-color: #F30D31;
+            color: #F30D31; }
+            .modal > .modal-body > .modal-container form .form-col > .select-form > .show-select > .choose-radio.error:after {
+              border-color: transparent transparent #F30D31 #F30D31; }
+          .modal > .modal-body > .modal-container form .form-col > .select-form > .show-select > .choose-radio:hover {
+            border-color: #5f6366;
+            -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 6px rgba(0, 0, 0, 0.2); }
+          .modal > .modal-body > .modal-container form .form-col > .select-form > .show-select > .choose-radio > .red-price {
+            float: none;
+            margin-left: 10px; }
+        .modal > .modal-body > .modal-container form .form-col > .select-form > .select-body {
+          position: absolute;
+          width: 100%;
+          z-index: 500;
+          background: white;
+          margin-top: -2px; }
+        .modal > .modal-body > .modal-container form .form-col > .select-form label {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          width: 100%;
+          color: #ACAFB2;
+          border: 1px solid #ACAFB2;
+          cursor: pointer;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+          position: relative;
+          padding: 15px 24px;
+          font-weight: bolder;
+          color: #62686F;
+          font-size: 18px; }
+          .modal > .modal-body > .modal-container form .form-col > .select-form label:hover {
+            background-color: rgba(172, 175, 178, 0.2); }
+          .modal > .modal-body > .modal-container form .form-col > .select-form label > input {
+            opacity: 0;
+            width: 0; }
+          .modal > .modal-body > .modal-container form .form-col > .select-form label .select-text {
+            width: 100%; }
+            .modal > .modal-body > .modal-container form .form-col > .select-form label .select-text > b {
+              color: #000000;
+              font-weight: bold;
+              float: none;
+              padding-right: 15px; }
+            .modal > .modal-body > .modal-container form .form-col > .select-form label .select-text > .red-price {
+              color: #F30D31;
+              font-weight: bold;
+              float: right; }
     .modal > .modal-body > .modal-container > .btn-close {
       margin-bottom: 7px !important; }
       .modal > .modal-body > .modal-container > .btn-close > button {

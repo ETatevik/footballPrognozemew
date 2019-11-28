@@ -153,7 +153,8 @@
 
 				button{
 					padding: 12px;
-					background: #F30D31
+					background: #F30D31;
+					margin-left: 20px;
 				}
 
 				display: none;
@@ -279,6 +280,10 @@
 			.btns-registration-login{
 				margin-top: 20px;
 				justify-content: center;
+				.signActive{
+					width: 100%;
+					min-width: 200px;
+				}
 			}
 		}
 	}

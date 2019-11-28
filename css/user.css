@@ -353,21 +353,15 @@ body {
     .userData-body form > .form-group .form-col {
       max-width: 374px;
       width: 33.33%; }
-      .userData-body form > .form-group .form-col label {
+      .userData-body form > .form-group .form-col > label {
         display: block;
         margin: auto;
         position: relative;
         -webkit-transition: .5s;
         -o-transition: .5s;
         transition: .5s;
-        margin-bottom: 14px;
-        /*the container must be positioned relative:*/
-        /*style the arrow inside the select element:*/
-        /*point the arrow upwards when the select box is open (active):*/
-        /*style the items (options), including the selected item:*/
-        /*style items (options):*/
-        /*hide the items when the select box is closed:*/ }
-        .userData-body form > .form-group .form-col label > span {
+        margin-bottom: 14px; }
+        .userData-body form > .form-group .form-col > label > span {
           font-size: 12px;
           font-family: "Roboto Condensed", sans-serif;
           color: #ACAFB2;
@@ -377,7 +371,7 @@ body {
           transition: .5s;
           top: 5px;
           left: 24px; }
-        .userData-body form > .form-group .form-col label > input {
+        .userData-body form > .form-group .form-col > label > input {
           width: 100%;
           font-size: 14px;
           font-family: "Roboto Condensed", sans-serif;
@@ -388,100 +382,102 @@ body {
           -webkit-transition: .5s;
           -o-transition: .5s;
           transition: .5s; }
-          .userData-body form > .form-group .form-col label > input:hover {
+          .userData-body form > .form-group .form-col > label > input:hover {
             border-color: #5f6366;
             -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
             box-shadow: 0 0 6px rgba(0, 0, 0, 0.2); }
-          .userData-body form > .form-group .form-col label > input.active {
+          .userData-body form > .form-group .form-col > label > input.active {
             border-color: #239800;
             -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.2) inset;
             box-shadow: 0 0 6px rgba(0, 0, 0, 0.2) inset; }
-        .userData-body form > .form-group .form-col label .custom-select {
-          position: relative;
-          width: 100%; }
-        .userData-body form > .form-group .form-col label .custom-select select {
-          display: none;
-          /*hide original SELECT element:*/ }
-        .userData-body form > .form-group .form-col label .select-selected {
-          background-color: white;
-          font-size: 14px; }
-        .userData-body form > .form-group .form-col label .select-selected:after {
-          position: absolute;
-          content: "";
-          top: 20px;
-          right: 24px;
-          width: 7px;
-          height: 7px;
-          border: 1px solid transparent;
-          border-color: transparent transparent #ACAFB2 #ACAFB2;
-          border-radius: 3px 0 3px 0;
-          -webkit-transform: rotate(-45deg);
-          -ms-transform: rotate(-45deg);
-          transform: rotate(-45deg); }
-        .userData-body form > .form-group .form-col label .select-selected.select-arrow-active:after {
-          border-color: transparent transparent #239800 #239800; }
-        .userData-body form > .form-group .form-col label .select-selected.select-arrow-active {
-          border-color: #239800;
-          color: #239800;
-          border-bottom: 0;
-          border-bottom-left-radius: 0;
-          border-bottom-right-radius: 0; }
-        .userData-body form > .form-group .form-col label .select-items div, .userData-body form > .form-group .form-col label .select-selected {
+      .userData-body form > .form-group .form-col > .select-form {
+        position: relative;
+        background: white;
+        padding-bottom: 17px; }
+        .userData-body form > .form-group .form-col > .select-form > .show-select > .choose-radio {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          width: 100%;
           color: #ACAFB2;
-          padding: 15px 24px;
           border: 1px solid #ACAFB2;
           cursor: pointer;
           -webkit-user-select: none;
           -moz-user-select: none;
           -ms-user-select: none;
           user-select: none;
-          border-radius: 4px; }
-        .userData-body form > .form-group .form-col label .select-items div {
+          border-radius: 4px;
+          font-size: 14px;
+          position: relative;
+          padding: 15px 24px; }
+          .userData-body form > .form-group .form-col > .select-form > .show-select > .choose-radio:after {
+            position: absolute;
+            content: "";
+            top: 15px;
+            right: 24px;
+            width: 7px;
+            height: 7px;
+            border: 1px solid transparent;
+            border-color: transparent transparent #ACAFB2 #ACAFB2;
+            border-radius: 3px 0 3px 0;
+            -webkit-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg); }
+          .userData-body form > .form-group .form-col > .select-form > .show-select > .choose-radio.active:after {
+            border-color: transparent transparent #239800 #239800; }
+          .userData-body form > .form-group .form-col > .select-form > .show-select > .choose-radio.active {
+            border-color: #239800 !important;
+            color: #239800; }
+          .userData-body form > .form-group .form-col > .select-form > .show-select > .choose-radio.error {
+            border-color: #F30D31;
+            color: #F30D31; }
+            .userData-body form > .form-group .form-col > .select-form > .show-select > .choose-radio.error:after {
+              border-color: transparent transparent #F30D31 #F30D31; }
+          .userData-body form > .form-group .form-col > .select-form > .show-select > .choose-radio:hover {
+            border-color: #5f6366;
+            -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 6px rgba(0, 0, 0, 0.2); }
+          .userData-body form > .form-group .form-col > .select-form > .show-select > .choose-radio > .red-price {
+            float: none;
+            margin-left: 10px; }
+        .userData-body form > .form-group .form-col > .select-form > .select-body {
+          width: 100%;
+          z-index: 500;
+          background: white;
+          margin-top: -2px; }
+        .userData-body form > .form-group .form-col > .select-form label {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          width: 100%;
+          color: #ACAFB2;
+          border: 1px solid #ACAFB2;
+          cursor: pointer;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+          position: relative;
+          padding: 15px 24px;
           font-weight: bolder;
           color: #62686F;
           font-size: 18px; }
-        .userData-body form > .form-group .form-col label .select-items div > strong,
-        .userData-body form > .form-group .form-col label .select-selected strong {
-          color: #000000;
-          font-weight: bold; }
-        .userData-body form > .form-group .form-col label .select-items div > span,
-        .userData-body form > .form-group .form-col label .select-selected span {
-          color: #F30D31;
-          font-weight: bold;
-          float: right; }
-        .userData-body form > .form-group .form-col label .select-selected span {
-          float: none;
-          margin-left: 15px; }
-        .userData-body form > .form-group .form-col label .select-items div {
-          border: 1px solid transparent;
-          border-top-color: #ACAFB2;
-          border-left-color: #239800;
-          border-right-color: #239800;
-          border-radius: 0px; }
-        .userData-body form > .form-group .form-col label .select-selected.active {
-          border-color: #239800;
-          color: #62686F; }
-          .userData-body form > .form-group .form-col label .select-selected.active:after {
-            border-color: transparent transparent #239800 #239800; }
-        .userData-body form > .form-group .form-col label .select-selected.error {
-          border-color: #F30D31;
-          color: #F30D31; }
-          .userData-body form > .form-group .form-col label .select-selected.error:after {
-            border-color: transparent transparent #F30D31 #F30D31; }
-        .userData-body form > .form-group .form-col label .select-items {
-          position: absolute;
-          background-color: white;
-          top: 100%;
-          left: 0;
-          right: 0;
-          z-index: 99;
-          border-bottom: 1px solid #239800;
-          border-bottom-left-radius: 3px;
-          border-bottom-right-radius: 3px; }
-        .userData-body form > .form-group .form-col label .select-hide {
-          display: none; }
-        .userData-body form > .form-group .form-col label .select-items div:hover, .userData-body form > .form-group .form-col label .same-as-selected {
-          background-color: rgba(172, 175, 178, 0.2); }
+          .userData-body form > .form-group .form-col > .select-form label:hover {
+            background-color: rgba(172, 175, 178, 0.2); }
+          .userData-body form > .form-group .form-col > .select-form label > input {
+            opacity: 0;
+            width: 0; }
+          .userData-body form > .form-group .form-col > .select-form label .select-text {
+            width: 100%; }
+            .userData-body form > .form-group .form-col > .select-form label .select-text > b {
+              color: #000000;
+              font-weight: bold;
+              float: none;
+              padding-right: 15px; }
+            .userData-body form > .form-group .form-col > .select-form label .select-text > .red-price {
+              color: #F30D31;
+              font-weight: bold;
+              float: right; }
       .userData-body form > .form-group .form-col .invalid {
         display: none;
         color: #F30D31;

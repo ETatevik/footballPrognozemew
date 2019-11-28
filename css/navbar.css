@@ -206,7 +206,8 @@ body {
         display: none; }
         #glMenu > .container .btns-registration-login .signActive button {
           padding: 12px;
-          background: #F30D31; }
+          background: #F30D31;
+          margin-left: 20px; }
         #glMenu > .container .btns-registration-login .signActive.show {
           display: -webkit-box;
           display: -ms-flexbox;
@@ -300,7 +301,10 @@ body {
       margin-top: 20px;
       -webkit-box-pack: center;
       -ms-flex-pack: center;
-      justify-content: center; } }
+      justify-content: center; }
+      #glMenu > .container .btns-registration-login .signActive {
+        width: 100%;
+        min-width: 200px; } }
 
 @media only screen and (max-width: 450px) {
   #glMenu > .container .btns-registration-login {
