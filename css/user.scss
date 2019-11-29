@@ -555,6 +555,33 @@
 	}  
 }
 
+@media only screen and(min-width: 1130px) and (max-width: 1199px) {
+	#personalAreaBox{
+		#userArea-header{
+
+			& > .row{
+				flex-direction: column;
+				justify-content: flex-start;
+				align-items: flex-start;
+			}
+
+			& .personalAre-navbar{
+				width: 100%;
+				ul.row{
+					width: 100%;
+					& > li{
+						width: 100%;
+						& > a{
+							width: 100%;
+							padding-left: 0;
+							padding-right: 0;
+						}	
+					}
+				}
+			}
+		}
+	}
+}
 
 // media
 @media only screen and (min-width: 799px) and(max-width: 1000px ) {

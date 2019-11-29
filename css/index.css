@@ -531,6 +531,11 @@ body {
         #pageContent > .container footer > .container > .row .col-foot > p > a:hover {
           text-decoration: underline;
           color: #F30D31; }
+      #pageContent > .container footer > .container > .row .col-foot > p {
+        font-family: "Roboto Condensed", sans-serif;
+        font-weight: normal;
+        font-size: 16px;
+        color: #000000; }
   #pageContent #nav-node-list {
     background: #ffffff;
     padding: 4px 15px;

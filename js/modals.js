@@ -1,4 +1,13 @@
 jQuery(document).ready(function($) {
+	// modal
+	{
+		if(jQuery(window).height() < 650){
+    		jQuery('.modal-body').css('marginTop', '80px');
+    	}
+    	if(jQuery(window).height() < 530){
+    		jQuery('.modal-body').css('marginTop', '120px');
+    	}
+	}
 	// all modal window close
 	{
 		jQuery('.modal').click(function(event) {

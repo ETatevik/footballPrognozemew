@@ -590,6 +590,12 @@ body{
 							color: #F30D31;
 						}
 					}
+					& > p{
+						font-family: $Roboto_Condensed;
+						font-weight: normal;
+						font-size: 16px;
+						color: #000000;
+					}
 				}
 			}
 		}

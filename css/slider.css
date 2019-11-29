@@ -39,6 +39,24 @@ body {
   background-color: transparent;
   cursor: pointer; }
 
+.text-nowrap {
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative; }
+
+@media only screen and (max-width: 950px) {
+  .text-nowrap {
+    max-width: 600px; }
+    .text-nowrap:after {
+      content: '...';
+      background: white;
+      font-size: 14px;
+      color: #000000;
+      position: absolute;
+      right: 0px;
+      padding: 0 3px;
+      bottom: 0; } }
+
 #pageContent > .container #indexPageSilder {
   position: relative;
   min-height: 496px;

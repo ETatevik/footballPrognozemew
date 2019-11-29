@@ -2,7 +2,8 @@ jQuery(document).ready(function() {
 	// when resize window width // this can testing viewport desctop
 	{
 		jQuery(window).resize(function(event) {
-			console.log(jQuery(window).width());
+
+			console.log(jQuery(window).height());
 			// navbar - menu # show nav-body when desctop is big 1129px
 			if(jQuery(window).width() > 1128){
 				jQuery('#glMenu .nav-body').removeAttr('style');
@@ -39,6 +40,24 @@ jQuery(document).ready(function() {
 					jQuery('#personalAreaBox .personalAre-navbar-body').slideDown(0);
 				}
 			}
+
+			// news slider width
+			{
+				jQuery('.recommendBlockSlide').width(jQuery('#recommendedReadingBox').width());
+    			// jQuery('.recommendBlockSlide').height(jQuery('#recommend-slider').height() + 100);
+    			if(jQuery(window).width() > 1405 && jQuery(window).width() < 1700){
+			        jQuery('.recommendBlockSlide').width(jQuery('#recommendedReadingBox').width() - 150);
+			    }
+    		}
+    		// modal
+    		{
+    			if(jQuery(window).height() < 650){
+    				jQuery('.modal-body').css('marginTop', '80px');
+    			}
+    			if(jQuery(window).height() < 530){
+    				jQuery('.modal-body').css('marginTop', '120px');
+    			}
+    		}
 		});
 	}
 });

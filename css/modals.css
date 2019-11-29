@@ -79,14 +79,16 @@ body {
   align-items: center;
   display: none;
   overflow-y: auto;
-  padding-bottom: 20px; }
+  padding-bottom: 20px;
+  padding-top: 20px; }
   .modal::-webkit-scrollbar {
     display: none; }
   .modal > .modal-body {
     background: white;
     padding: 60px 40px 83px;
     position: relative;
-    width: auto; }
+    width: auto;
+    margin-top: 40px; }
     .modal > .modal-body > .modal-container h3 {
       font-family: "Roboto Condensed", sans-serif;
       font-weight: bold;
@@ -392,7 +394,11 @@ body {
       padding-bottom: 46px;
       width: 100%; }
     .modal > .modal-body > .modal-container form .form-col label {
-      width: 100%; } }
+      width: 100%; }
+    .modal > .modal-body > .modal-container form .form-col > .select-form > .show-select > .choose-radio {
+      font-size: 14px; }
+    .modal > .modal-body > .modal-container form .form-col > .select-form label {
+      font-size: 14px; } }
 
 @media only screen and (max-height: 700px) {
   .modal {

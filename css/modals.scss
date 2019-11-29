@@ -14,6 +14,7 @@
 	display: none;
 	overflow-y: auto;
 	padding-bottom: 20px;
+	padding-top: 20px;
 	&::-webkit-scrollbar {
 	    display: none;
 	}
@@ -23,6 +24,7 @@
 		padding: 60px 40px 83px;
 		position: relative;
 		width: auto;
+		margin-top: 40px;
 		
 		& > .modal-container{
 			h3{
@@ -385,6 +387,14 @@
 					.form-col{
 						label{
 							width: 100%;
+						}
+						& > .select-form{
+							& >.show-select>.choose-radio{
+						  		font-size: 14px;
+							}
+							label{
+							  	font-size: 14px;
+							}
 						}
 					}
 				}
