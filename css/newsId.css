@@ -44,6 +44,10 @@ body {
   overflow: hidden;
   position: relative; }
 
+.img-fluid {
+  max-width: 100%;
+  height: auto; }
+
 @media only screen and (max-width: 950px) {
   .text-nowrap {
     max-width: 600px; }

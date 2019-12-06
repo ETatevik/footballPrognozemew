@@ -44,6 +44,10 @@ body {
   overflow: hidden;
   position: relative; }
 
+.img-fluid {
+  max-width: 100%;
+  height: auto; }
+
 @media only screen and (max-width: 950px) {
   .text-nowrap {
     max-width: 600px; }
@@ -59,7 +63,7 @@ body {
 
 #glMenu {
   background: #323840;
-  border-top: 2px solid #F30D31;
+  border-top: 2px solid #DB2214;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -137,7 +141,14 @@ body {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row;
         max-width: 967px;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
         width: 100%; }
         #glMenu > .container .nav-body .menu-football-gl > li > a {
           font-family: "Roboto Condensed", sans-serif;
@@ -172,10 +183,10 @@ body {
         transition: .25s;
         background: transparent; }
         #glMenu > .container .btns-registration-login .signNotActive > button:hover {
-          background: #F30D31;
-          border-color: #F30D31; }
+          background: #DB2214;
+          border-color: #DB2214; }
       #glMenu > .container .btns-registration-login .signNotActive.signUpActive > button {
-        background: #F30D31;
+        background: #DB2214;
         border: 0;
         padding: 12px 15px; }
         #glMenu > .container .btns-registration-login .signNotActive.signUpActive > button:hover {
@@ -206,7 +217,7 @@ body {
         display: none; }
         #glMenu > .container .btns-registration-login .signActive button {
           padding: 12px;
-          background: #F30D31;
+          background: #DB2214;
           margin-left: 20px; }
         #glMenu > .container .btns-registration-login .signActive.show {
           display: -webkit-box;
@@ -219,10 +230,7 @@ body {
     #glMenu > .container .nav-body {
       width: 95%; }
       #glMenu > .container .nav-body .menu-football-gl {
-        width: 90%;
-        -webkit-box-pack: end;
-        -ms-flex-pack: end;
-        justify-content: flex-end; }
+        width: 90%; }
         #glMenu > .container .nav-body .menu-football-gl > li > a {
           font-size: 17px;
           padding: 0 15px; }
@@ -235,10 +243,7 @@ body {
     #glMenu > .container .nav-body {
       width: 95%; }
       #glMenu > .container .nav-body .menu-football-gl {
-        width: 100%;
-        -webkit-box-pack: end;
-        -ms-flex-pack: end;
-        justify-content: flex-end; }
+        width: 100%; }
         #glMenu > .container .nav-body .menu-football-gl > li > a {
           padding: 0 10px; }
     #glMenu > .container .signNotActive:first-of-type > button {

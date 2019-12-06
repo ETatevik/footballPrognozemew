@@ -44,6 +44,10 @@ body {
   overflow: hidden;
   position: relative; }
 
+.img-fluid {
+  max-width: 100%;
+  height: auto; }
+
 @media only screen and (max-width: 950px) {
   .text-nowrap {
     max-width: 600px; }
@@ -92,11 +96,11 @@ body {
             #newsBigBox #newsBigHeader.row .col-news-data ul.row > li > a.active {
               font-weight: 600;
               color: #000000;
-              border-bottom-color: #F30D31; }
+              border-bottom-color: #DB2214; }
             #newsBigBox #newsBigHeader.row .col-news-data ul.row > li > a:hover {
-              background: #F30D31;
+              background: #DB2214;
               color: white;
-              border-bottom-color: #F30D31;
+              border-bottom-color: #DB2214;
               -webkit-transition: .4s border;
               -o-transition: .4s border;
               transition: .4s border;
@@ -104,7 +108,7 @@ body {
               #newsBigBox #newsBigHeader.row .col-news-data ul.row > li > a:hover.active {
                 background: white;
                 color: #000000;
-                border-bottom-color: #F30D31; }
+                border-bottom-color: #DB2214; }
           #newsBigBox #newsBigHeader.row .col-news-data ul.row > li:nth-of-type(2) > a {
             position: relative; }
             #newsBigBox #newsBigHeader.row .col-news-data ul.row > li:nth-of-type(2) > a:before, #newsBigBox #newsBigHeader.row .col-news-data ul.row > li:nth-of-type(2) > a:after {
@@ -232,7 +236,7 @@ body {
       position: relative;
       overflow: hidden;
       background: transparent;
-      border: 2px solid #F30D31; }
+      border: 2px solid #DB2214; }
       #newsBigBox > .moreNews-btn > .btn > span {
         padding: 10px 45px;
         font-size: 18px;
@@ -249,7 +253,7 @@ body {
         position: absolute;
         width: 100%;
         height: 100%;
-        background: #F30D31;
+        background: #DB2214;
         left: 0;
         top: 100%;
         -webkit-transition: .5s;

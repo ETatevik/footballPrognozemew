@@ -44,6 +44,10 @@ body {
   overflow: hidden;
   position: relative; }
 
+.img-fluid {
+  max-width: 100%;
+  height: auto; }
+
 @media only screen and (max-width: 950px) {
   .text-nowrap {
     max-width: 600px; }
@@ -69,7 +73,7 @@ body {
     padding: 6px  4px 3px;
     background: #707070; }
     #headerNews > .container-row h3 {
-      background: #F30D31;
+      background: #DB2214;
       border-radius: 2px;
       color: white;
       font-size: 12px;
@@ -210,11 +214,11 @@ body {
             #successForecasts > .container-row #successForecastsDescript .col-data ul.row > li > a.active {
               font-weight: 600;
               color: #000000;
-              border-bottom-color: #F30D31; }
+              border-bottom-color: #DB2214; }
             #successForecasts > .container-row #successForecastsDescript .col-data ul.row > li > a:hover {
-              background: #F30D31;
+              background: #DB2214;
               color: white;
-              border-bottom-color: #F30D31;
+              border-bottom-color: #DB2214;
               -webkit-transition: .4s border;
               -o-transition: .4s border;
               transition: .4s border;
@@ -222,7 +226,7 @@ body {
               #successForecasts > .container-row #successForecastsDescript .col-data ul.row > li > a:hover.active {
                 background: white;
                 color: #000000;
-                border-bottom-color: #F30D31; }
+                border-bottom-color: #DB2214; }
           #successForecasts > .container-row #successForecastsDescript .col-data ul.row > li:nth-of-type(2) > a {
             position: relative; }
             #successForecasts > .container-row #successForecastsDescript .col-data ul.row > li:nth-of-type(2) > a:before, #successForecasts > .container-row #successForecastsDescript .col-data ul.row > li:nth-of-type(2) > a:after {
@@ -294,7 +298,7 @@ body {
             -ms-flex-item-align: end;
             align-self: flex-end; }
             #successForecasts > .container-row #successForecastsDescript .sucForecBox > .row > .col-lig-forec.align-self-end > h4 {
-              color: #F30D31;
+              color: #DB2214;
               font-size: 40px;
               font-weight: normal;
               font-family: "Roboto Condensed", sans-serif; }
@@ -303,7 +307,7 @@ body {
         width: 100%;
         margin-top: 15px; }
         #successForecasts > .container-row #successForecastsDescript .sucForecBox > table th {
-          background: #F30D31;
+          background: #DB2214;
           border-radius: 2px 2px 0 0;
           color: white;
           font-size: 10px;
@@ -312,7 +316,7 @@ body {
           padding: 5px; }
         #successForecasts > .container-row #successForecastsDescript .sucForecBox > table td {
           border: 1px solid #ACAFB2;
-          color: #F30D31;
+          color: #DB2214;
           font-size: 14px;
           font-weight: normal;
           font-family: "Roboto Condensed", sans-serif;
@@ -407,7 +411,7 @@ body {
           width: 6px;
           height: 6px;
           border-radius: 100%;
-          background: #F30D31;
+          background: #DB2214;
           display: inline-block; }
           #successForecasts > .mobile-hide-block > .btn-open-fix > span:after, #successForecasts > .mobile-hide-block > .btn-open-fix > span:before {
             content: '';
@@ -415,7 +419,7 @@ body {
             width: 6px;
             height: 6px;
             border-radius: 100%;
-            background: #F30D31; }
+            background: #DB2214; }
           #successForecasts > .mobile-hide-block > .btn-open-fix > span:before {
             top: -8px;
             left: 0; }
@@ -423,8 +427,8 @@ body {
             bottom: -8px;
             left: 0; }
         #successForecasts > .mobile-hide-block > .btn-open-fix:hover {
-          background: #F30D31;
-          border-color: #F30D31; }
+          background: #DB2214;
+          border-color: #DB2214; }
           #successForecasts > .mobile-hide-block > .btn-open-fix:hover > span {
             background: white; }
             #successForecasts > .mobile-hide-block > .btn-open-fix:hover > span:before, #successForecasts > .mobile-hide-block > .btn-open-fix:hover > span:after {
@@ -441,8 +445,8 @@ body {
             -ms-transform: rotate(180deg);
             transform: rotate(180deg); }
           #successForecasts > .mobile-hide-block > .btn-open-fix.active:hover {
-            background: #f30d31;
-            border-color: #f30d31; }
+            background: #DB2214;
+            border-color: #DB2214; }
             #successForecasts > .mobile-hide-block > .btn-open-fix.active:hover > svg > path {
               fill: white; }
             #successForecasts > .mobile-hide-block > .btn-open-fix.active:hover:active {

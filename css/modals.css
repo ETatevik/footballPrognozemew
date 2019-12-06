@@ -44,6 +44,10 @@ body {
   overflow: hidden;
   position: relative; }
 
+.img-fluid {
+  max-width: 100%;
+  height: auto; }
+
 @media only screen and (max-width: 950px) {
   .text-nowrap {
     max-width: 600px; }
@@ -118,7 +122,7 @@ body {
             font-size: 10px;
             text-decoration: underline; }
             .modal > .modal-body > .modal-container form .form-col > label.checkPesData > a:hover {
-              color: #F30D31; }
+              color: #DB2214; }
         .modal > .modal-body > .modal-container form .form-col > label > span {
           font-size: 14px;
           font-family: "Roboto Condensed", sans-serif;
@@ -182,7 +186,7 @@ body {
           display: block; }
       .modal > .modal-body > .modal-container form .form-col .invalid {
         display: none;
-        color: #F30D31;
+        color: #DB2214;
         margin-top: 5px;
         font-size: 12px; }
         .modal > .modal-body > .modal-container form .form-col .invalid.error {
@@ -191,7 +195,7 @@ body {
         margin-top: 50px;
         margin-bottom: 7px !important; }
         .modal > .modal-body > .modal-container form .form-col.btn-submit > button {
-          background: #F30D31;
+          background: #DB2214;
           width: 100%;
           font-size: 18px;
           font-weight: bold;
@@ -219,7 +223,7 @@ body {
           font-size: 10px;
           font-weight: bold; }
           .modal > .modal-body > .modal-container form .form-col.btn-link button:hover {
-            color: #F30D31;
+            color: #DB2214;
             text-decoration: underline; }
       .modal > .modal-body > .modal-container form .form-col > .select-form {
         position: relative;
@@ -259,10 +263,10 @@ body {
             border-color: #239800 !important;
             color: #239800; }
           .modal > .modal-body > .modal-container form .form-col > .select-form > .show-select > .choose-radio.error {
-            border-color: #F30D31;
-            color: #F30D31; }
+            border-color: #DB2214;
+            color: #DB2214; }
             .modal > .modal-body > .modal-container form .form-col > .select-form > .show-select > .choose-radio.error:after {
-              border-color: transparent transparent #F30D31 #F30D31; }
+              border-color: transparent transparent #DB2214 #DB2214; }
           .modal > .modal-body > .modal-container form .form-col > .select-form > .show-select > .choose-radio:hover {
             border-color: #5f6366;
             -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
@@ -306,13 +310,13 @@ body {
               float: none;
               padding-right: 15px; }
             .modal > .modal-body > .modal-container form .form-col > .select-form label .select-text > .red-price {
-              color: #F30D31;
+              color: #DB2214;
               font-weight: bold;
               float: right; }
     .modal > .modal-body > .modal-container > .btn-close {
       margin-bottom: 7px !important; }
       .modal > .modal-body > .modal-container > .btn-close > button {
-        background: #F30D31;
+        background: #DB2214;
         width: 100%;
         font-size: 18px;
         font-weight: bold;
@@ -345,7 +349,7 @@ body {
         font-size: 18px;
         font-weight: 600;
         font-family: "Roboto Condensed", sans-serif;
-        border: 2px solid #F30D31;
+        border: 2px solid #DB2214;
         border-radius: 3px;
         padding: 10px 15px;
         -webkit-transition: .25s;
@@ -353,11 +357,11 @@ body {
         transition: .25s;
         background: transparent; }
         .modal > .modal-body > .modal-container > .signNotActive > button:hover {
-          background: #F30D31;
-          border-color: #F30D31;
+          background: #DB2214;
+          border-color: #DB2214;
           color: white; }
       .modal > .modal-body > .modal-container > .signNotActive.signUpActive > button {
-        background: #F30D31;
+        background: #DB2214;
         border: 0;
         padding: 12px 15px;
         margin-bottom: 27px;
@@ -381,7 +385,7 @@ body {
         display: inline-block;
         vertical-align: middle; }
       .modal > .modal-body > .close-modal:hover {
-        background: #F30D31; }
+        background: #DB2214; }
         .modal > .modal-body > .close-modal:hover > svg > path {
           fill: white; }
 

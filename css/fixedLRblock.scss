@@ -14,7 +14,7 @@
 
 
 		h3{
-			background: #F30D31;
+			background: #DB2214;
 			border-radius: 2px;
 			color: white;
 			font-size: 12px;
@@ -157,18 +157,18 @@
 							&.active{
 								font-weight: 600;
 								color: #000000;
-								border-bottom-color: #F30D31;
+								border-bottom-color: #DB2214;
 							}
 							&:hover{
-								background: #F30D31;
+								background: #DB2214;
 								color: white;
-								border-bottom-color: #F30D31;
+								border-bottom-color: #DB2214;
 								transition: .4s border;
 								font-weight: 600;
 								&.active{
 									background: white;
 									color: #000000;
-									border-bottom-color: #F30D31;
+									border-bottom-color: #DB2214;
 								}
 							}
 						}
@@ -249,7 +249,7 @@
 							align-self: flex-end;
 
 							& > h4{
-								color: #F30D31;
+								color: #DB2214;
 								font-size: 40px;
 								font-weight: normal;
 								font-family: $Roboto_Condensed;
@@ -264,7 +264,7 @@
 					margin-top: 15px;
 
 					th{
-						background: #F30D31;
+						background: #DB2214;
 						border-radius: 2px 2px 0 0;
 						color: white;
 						font-size: 10px;
@@ -274,7 +274,7 @@
 					}
 					td{
 						border: 1px solid #ACAFB2;
-						color: #F30D31;
+						color: #DB2214;
 						font-size: 14px;
 						font-weight: normal;
 						font-family: $Roboto_Condensed;
@@ -387,7 +387,7 @@
 					width: 6px;
 					height: 6px;
 					border-radius: 100%;
-					background: #F30D31;
+					background: #DB2214;
 					display: inline-block;;
 
 					&:after,
@@ -397,7 +397,7 @@
 						width: 6px;
 						height: 6px;
 						border-radius: 100%;
-						background: #F30D31;
+						background: #DB2214;
 					}
 
 					&:before{
@@ -411,8 +411,8 @@
 				}
 
 				&:hover{
-					background: #F30D31;
-					border-color: #F30D31;
+					background: #DB2214;
+					border-color: #DB2214;
 					& >span{
 						background: white;
 						&:before,
@@ -434,8 +434,8 @@
 					}
 
 					&:hover{
-						background: #f30d31;
-						border-color: #f30d31;
+						background: #DB2214;
+						border-color: #DB2214;
 						& > svg > path{
 							fill:white;
 						}

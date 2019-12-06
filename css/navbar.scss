@@ -2,7 +2,7 @@
 // navbar - menu
 #glMenu{
 	background: lighten(#323840, 0%);
-	border-top: 2px solid #F30D31;
+	border-top: 2px solid #DB2214;
 	position: sticky;
 	top: 0;
 	z-index: 1000;
@@ -80,7 +80,9 @@
 
 			.menu-football-gl{
 				display: flex;
+				flex-direction: row;
 				max-width: 967px;
+				justify-content: center;
 				width: 100%;
 				& > li{
 					>  a{
@@ -116,12 +118,12 @@
 					background:transparent;
 
 					&:hover{
-						background: #F30D31;
-						border-color: #F30D31;
+						background: #DB2214;
+						border-color: #DB2214;
 					}
 				}
 				&.signUpActive > button {
-					background: #F30D31;
+					background: #DB2214;
 					border:0;
 					padding: 12px 15px;
 					&:hover{
@@ -153,7 +155,7 @@
 
 				button{
 					padding: 12px;
-					background: #F30D31;
+					background: #DB2214;
 					margin-left: 20px;
 				}
 
@@ -180,7 +182,6 @@
 
 				.menu-football-gl{
 					width: 90%;
-					justify-content: flex-end;
 					& > li{
 						>  a{
 							font-size: 17px;
@@ -208,7 +209,6 @@
 
 				.menu-football-gl{
 					width: 100%;
-					justify-content: flex-end;
 					& > li{
 						>  a{
 							padding: 0 10px;

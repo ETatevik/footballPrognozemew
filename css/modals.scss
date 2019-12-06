@@ -57,7 +57,7 @@
 								font-size: 10px;
 								text-decoration: underline;
 								&:hover{
-									color: #F30D31;
+									color: #DB2214;
 								}
 							}
 						}
@@ -134,7 +134,7 @@
 
 					.invalid{
 						display: none;
-						color: #F30D31;
+						color: #DB2214;
 						margin-top: 5px;
 						font-size: 12px;
 						&.error{
@@ -146,7 +146,7 @@
 						margin-top: 50px;
 						margin-bottom: 7px !important;
 						& > button{
-							background: #F30D31;
+							background: #DB2214;
 							width: 100%;
 							font-size: 18px;
 							font-weight: bold;
@@ -172,7 +172,7 @@
 							font-size: 10px;
 							font-weight: bold;
 							&:hover{
-								color: #F30D31;
+								color: #DB2214;
 								text-decoration: underline;
 							}
 						}
@@ -215,10 +215,10 @@
 							}
 							
 							&.error{
-								border-color: #F30D31;
-								color: #F30D31;
+								border-color: #DB2214;
+								color: #DB2214;
 								&:after {
-							  		border-color: transparent transparent #F30D31 #F30D31;
+							  		border-color: transparent transparent #DB2214 #DB2214;
 								}
 							}
 
@@ -269,7 +269,7 @@
 							    	padding-right: 15px;
 							    }
 							    & > .red-price{
-							    	color: #F30D31;
+							    	color: #DB2214;
 									font-weight: bold;
 									float: right;
 							    }
@@ -281,7 +281,7 @@
 			& > .btn-close{
 				margin-bottom: 7px !important;
 				& > button{
-					background: #F30D31;
+					background: #DB2214;
 					width: 100%;
 					font-size: 18px;
 					font-weight: bold;
@@ -313,20 +313,20 @@
 					font-size: 18px;
 					font-weight: 600;
 					font-family: $Roboto_Condensed;
-					border: 2px solid #F30D31;
+					border: 2px solid #DB2214;
 					border-radius: 3px;
 					padding: 10px 15px;
 					transition: .25s;
 					background:transparent;
 
 					&:hover{
-						background: #F30D31;
-						border-color: #F30D31;
+						background: #DB2214;
+						border-color: #DB2214;
 						color: white;
 					}
 				}
 				&.signUpActive > button {
-					background: #F30D31;
+					background: #DB2214;
 					border:0;
 					padding: 12px 15px;
 					margin-bottom: 27px;
@@ -361,7 +361,7 @@
 			}
 
 			&:hover{
-				background: #F30D31;
+				background: #DB2214;
 				& > svg > path{
 					fill:white;
 				}

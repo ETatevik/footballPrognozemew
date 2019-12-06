@@ -44,6 +44,10 @@ body {
   overflow: hidden;
   position: relative; }
 
+.img-fluid {
+  max-width: 100%;
+  height: auto; }
+
 @media only screen and (max-width: 950px) {
   .text-nowrap {
     max-width: 600px; }
@@ -60,7 +64,7 @@ body {
 #pageContent > .container #indexPageSilder {
   position: relative;
   min-height: 496px;
-  background: #F30D31; }
+  background: #DB2214; }
   #pageContent > .container #indexPageSilder .slide {
     display: none;
     max-width: 1206px;
@@ -91,7 +95,7 @@ body {
         line-height: 23px;
         margin: 26px 0; }
       #pageContent > .container #indexPageSilder .slide > .container-fluid > .moreInfo {
-        border: 2px solid #F30D31;
+        border: 2px solid #DB2214;
         border-radius: 3px;
         padding: 10px 19px;
         position: relative;
@@ -108,7 +112,7 @@ body {
           content: '';
           width: 100%;
           height: 100%;
-          background: #F30D31;
+          background: #DB2214;
           position: absolute;
           top: 0;
           left: 100%;
@@ -152,7 +156,7 @@ body {
           padding: 0; }
           #pageContent > .container #indexPageSilder .slide > .container-fluid > .moreInfo > span {
             font-size: 12px;
-            color: #F30D31;
+            color: #DB2214;
             text-decoration: underline; }
           #pageContent > .container #indexPageSilder .slide > .container-fluid > .moreInfo:before {
             display: none; }

@@ -44,6 +44,10 @@ body {
   overflow: hidden;
   position: relative; }
 
+.img-fluid {
+  max-width: 100%;
+  height: auto; }
+
 @media only screen and (max-width: 950px) {
   .text-nowrap {
     max-width: 600px; }
@@ -194,7 +198,7 @@ body {
           -ms-flex-item-align: end;
           align-self: flex-end; }
           #pageContent #moreOfForecast > .moreInfoForecBox > .row > .col-lig-forec.align-self-end > h4 {
-            color: #F30D31;
+            color: #DB2214;
             font-size: 40px;
             font-weight: bold;
             font-family: "Roboto Condensed", sans-serif; }
@@ -202,7 +206,7 @@ body {
       border-collapse: collapse;
       width: 100%; }
       #pageContent #moreOfForecast > .moreInfoForecBox > table th {
-        background: #F30D31;
+        background: #DB2214;
         border-radius: 2px 2px 0 0;
         color: white;
         font-size: 10px;
@@ -211,7 +215,7 @@ body {
         padding: 5px; }
       #pageContent #moreOfForecast > .moreInfoForecBox > table td {
         border: 1px solid #ACAFB2;
-        color: #F30D31;
+        color: #DB2214;
         font-size: 18px;
         font-weight: bold;
         font-family: "Roboto Condensed", sans-serif;

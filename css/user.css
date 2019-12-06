@@ -44,6 +44,10 @@ body {
   overflow: hidden;
   position: relative; }
 
+.img-fluid {
+  max-width: 100%;
+  height: auto; }
+
 @media only screen and (max-width: 950px) {
   .text-nowrap {
     max-width: 600px; }
@@ -84,11 +88,11 @@ body {
     #personalAreaBox #userArea-header .personalAre-navbar ul.row > li > a.active {
       font-weight: 600;
       color: #000000;
-      border-bottom-color: #F30D31; }
+      border-bottom-color: #DB2214; }
     #personalAreaBox #userArea-header .personalAre-navbar ul.row > li > a:hover {
-      background: #F30D31;
+      background: #DB2214;
       color: white;
-      border-bottom-color: #F30D31;
+      border-bottom-color: #DB2214;
       -webkit-transition: .4s border;
       -o-transition: .4s border;
       transition: .4s border;
@@ -96,7 +100,7 @@ body {
       #personalAreaBox #userArea-header .personalAre-navbar ul.row > li > a:hover.active {
         background: white;
         color: #000000;
-        border-bottom-color: #F30D31; }
+        border-bottom-color: #DB2214; }
   #personalAreaBox #userArea-header .personalAre-navbar ul.row > li:nth-of-type(2) > a {
     position: relative; }
     #personalAreaBox #userArea-header .personalAre-navbar ul.row > li:nth-of-type(2) > a:before, #personalAreaBox #userArea-header .personalAre-navbar ul.row > li:nth-of-type(2) > a:after {
@@ -125,7 +129,7 @@ body {
 #personalAreaBox #userArea-header .personalAre-navbar .mobile-persNavbar {
   background: white;
   color: #000000;
-  border-bottom: 2px solid #F30D31;
+  border-bottom: 2px solid #DB2214;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -143,7 +147,7 @@ body {
   #personalAreaBox #userArea-header .personalAre-navbar .mobile-persNavbar > .menu-tree-mb button {
     height: 24px;
     width: 24px;
-    background: #F30D31;
+    background: #DB2214;
     border-radius: 50%; }
     #personalAreaBox #userArea-header .personalAre-navbar .mobile-persNavbar > .menu-tree-mb button.active .tree-btn-is {
       background: transparent; }
@@ -226,9 +230,9 @@ body {
     background: white !important; }
 
 .alert-danger {
-  background: #F30D31; }
+  background: #DB2214; }
   .alert-danger .btn:hover {
-    color: #F30D31 !important;
+    color: #DB2214 !important;
     background: white !important; }
 
 #ligaFootball {
@@ -309,7 +313,7 @@ body {
       #userSubscript > .sub-info ul li:first-of-type {
         border-top: 0;
         padding: 23px 0;
-        color: #F30D31;
+        color: #DB2214;
         font-size: 38px;
         font-weight: bolder; }
       #userSubscript > .sub-info ul li.sub-btn {
@@ -327,8 +331,8 @@ body {
           border-radius: 6px;
           padding: 5px 10px; }
           #userSubscript > .sub-info ul li.sub-btn > .btn-continue-sub.active {
-            color: #F30D31;
-            border-color: #F30D31; }
+            color: #DB2214;
+            border-color: #DB2214; }
 
 .userData-body {
   margin: 12px 0 16px; }
@@ -429,10 +433,10 @@ body {
             border-color: #239800 !important;
             color: #239800; }
           .userData-body form > .form-group .form-col > .select-form > .show-select > .choose-radio.error {
-            border-color: #F30D31;
-            color: #F30D31; }
+            border-color: #DB2214;
+            color: #DB2214; }
             .userData-body form > .form-group .form-col > .select-form > .show-select > .choose-radio.error:after {
-              border-color: transparent transparent #F30D31 #F30D31; }
+              border-color: transparent transparent #DB2214 #DB2214; }
           .userData-body form > .form-group .form-col > .select-form > .show-select > .choose-radio:hover {
             border-color: #5f6366;
             -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
@@ -475,12 +479,12 @@ body {
               float: none;
               padding-right: 15px; }
             .userData-body form > .form-group .form-col > .select-form label .select-text > .red-price {
-              color: #F30D31;
+              color: #DB2214;
               font-weight: bold;
               float: right; }
       .userData-body form > .form-group .form-col .invalid {
         display: none;
-        color: #F30D31;
+        color: #DB2214;
         margin-top: 5px;
         font-size: 12px; }
         .userData-body form > .form-group .form-col .invalid.error {
@@ -501,8 +505,8 @@ body {
         background: transparent;
         margin-left: auto; }
         .userData-body form > .form-group .btn-submit > button > span {
-          border: 2px solid #F30D31;
-          color: #F30D31;
+          border: 2px solid #DB2214;
+          color: #DB2214;
           font-family: "Roboto Condensed", sans-serif;
           font-weight: 600;
           font-size: 18px;
@@ -519,7 +523,7 @@ body {
           position: absolute;
           width: 100%;
           height: 100%;
-          background: #F30D31;
+          background: #DB2214;
           left: 0;
           top: 100%;
           -webkit-transition: .5s;
@@ -640,15 +644,15 @@ body {
   .alert-warring .btn:hover {
     background: transparent !important; }
     .alert-warring .btn:hover svg > path {
-      fill: #F30D31; }
+      fill: #DB2214; }
   .alert-success .btn:hover {
     background: transparent !important; }
     .alert-success .btn:hover svg > path {
-      fill: #F30D31; }
+      fill: #DB2214; }
   .alert-danger .btn:hover {
     background: transparent  !important; }
     .alert-danger .btn:hover svg > path {
-      fill: #F30D31; }
+      fill: #DB2214; }
   .modal-danger-close > .row > .col h2 {
     font-size: 28px; }
   #userSubscript > .sub-info ul li {
