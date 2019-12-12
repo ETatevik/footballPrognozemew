@@ -1,0 +1,1045 @@
+@import 'all.scss';
+
+body{
+	background: #F1F2F2;
+}
+
+// page content
+.indexContentBody.row{
+	width: 100%;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+
+#pageContent{
+	width: 80%;
+	max-width: 1206px !important;
+	padding: 5px 5px 0px 5px;
+	& > .container{
+		// ligaFootball
+		#ligaFootball{
+			& > nav.navbar-liga{
+				ul.row{
+					box-shadow: 0 0 5px rgba(0,0,0, .06);
+					background: white;
+					margin: 10px 0 14px;
+					align-items: stretch;
+					& > li{
+						width: 33.33%;
+						max-width: 403px;
+						& > a{
+							padding: 14px 0 12px;
+							display: block;	
+							height: 100%;
+							text-align: center;
+							color: #808080;
+							font-size: 18px;
+							transition: .3s background,  .25s border;
+							border-bottom: 2px solid transparent;
+							font-family: $Roboto_Condensed;
+
+							&.active{
+								font-weight: 600;
+								color: #000000;
+								border-bottom-color: #F30D31;
+							}
+							&:hover{
+								background: #F30D31;
+								color: white;
+								border-bottom-color: #F30D31;
+								transition: .4s border;
+								font-weight: 600;
+								&.active{
+									background: white;
+									color: #000000;
+									border-bottom-color: #F30D31;
+								}
+							}
+							& > .aw-bt{
+								display: none;
+							}
+						}
+						&:nth-of-type(2){
+							& > a{
+								position: relative;
+								&:before,
+								&:after{
+									content: '';
+									width: 1px;
+									height: 35%;
+									background: rgba(98,104,111,.5);
+									position: absolute;
+									top: 32.5%;
+								}
+								&:before{
+									left: 0;
+								}
+								&:after{
+									right: 0;
+								}
+							}
+						}	
+					}
+				}
+			}
+
+			& > .discription-navbarLiga{
+				.row{
+					justify-content: space-between;
+				}
+				.col-data{
+					ul.row{
+						box-shadow: 0 0 5px rgba(0,0,0, .06);
+						background: white;
+						align-items: stretch;
+						& > li{
+							width: 33.33%;
+							min-width: 124px;
+							& > a{
+								padding: 14px 0 12px;
+								display: block;	
+								height: 100%;
+								text-align: center;
+								color: #808080;
+								font-size: 18px;
+								transition: .3s background,  .25s border;
+								border-bottom: 2px solid transparent;
+								font-family: $Roboto_Condensed;
+
+								&.active{
+									font-weight: 600;
+									color: #000000;
+									border-bottom-color: #F30D31;
+								}
+								&:hover{
+									background: #F30D31;
+									color: white;
+									border-bottom-color: #F30D31;
+									transition: .4s border;
+									font-weight: 600;
+									&.active{
+										background: white;
+										color: #000000;
+										border-bottom-color: #F30D31;
+									}
+								}
+							}
+							&:nth-of-type(2){
+								& > a{
+									position: relative;
+									&:before,
+									&:after{
+										content: '';
+										width: 1px;
+										height: 35%;
+										background: rgba(98,104,111,.5);
+										position: absolute;
+										top: 32.5%;
+									}
+									&:before{
+										left: 0;
+									}
+									&:after{
+										right: 0;
+									}
+								}
+							}	
+						}
+					}
+				}
+				.col-forecasts{
+					ul.row{
+						box-shadow: 0 0 5px rgba(0,0,0, .06);
+						align-items: stretch;
+						& > li{
+							width: 50%;
+							min-width: 167px;
+							position: relative;
+							z-index: 1;
+							background: white;
+							border-radius: 3px;
+
+
+							& > a{
+								padding: 15px 0;
+								display: block;	
+								height: 100%;
+								text-align: center;
+								color: #363636;
+								font-size: 14px;
+								transition: .3s;
+								border: 1px solid #BEC1C4;
+								font-family: $Roboto_Condensed;
+								border-radius: 3px;
+
+								&:hover{
+									box-shadow: 0 0 20px #BEC1C4 inset;
+								}
+							}
+
+							&.active{
+								z-index: 2;
+								 > a{
+									border-color: #F30D31;
+									color: #F30D31;
+									box-shadow: 0 0 0;
+								}
+
+							}
+							&:last-of-type{
+								left: -4px;
+							}
+						}
+					}
+				}
+			}
+
+			&> .tabelForecastsLiga{
+				& > table{
+					box-shadow: 0 0 5px rgba(0,0,0, .06);
+					background: white;
+					width: 100%;
+					border-radius: 3px;
+					border-collapse: collapse;
+					margin: 14px 0 ;
+					overflow: hidden;
+					border: 0; 
+					tr:first-of-type{
+						border-radius: 3px;
+					}
+					th{
+						border-bottom: 1px solid #F1F2F2;
+						border-collapse: collapse;
+
+						& > span{
+							border-top: 4px solid white;
+							border-bottom: 9px solid white;
+							background:#F1F2F2;
+							padding: 8px 0;
+							font-family: $Roboto_Condensed;
+							font-size: 16px;
+							color: #808080;
+							font-weight: normal;
+							display: block;
+						}
+						
+
+						&:first-of-type{
+							border-left: 4px solid white;
+							border-radius: 3px 0 0 3px;
+						}
+						&:last-of-type{
+							border-right: 4px solid white;
+							border-radius: 0 3px 3px 0 ;
+						}
+					}
+					td{
+						text-align: center;
+						border: 1px solid #F1F2F2;
+						padding: 15px 0 16px;
+						border-collapse: collapse;
+						font-family: $Roboto_Condensed;
+						font-size: 16px;
+						&:first-of-type{
+							border-left: 0;
+						}
+						&:last-of-type{
+							border-right: 0;
+						}
+						&.teamVS{
+							& > .row{
+								justify-content: space-around;
+								align-items: center;
+								width: 100%;
+								li > span{
+									font-family: $Roboto_Condensed;
+									font-size: 16px;
+									color: #000000;
+									font-weight: normal;
+								}
+
+								img{
+									width: 27px;
+									height: 27px;
+								}
+							}
+						}
+						&>a{
+							color: #F30D31;
+							text-decoration: underline;
+							transition: .4s;
+							font-size: 16px;
+							font-family: $Roboto_Condensed;
+							&:hover{
+								color: #000000;
+								text-shadow: 0 0 1px #F30D31;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		//takeSubscription
+		#takeSubscription{
+			& > h2 {
+				text-align: center;
+				background: #2AB700;
+				border-radius: 3px;
+				padding: 9px 0 11px;
+				color: white;
+				font-size: 22px;
+				font-family: $Roboto_Condensed;
+				font-weight: 600;
+			}
+
+			& > .row{
+				.card{
+					box-shadow: 0 0 5px rgba(0,0,0, .06);
+					max-width: 290.5px;
+					width: 100%;
+					background: white;
+					text-align: center;
+					border-radius: 4px;
+					position: relative;
+					overflow: hidden;
+					& > .card-header{
+						background: #BEC1C4;
+						border-radius: 3px;
+						& > h4{
+							color: white;
+							font-weight: 600;
+							font-family: $Roboto_Condensed;
+							font-size: 16px;
+							padding: 11px 0 12px;
+						}
+					}
+					& > .card-body{
+						& > h3{
+							color: #F30D31;
+							font-weight: 600;
+							font-family: $Roboto_Condensed;
+							font-size: 38px;
+							padding: 20.4px 0 24.4px;
+						}
+
+						& > ul {
+							& > li{
+								padding: 13px 20px 13px 20px;
+								border-top: 1px solid #F1F2F2;
+								text-align: left;
+								&:last-of-type{
+									border-bottom: 1px solid #F1F2F2;
+								}
+								& > .table{
+									display: table;
+									& >.tb-row{
+										display: table-row;
+										& >.tb-cell{
+											vertical-align: middle;
+											display: table-cell;
+
+											& > svg{
+												margin-right: 18px;
+												width: 13.3px;
+												height: 13.3px;
+											}
+											font-family: $Roboto_Condensed;
+											font-size: 16px;
+											color: #000000;
+										}
+									}
+								}
+							}
+						}
+					}
+					& > .card-footer{
+						padding: 20px 8px 10px;
+						&> button{
+							border-radius: 3px;
+							width: 100%;
+							display: block;
+							position: relative;
+							overflow: hidden;
+							background: transparent;
+
+							& > span{
+								border: 2px solid #F30D31;
+								color: #F30D31;
+								font-family: $Roboto_Condensed;
+								font-weight: 600;
+								font-size: 18px;
+								padding: 10px;
+								border-radius: 3px;
+								position: relative;
+								z-index: 5;
+								transition:color 0s .2s;
+								display: block;
+							}
+							
+							&:before{
+								content: '';
+								position: absolute;
+								width: 100%;
+								height: 100%;
+								background: #F30D31;
+								left: 0;
+								top: 100%;
+								transition: .5s;
+								z-index: 2;
+							}
+							&:hover{
+								&:before{
+									top: 0;
+								}
+								& > span{
+									color: white;
+								}
+							}
+						}
+					}
+
+					& > .card-show{
+						position: absolute;
+						width: 60%;
+						padding: 3px;
+						transform: rotate(45deg);
+						right: -18%;
+						top: 15px;
+						box-shadow: 0 5px 8px rgba(0,0,0,.5);
+
+						&.most-buy{
+							background: #F0506D;
+							& > h6{
+								color: white;
+								font-size: 12px;
+								font-family: $Roboto_Condensed;
+								font-weight: 600;
+								max-width: 100px;
+								margin: auto;
+							}
+						}
+						&.premium{
+							background: #44238B;
+							padding: 5px;
+							top: 25px;
+							right: -16%;
+							& > h6{
+								color: white;
+								font-size: 12px;
+								font-family: $Roboto_Condensed;
+								font-weight: 600;
+								max-width: 100px;
+								margin: auto;
+							}
+						}
+					}
+				}
+
+				.col-cards{
+					margin: 14px 0;
+					padding: 0 8px; 
+
+					&:first-of-type{
+						padding-left: 0;
+					}
+					&:last-of-type{
+						padding-right: 0;
+					}
+				}
+			}
+		} 
+
+		// statistics our forecast
+		#statisticsOurForecast{
+			& > h2 {
+				text-align: center;
+				background: #2AB700;
+				border-radius: 3px;
+				padding: 9px 0 11px;
+				color: white;
+				font-size: 22px;
+				font-family: $Roboto_Condensed;
+				font-weight: 600;
+
+			}
+
+			& .proggresBars{
+				box-shadow: 0 0 5px rgba(0,0,0, .06);
+				padding: 34px 32px;
+				background: white;
+				margin: 14px 0 17px;
+				border-radius: 3px;
+
+				& > .row{
+					flex-direction: column;
+					
+					& .col-bar{
+						width: 100%;
+
+						&:first-of-type{
+							margin-bottom: 26px;
+						}
+
+						& > h5{
+							color: #000000;
+							font-size: 18px;
+							font-family: $Roboto_Condensed;
+							font-weight: 600;
+							margin-bottom: 10px;
+						}
+						& > .bar{
+							border-radius: 4px;
+							height: 8px;
+							background: #EBF2F7;
+							position: relative;
+	
+
+							&:after{
+								content: '100%';
+								font-size: 12px;
+								font-family: $Roboto_Condensed;
+								color: #818487;
+								position: absolute;
+								top: -20px;
+								right: 0;
+							}
+
+							& >.proggress{
+								position: relative;
+								height: 100%;
+								border-radius: 4px;
+								width: 0;
+								transition:.5s;
+								animation-delay: 0;
+								&>span{
+									opacity: 0;
+									color: inherit;
+									font-size: 20px;
+									font-family: $Roboto_Condensed;
+									font-weight: 600;
+									position: absolute;
+									top: -35px;
+									right: 0;
+									transition:.5s;
+								}
+
+								&.bg-prog-successful{
+									background: #2AB700;
+									color: #2AB700;
+								}
+								&.bg-prog-unsuccessful{
+									background: #F30D31;
+									color: #F30D31;
+								}
+							}
+						}
+					}
+				}
+			} 
+		}
+
+
+		// content footer
+		footer{
+			background: white;
+			padding: 26px 58px  16px;
+			box-shadow: 0 0 5px rgba(0,0,0, .06);
+			& >.container > .row{
+				justify-content: space-between;
+				align-items: center;
+				&:first-of-type{
+					padding-bottom: 21px;
+					border-bottom:1px solid #BEC1C4 ;
+				}
+				&:last-of-type{
+					padding-top: 21px;
+				}
+				.col-foot{
+					ul.row{
+						li:nth-of-type(2){
+							margin:0 16px;
+						}
+						& li > a > svg > path{
+							transition: .5s;
+						}
+						& li > a:hover{
+							&  > svg > path{
+								fill:#F30D31;
+							}
+						} 
+					}
+
+					.methPrice{
+						span:first-of-type{
+							margin-right: 20px;
+							font-family: $Roboto_Condensed;
+							font-weight: normal;
+							font-size: 16px;
+							color: #000000;
+						}
+					}
+
+					& > p > a{
+						font-family: $Roboto_Condensed;
+						font-weight: normal;
+						font-size: 16px;
+						color: #000000;
+						&:hover{
+							text-decoration: underline;
+							color: #F30D31;
+						}
+					}
+					& > p{
+						font-family: $Roboto_Condensed;
+						font-weight: normal;
+						font-size: 16px;
+						color: #000000;
+					}
+				}
+			}
+		}
+	}
+
+	// nav-node-list
+	#nav-node-list{
+		background: #ffffff;
+		padding: 4px 15px;
+		margin-bottom: 9px;
+		margin-top: 4px;
+		box-shadow: 0 0 5px rgba(0,0,0, .06);
+		li{
+			& > a{
+			 	display: inline-block;
+			 	padding-right: 10px;
+			 	position: relative;
+			 	font-size: 14px;
+			 	color: #808080;
+			 	padding-left: 5px;
+
+			 	&:after{
+			 		content: '/';
+			 		position: absolute;
+			 		right: 0px;
+			 	}
+			 	&:hover{
+			 		text-decoration: underline;
+			 		font-weight: bold;
+			 		color: #000000;
+			 	}
+			}
+
+			& > span{
+				padding-left: 5px;
+				color: #000000;
+				font-size: 14px;
+			}
+			&:first-of-type > a{
+				padding-left: 0;
+			}
+		}
+	}
+}
+// media mobile start for 798px
+
+@media only screen and(min-width: 1130px) and(max-width: 1260px) {
+	#pageContent{
+		margin-right: 15px;
+		& > .container{
+			//takeSubscription
+			#takeSubscription{
+				& > .row{
+					flex-wrap: wrap;
+
+					.col-cards{
+						margin: 14px auto;
+						padding: 0; 
+						width: 50%;
+						.card{
+							margin: auto;
+						}
+					}
+				}
+			}
+		}
+	} 
+}
+
+@media only screen and(min-width: 1130px) and(max-width: 1449px) {
+	#pageContent{
+		margin-right: 14px;
+	}
+}
+@media only screen and(max-width: 1130px) {
+	#pageContent{
+		width: 100%;
+		margin-right: 14px;
+		margin-left: 13px;
+	}
+}
+
+@media only screen and(max-width: 1040px) {
+	#pageContent{
+		& > .container{
+			//takeSubscription
+			#takeSubscription{
+				& > .row{
+					flex-wrap: wrap;
+
+					.col-cards{
+						margin: 14px auto;
+						padding: 0; 
+						width: 50%;
+						.card{
+							margin: auto;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 799px) {
+	// start slider in index page
+	#pageContent{
+		width: 96%;
+		margin-right: 15px;
+		margin-left: 15px;
+		& > .container{
+
+			// ligaFootball 
+			#ligaFootball{
+				& > nav.navbar-liga{
+					ul.row{
+						flex-direction: column;
+						margin: 6px 0;
+						align-items: stretch;
+						& > li{
+							width: 100%;
+							max-width: 100%;
+							& > a{
+								padding: 8px 0;
+								text-align: left;
+								display: flex;
+								justify-content: space-between;
+								& > span{
+									padding-left: 27px;
+								}
+								& > .aw-bt{
+									margin-right: 10px;
+									width: 20px;
+									height: 20px;
+									background: #F30D31;
+									border-radius: 	50%;
+									text-align: center;
+									transition: .5s;							
+								}
+
+								&.active{
+									font-weight: 600;
+									color: #000000;
+									border-bottom-color: #F30D31;
+									& > .aw-bt{
+										display: block;
+										transform: rotate(0deg);
+									}
+								}
+								&:hover,
+								&:hover.active{
+									background: #F30D31;
+									color: white;
+									border-bottom-color: #F30D31;
+									transition: .4s border;
+									font-weight: 600;
+								}
+
+								&:hover.active > .aw-bt{
+									background: white;
+									transform: rotate(0deg);
+									& svg > path{
+										fill: #F30D31;
+									}
+								}
+								&:hover > .aw-bt{
+									display: block;
+									background: white;
+									transform: rotate(180deg);
+									& svg > path{
+										fill: #F30D31;
+									}
+								}
+							}
+							&:nth-of-type(2){
+								& > a{
+									border-top: 1px solid #EBECEC;
+									border-bottom: 1px solid #EBECEC;
+									&:before,
+									&:after{
+										display: none;
+									}
+								}
+							}	
+						}
+					}
+				}
+
+				& > .discription-navbarLiga{
+					.row{
+						justify-content: space-between;
+						flex-direction: column;
+					}
+					.col-data{
+						width: 100%;
+						margin-top: 6px;
+						margin-bottom: 6px;
+						ul.row{
+							box-shadow: 0 0 5px rgba(0,0,0, .06);
+							background: white;
+							align-items: stretch;
+							flex-direction: row;
+							& > li{
+								width: 33.33%;
+								min-width: 110px;
+								& > a{
+									padding: 12px 0;
+									font-size: 14px;
+								}	
+							}
+						}
+					}
+					.col-forecasts{
+						width: 100%;
+						ul.row{
+							box-shadow: 0 0 5px rgba(0,0,0, .06);
+							align-items: stretch;
+							flex-direction: row;
+							justify-content: space-between;
+							& > li{
+								width: auto;
+								min-width: auto;
+								position: static;
+
+								& > a{
+									padding: 12px 10px;
+								}
+							}
+						}
+					}
+				}
+
+				&> .tabelForecastsLiga{
+					& > table{
+						margin: 0px 0 6px;
+						tr:first-of-type{
+							border-radius: 3px;
+							overflow: hidden;
+						}
+						th{
+							border-bottom: 1px solid #F1F2F2;
+							border-collapse: collapse;
+
+							& > span{
+								padding: 10px 0;								
+								font-size: 12px;
+							}
+							&:first-of-type{
+								display: none;
+							}
+							
+							&:nth-of-type(2){
+								border-left: 4px solid white;
+								border-radius: 3px 0 0 3px;
+								text-align: left;
+								& > span{
+									padding-left: 12px;
+								}
+							}
+						}
+						td{
+							text-align: center;
+							border: 1px solid #F1F2F2;
+							padding: 15px 0 16px;
+							border-collapse: collapse;
+							font-size: 14px;
+
+							&:first-of-type{
+								display: none;
+							}
+							&:nth-of-type(2){
+								border-left: 0;
+							}
+							&:last-of-type{
+								border-right: 0;
+							}
+							&.teamVS{
+								& > .row{
+									justify-content: space-around;
+									align-items: center;
+									width: 100%;
+									.teamStart,
+									.teamEnd{
+										display: none;
+									}
+									li{
+										width: 100%;
+										text-align: left;
+										padding-left: 12px;
+										display: flex;
+										flex-direction: column;
+										align-items: flex-start;
+										font-size: 12px;
+										color: #808080;
+										line-height: 20px;
+										& > span{
+											font-size: 14px;
+											background: #F30D31;
+											border-radius: 2px;
+											display: inline-block;
+											padding:4px;
+											color: white;
+										}
+									}
+								}
+							}
+							&>a{
+								color: #F30D31;
+								text-decoration: underline;
+								transition: .4s;
+								font-size: 14px;
+
+
+								&:hover{
+									color: #000000;
+									text-shadow: 0 0 1px #F30D31;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			//takeSubscription
+			#takeSubscription{
+				& > h2 {
+					padding: 8px 0;
+					font-size: 16px;
+				}
+
+				& > .row{
+					flex-direction: column;
+					.card{
+						max-width: 335px;
+						// max-width: 100%; 
+					}
+
+					.col-cards{
+						margin: 6px auto;
+						padding: 0;
+						width: 100%;
+					}
+				}
+			}
+
+			// statistics our forecast
+			#statisticsOurForecast{
+				& > h2 {
+					padding: 8px 0;
+					font-size: 16px;
+				}
+
+				& .proggresBars{
+					padding: 16px 14px 29px;
+					margin: 12px 0 18px;
+
+					& > .row{
+						flex-direction: column;
+						
+						& .col-bar{
+
+							& > h5{
+								font-size: 14px;
+							}
+							& > .bar{
+								& >.proggress{
+									position: relative;
+									height: 100%;
+									border-radius: 4px;
+									width: 0;
+									transition:.5s;
+									animation-delay: 0;
+									&>span{
+										font-size: 16px;
+										top: -27px;
+									}
+								}
+							}
+						}
+					}
+				} 
+			} 
+
+			// content footer
+			footer{
+				padding: 29px 0px  16px;
+				& >.container > .row{
+					align-items: flex-start;
+					&:first-of-type{
+						padding-bottom: 14px;
+					}
+					.col-foot{
+						ul.row{
+							padding-right: 12px;
+						}
+
+						.methPrice{
+							display: flex;
+							flex-direction: column;
+							padding-left: 12px;
+							span:first-of-type{
+								margin-right: 0px;
+								margin-bottom: 22.5px;
+								font-size: 14px;
+							}
+						}
+
+						& > p{
+							text-align: center;
+							width: 100%;
+							& > a{
+								font-size: 14px;
+							}
+						}
+						&.order-mb-1{
+							order: 1;
+						}
+						&.order-mb-2{
+							order: 2;
+						}
+					}
+
+					&:last-of-type>.col-foot:first-of-type{
+						display: none;
+					}
+					&:last-of-type>.col-foot{
+						width: 100%;
+					}
+				}
+			}
+		}
+		// nav-node-list
+		#nav-node-list{
+			background: #ffffff;
+			padding: 5px 10px;
+			margin-bottom: 4px;
+			margin-top: 0px;
+			li{
+				& > a,
+				& > span{
+				 	font-size: 12px;
+				}
+			}
+		}
+
+	}
+}

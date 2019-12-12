@@ -1,0 +1,27 @@
+# Charset
+AddDefaultCharset 'utf-8'
+
+# Time Zone
+php_value date.timezone 'Asia/Yerevan'
+
+# mbstring
+php_value mbstring.internal_encoding 'utf-8'
+php_value mbstring.regex_encoding 'utf-8'
+
+
+
+# Disable Listing
+Options -Indexes
+
+
+
+RewriteEngine On
+
+# Without www
+RewriteCond %{HTTP_HOST} ^www.pcfootball.store$ [NC]
+RewriteRule ^(.*)$ https://pcfootball.store/$1 [R=301,L]
+
+# MVC rules
+RewriteRule ^sp-push-(.*) sp-push-$1 [L]
+RewriteRule ^public/(.*) public/$1 [L]
+RewriteRule ^(.*)$ index.php [L]
